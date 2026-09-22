@@ -47,7 +47,7 @@ NAME = "fs1a_deckel_boden"
 # Loch für den Montagewinkel (Keystone 633) zum Gewindebolzen der Frontplatte.
 # Der Winkel liegt mit einem Schenkel am Blech, seine Lochmitte sitzt 5,5 mm von der
 # Blechvorderkante; das Blech schließt vorn bündig mit der Blendenrückseite ab.
-COVER_HOLE_D = 3.1
+COVER_HOLE_D = 3.2            # M3-Durchgang, wie in der Rückwand
 COVER_HOLE_FROM_FRONT = p.BRACKET_HOLE_OFF
 # hinten sitzt der Winkel an der Rückwand; das Blech endet 0,5 mm vor der Profilstirnfläche
 COVER_HOLE_FROM_REAR = p.BRACKET_HOLE_OFF - (BOX_DEPTH - COVER_L)

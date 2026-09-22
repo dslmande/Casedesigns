@@ -8,8 +8,8 @@
     <rect x="0" y="0" width="416.0" height="249.5" rx="1.5" fill="none" stroke="#22307C" stroke-width="0.2"/>
   </g>
   <g inkscape:groupmode="layer" inkscape:label="2 Ausschnitte" id="layer2">
-    <circle cx="208" cy="5.5" r="1.55" fill="#FFFFFF" stroke="#22307C" stroke-width="0.15"/>
-    <circle cx="208" cy="244.5" r="1.55" fill="#FFFFFF" stroke="#22307C" stroke-width="0.15"/>
+    <circle cx="208" cy="5.5" r="1.6" fill="#FFFFFF" stroke="#22307C" stroke-width="0.15"/>
+    <circle cx="208" cy="244.5" r="1.6" fill="#FFFFFF" stroke="#22307C" stroke-width="0.15"/>
   </g>
   <g inkscape:groupmode="layer" inkscape:label="3 Druck" id="layer3">
 
@@ -18,7 +18,7 @@
 
   </g>
   <g inkscape:groupmode="layer" inkscape:label="5 Bohrmaße" id="layer5" style="display:none">
-    <text x="210.35" y="6.148" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="1.8" text-anchor="start" fill="#C0392B">Ø3.1</text>
-    <text x="210.35" y="245.148" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="1.8" text-anchor="start" fill="#C0392B">Ø3.1</text>
+    <text x="210.4" y="6.148" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="1.8" text-anchor="start" fill="#C0392B">Ø3.2</text>
+    <text x="210.4" y="245.148" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="1.8" text-anchor="start" fill="#C0392B">Ø3.2</text>
   </g>
 </svg>

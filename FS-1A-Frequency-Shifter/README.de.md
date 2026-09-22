@@ -124,7 +124,7 @@ Stelle zwei Durchgangslöcher, der Winkel wird von außen angeschraubt.
 |---|---|
 | Bolzen Frontplatte | x 241,3 (Mitte), y **8,35** und **79,75** von der Oberkante |
 | Löcher Rückwand | Ø **3,2**, x 218,5 (Mitte), y **8,35** und **79,75** von der Oberkante |
-| Löcher in Deckel und Boden | Ø **3,1**, mittig (208 mm von links), **5,5 mm von der Vorderkante** und **5,0 mm von der Hinterkante** |
+| Löcher in Deckel und Boden | Ø **3,2**, mittig (208 mm von links), **5,5 mm von der Vorderkante** und **5,0 mm von der Hinterkante** |
 | Abstand Bolzen-/Schraubenachse ↔ Blechfläche | 5,5 mm (= Maß D des Winkels) |
 | Nächstes Bauteil | Fine-Tune-Poti, 14,4 mm entfernt – frei |
 
@@ -159,7 +159,7 @@ Gehäusetiefe `BOX_DEPTH = 250` mm (Profillänge), Außentiefe 254 mm mit Front 
 | 2 | Seitenteilprofil | Gie-Tec 122040, Zuschnitt **250 mm** (Sonderlänge bestellbar) |
 | 1 | Frontplatte | 482,6 × 88,1 × 2 – `fs1a_frontpanel.fpd` bzw. `_druck.fpd` |
 | 1 | Rückwand | 437 × 88,1 × 2 – `fs1a_rueckwand.fpd` |
-| 2 | Deckel / Boden | **416 × 249,5 × 1,5 mm Alu-Blech**, 2 Löcher Ø 3,1 – `fs1a_deckel_boden.dxf` |
+| 2 | Deckel / Boden | **416 × 249,5 × 1,5 mm Alu-Blech**, 2 Löcher Ø 3,2 – `fs1a_deckel_boden.dxf` |
 | 8 | Schraube M5 | gewindeformend in die Profilkanäle, 4 vorn + 4 hinten |
 | 4 | Winkel Keystone 633 | oben/unten mittig, vorn an der Blende und hinten an der Rückwand |
 | 2 | Mutter M3 | auf die Gewindebolzen der Blende |

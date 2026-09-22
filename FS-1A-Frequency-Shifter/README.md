@@ -23,7 +23,7 @@ PCB files.
 | 1 | Front panel | 482.6 × 88.1 × 2 mm, corner R2 | `fs1a_frontpanel.fpd` or `fs1a_frontpanel_druck.fpd` |
 | 1 | Rear panel | 437 × 88.1 × 2 mm, corner R2 | `fs1a_rueckwand.fpd` |
 | 2 | Side rail | Gie-Tec *Seitenteilprofil 4* (art. 122040), cut to **250 mm** | purchased part |
-| 2 | Top / bottom cover | 416 × 249.5 × **1.5 mm** aluminium sheet, two Ø3.1 holes | `fs1a_deckel_boden.dxf` |
+| 2 | Top / bottom cover | 416 × 249.5 × **1.5 mm** aluminium sheet, two Ø3.2 holes | `fs1a_deckel_boden.dxf` |
 | 8 | Screw M5 | thread-forming, into the rail screw channels (4 front, 4 rear) | — |
 | 4 | Angle bracket | Keystone **633**, front and rear, to top and bottom cover | — |
 | 2 | Nut M3 | onto the front panel studs | — |
@@ -96,7 +96,7 @@ holes at the same height, and the bracket is bolted on from outside.
 |---|---|
 | Stud on the front panel | x 241.3 (centre), y **8.35** and **79.75** from the top edge |
 | Holes in the rear panel | Ø **3.2**, x 218.5 (centre), y **8.35** and **79.75** from the top edge |
-| Holes in top and bottom cover | Ø **3.1**, centred (208 mm from the left edge), **5.5 mm from the front edge** and **5.0 mm from the rear edge** |
+| Holes in top and bottom cover | Ø **3.2**, centred (208 mm from the left edge), **5.5 mm from the front edge** and **5.0 mm from the rear edge** |
 | Stud / screw axis to sheet face | 5.5 mm (= bracket dimension D) |
 | Nearest component | Fine Tune pot, 14.4 mm away — clear |
 

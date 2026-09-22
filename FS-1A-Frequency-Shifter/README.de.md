@@ -83,7 +83,7 @@ Konturen. Ebene `DRUCK` enthält den Text als Pfade (Strichschrift). Auch für K
 | Mini-Kippschalter | 6,0 | M6-Gewindebuchse, 9 Stück |
 | LED 3 mm | 3,2 | Freq/Dir ×4, LFO ×1 |
 | Netzschalter | 12,3 × 27,2, R 1 | Marquardt 1555.3102 Wippschalter (Reichelt WIPPE 1555.3102), Snap-in, hochkant; Datenblatt 27,2 ±0,1 × 12,2 +0,2, Wandstärke 0,8–5 mm, Blende 30 × 15. Keine On/Off-Beschriftung |
-| Schrauben M5 | 5,3 | 4 × Befestigung an den Seitenteilprofilen (x 27,8 / 454,8, y 4,9 / 83,2), mit **Senkung Ø 9,2 / 90°** für DIN 965 |
+| Schrauben M5 | 5,3 | 4 × Befestigung an den Seitenteilprofilen (x 27,8 / 454,8, y 4,9 / 83,2), **Zylinderkopf** |
 | Rack-Langlöcher | 10 × 6,4 | Lochmitten 465,1 mm, ±38,1 mm von der Panelmitte |
 | Gewindebolzen M3 | kein Loch | 2 × Einklebebolzen GU30, 6 mm, auf der **Rückseite** bei x 241,3 / y 8,35 und 79,75 |
 
@@ -106,30 +106,24 @@ Gehäuse-Außenbreite `BOX_WIDTH = 437` mm → Profile belegen hinter der Blende
 
 `pruefung_gehaeusezonen.png` zeigt die Profilzonen rot über dem Layout.
 
-## Senkkopf an den Befestigungsschrauben – welche Schraube passt
+## Befestigungsschrauben: Zylinderkopf, kein Senkkopf
 
 Die Schraubkanäle liegen 5 mm von der Profilkante, die Blende ist 0,2 mm niedriger als das
-Profil → **Lochmitte nur 4,9 mm von der Blendenkante**. Das schließt die meisten Senkköpfe aus:
+Profil → **Lochmitte nur 4,9 mm von der Blendenkante**. Geprüft wurde:
 
 | Variante | Ø Kopf / Senkung | Rand bis zur Blendenkante |
 |---|---|---|
 | Schaeffer-Senkung DIN 74A-M5 (3 mm Platte) | 10,94 | **−0,57 mm** – schneidet die Kante an |
 | M5 Senkkopf DIN 7991 / ISO 10642 (Innensechskant) | 10,0 | **−0,10 mm** |
-| **M5 Senkkopf DIN 965 / ISO 7046 (Kreuzschlitz) – gewählt** | **9,2** | **+0,30 mm** |
-| M5 Zylinderkopf DIN 912 | 8,5 | +0,65 mm |
+| M5 Senkkopf DIN 965 / ISO 7046 (Kreuzschlitz) | 9,2 | +0,30 mm – sehr dünne Kante |
+| **M5 Zylinderkopf DIN 912 – gewählt** | **8,5** | **+0,65 mm** |
 
-Gesetzt ist deshalb eine **kundendefinierte Senkung** statt der Norm-Senkung des Designers:
+Die DIN-965-Senkung war probeweise eingebaut (Kegel Ø 9,2 / 90°, 2,15 mm tief) und
+funktioniert in FrontDesign; 0,30 mm Restmaterial an der Blendenkante sind aber zu wenig.
+Deshalb bleibt es bei der glatten Bohrung Ø 5,3 und Zylinderkopfschrauben.
 
-```
-SetCountersinkWithParameters(9.2, 5.3, 0.2, 90)
-```
-
-Kegel Ø 9,2 / 90°, Bohrung Ø 5,3, 0,2 mm Zylinderanteil → **2,15 mm tief** in der 3-mm-Platte,
-darunter bleiben 0,85 mm Material. Zur Blendenkante stehen 0,30 mm.
-
-Schraube: **DIN 965 M5 × 20, A2, PH2** (dk 9,2 / k 2,5 / 90°) – 3 mm Blende, damit rund
-17 mm Einschraublänge im Profilkanal. Im Generator: `CSK_CONE / CSK_DRILL / CSK_CYL /
-CSK_ANGLE` in `fs1a_panel.py`; `CSK_TYPE = None` schaltet auf Zylinderkopf zurück.
+Wieder einschalten: in `fs1a_panel.py` die Zeile `CSK_TYPE = None` durch die darüber
+auskommentierte Zeile ersetzen – Bohrung, Senkung, CSV, Vorschau und STEP ziehen mit.
 
 ## Versteifung: Winkel zwischen Blende und Blechen
 
@@ -185,8 +179,7 @@ Gehäusetiefe `BOX_DEPTH = 250` mm (Profillänge), Außentiefe **255 mm** (Blend
 | 1 | Frontplatte | 482,6 × 88,1 × **3** – `fs1a_frontpanel.fpd` bzw. `_druck.fpd` |
 | 1 | Rückwand | 437 × 88,1 × 2 – `fs1a_rueckwand.fpd` |
 | 2 | Deckel / Boden | **416 × 249,5 × 1,5 mm Alu-Blech**, 2 Löcher Ø 3,2 – `fs1a_deckel_boden.dxf` |
-| 4 | Senkschraube DIN 965 M5 × 20 A2 | vorn, in die Profilkanäle, Kopf versenkt |
-| 4 | Schraube M5 | hinten, Rückwand an die Profilkanäle |
+| 8 | Schraube M5 Zylinderkopf | gewindeformend in die Profilkanäle, 4 vorn + 4 hinten |
 | 4 | Winkel Keystone 633 | oben/unten mittig, vorn an der Blende und hinten an der Rückwand |
 | 2 | Mutter M3 | auf die Gewindebolzen der Blende |
 | 6 | Schraube M3 + Mutter | 2 × Winkel an die Rückwand, 4 × Winkel an Deckel/Boden |

@@ -9,7 +9,7 @@ var INK      = engrave_night_blue;
 var FONT     = "helvetica-light-1stroke";
 var FONT_TTL = "helvetica-medium-outline";
 
-var fp = new Frontpanel("FS-1A Rückwand", thick_2mm, 437, 88.1, alu_elox, elox_natural);
+var fp = new Frontpanel("FS-1A Rückwand", thick_3mm, 437, 88.1, alu_elox, elox_natural);
 fp.SetCornerRadii(2, 2, 2, 2);
 fp.SetRemark("FS-1A Rückwand, Gehäuse 437 mm (Gie-Tec Seitenteilprofil 4). Bohrung Ø12 für Kabeldurchführung.");
 

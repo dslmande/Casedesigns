@@ -458,16 +458,12 @@
     <text x="416.5" y="84.224" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.4" text-anchor="middle" fill="#22307C">OUT B</text>
   </g>
   <g inkscape:groupmode="layer" inkscape:label="4 Bauteile (Vorschau)" id="layer4">
-    <circle cx="27.8" cy="4.9" r="4.6" fill="#C9CCD0" stroke="#8A8D92" stroke-width="0.2"/>
     <circle cx="27.8" cy="4.9" r="4.3" fill="#1C1C1C" stroke="none" stroke-width="0"/>
     <circle cx="27.8" cy="4.9" r="2.2" fill="none" stroke="#3C3C3C" stroke-width="0.45"/>
-    <circle cx="27.8" cy="83.2" r="4.6" fill="#C9CCD0" stroke="#8A8D92" stroke-width="0.2"/>
     <circle cx="27.8" cy="83.2" r="4.3" fill="#1C1C1C" stroke="none" stroke-width="0"/>
     <circle cx="27.8" cy="83.2" r="2.2" fill="none" stroke="#3C3C3C" stroke-width="0.45"/>
-    <circle cx="454.8" cy="4.9" r="4.6" fill="#C9CCD0" stroke="#8A8D92" stroke-width="0.2"/>
     <circle cx="454.8" cy="4.9" r="4.3" fill="#1C1C1C" stroke="none" stroke-width="0"/>
     <circle cx="454.8" cy="4.9" r="2.2" fill="none" stroke="#3C3C3C" stroke-width="0.45"/>
-    <circle cx="454.8" cy="83.2" r="4.6" fill="#C9CCD0" stroke="#8A8D92" stroke-width="0.2"/>
     <circle cx="454.8" cy="83.2" r="4.3" fill="#1C1C1C" stroke="none" stroke-width="0"/>
     <circle cx="454.8" cy="83.2" r="2.2" fill="none" stroke="#3C3C3C" stroke-width="0.45"/>
     <circle cx="42" cy="15" r="3.4" fill="#161616" stroke="none" stroke-width="0"/>

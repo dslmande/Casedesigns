@@ -131,7 +131,8 @@ BOLT_TYPE, BOLT_LEN = "GU30", 6               # Einklebebolzen M3, 6 mm (kürzes
 # Schraube: DIN 965 M5 x 20, A2, Kreuzschlitz PH2 (dk 9,2 / k 2,5 / 90°).
 CSK_CONE, CSK_DRILL, CSK_CYL, CSK_ANGLE = 9.2, 5.3, 0.2, 90
 CSK_DEPTH = (CSK_CONE - CSK_DRILL) / 2 + CSK_CYL     # 2,15 mm in der 3-mm-Platte
-CSK_TYPE = f"custom:{CSK_CONE},{CSK_DRILL},{CSK_CYL},{CSK_ANGLE}"
+# CSK_TYPE = f"custom:{CSK_CONE},{CSK_DRILL},{CSK_CYL},{CSK_ANGLE}"   # Senkung für DIN 965
+CSK_TYPE = None   # gewählt: Zylinderkopf M5 (DIN 912, dk 8,5) – 0,65 mm Rand, keine dünne Kante
 BOX_WIDTH = 437.0             # Außenbreite des Gehäuses (Außenfläche zu Außenfläche der Profile)
 X_PROFILE_IN_L = (W - BOX_WIDTH) / 2 + PROFILE_FACE      # ab hier ist hinter der Blende frei
 X_PROFILE_IN_R = W - X_PROFILE_IN_L
@@ -419,7 +420,7 @@ def build():
             slot(sx, sy)
     for ex in (X_EAR_L, X_EAR_R):
         for ey in Y_EAR:
-            screw(ex, ey, "M5 Senkkopf DIN 965 in den Schraubkanal des Seitenteilprofils")
+            screw(ex, ey, "M5 Zylinderkopf in den Schraubkanal des Seitenteilprofils")
 
     # Rahmen
     y0, y1 = INSET, H - INSET

@@ -1,0 +1,88 @@
+// FS-1A Frontpanel – erzeugt von fs1a_panel.py
+// Ausführen in Schaeffer FrontDesign: Bearbeiten → Skripte → Hinzufügen (diese Datei) → Start
+// oder Inhalt in das PastePad kopieren und Start drücken.
+// Koordinaten in mm, Ursprung unten links (FrontDesign-Konvention).
+
+var SAVE_AS  = "/Users/patrickjoricke/Claude/code/haible-fs1a/frontpanel/fs1a_frontpanel_druck.fpd";   // "" = nicht speichern, nur anzeigen
+var PRINTED  = false;   // true: Elemente drucken statt gravieren
+var INK      = engrave_night_blue;
+var FONT     = "helvetica-light-1stroke";
+var FONT_TTL = "helvetica-medium-outline";
+
+var fp = new Frontpanel("FS-1A Frontpanel Druck", thick_2mm, 482.6, 88.1, alu_elox, elox_natural);
+fp.SetCornerRadii(2, 2, 2, 2);
+fp.SetRemark("Jürgen Haible Frequency Shifter FS-1A, 19 Zoll 2 HE. Bohrungen vor Fertigung mit Bauteilen abgleichen.");
+
+function text(name, s, x, y, size, align, font) {
+    var t = new TextEngraving(name, s);
+    try { t.SetFont(font + ":" + size + "mm"); } catch (e) {}
+    try { t.SetTextSize(size); } catch (e) {}
+    t.SetAlignment(align);
+    try { t.SetVAlignment(valign_center); } catch (e) {}
+    t.SetColor(INK);
+    fp.AddElement(t, x, y);
+    return t;
+}
+
+fp.AddElement(new RectHole("L001 Rack", 10, 6.4, 3.2), 8.75, 82.15);
+fp.AddElement(new RectHole("L002 Rack", 10, 6.4, 3.2), 8.75, 5.95);
+fp.AddElement(new RectHole("L003 Rack", 10, 6.4, 3.2), 473.85, 82.15);
+fp.AddElement(new RectHole("L004 Rack", 10, 6.4, 3.2), 473.85, 5.95);
+fp.AddElement(new DrillHole("B005 M5 in Schraubkanal Seitenteilprofil 4", 5.3), 27.8, 83.2);
+fp.AddElement(new DrillHole("B006 M5 in Schraubkanal Seitenteilprofil 4", 5.3), 27.8, 4.9);
+fp.AddElement(new DrillHole("B007 M5 in Schraubkanal Seitenteilprofil 4", 5.3), 454.8, 83.2);
+fp.AddElement(new DrillHole("B008 M5 in Schraubkanal Seitenteilprofil 4", 5.3), 454.8, 4.9);
+fp.AddElement(new DrillHole("B009 Preamp, Neutrik NCJ6FI-S", 24), 52, 61.6);
+fp.AddElement(new DrillHole("B010 M3, Neutrik-Zeichnung 3102ST1728 (20 x 23 mm)", 3.2), 42, 73.1);
+fp.AddElement(new DrillHole("B011 M3, Neutrik-Zeichnung 3102ST1728 (20 x 23 mm)", 3.2), 62, 50.1);
+fp.AddElement(new DrillHole("B012 GAIN", 7.5), 80, 61.6);
+fp.AddElement(new DrillHole("B013 PAD", 6), 101, 61.6);
+fp.AddElement(new DrillHole("B014 LEVEL", 7.5), 120.5, 61.6);
+fp.AddElement(new DrillHole("B015 AUX", 9.5), 52, 21.1);
+fp.AddElement(new DrillHole("B016 LEVEL", 7.5), 80, 21.1);
+fp.AddElement(new DrillHole("B017 Deep Phase/Norm", 6), 101, 21.1);
+fp.AddElement(new DrillHole("B018 Up/Down", 6), 113, 21.1);
+fp.AddElement(new DrillHole("B019 Invert +/-", 6), 139.5, 61.6);
+fp.AddElement(new DrillHole("B020 EXP", 7.5), 158.5, 61.6);
+fp.AddElement(new DrillHole("B021 V/OCT", 9.5), 134, 21.1);
+fp.AddElement(new DrillHole("B022 CV IN", 9.5), 158.5, 21.1);
+fp.AddElement(new DrillHole("B023 RANGE", 7.5), 199, 61.1);
+fp.AddElement(new DrillHole("B024 MANUAL", 7.5), 248, 61.1);
+fp.AddElement(new DrillHole("B025 Fine Tune", 7.5), 199, 21.1);
+fp.AddElement(new DrillHole("B026 Fine Tune", 7.5), 248, 21.1);
+fp.AddElement(new DrillHole("B027 Freq Up", 3.2), 214, 32.1);
+fp.AddElement(new DrillHole("B028 Freq Down", 3.2), 219, 32.1);
+fp.AddElement(new DrillHole("B029 Dir Up", 3.2), 227.5, 32.1);
+fp.AddElement(new DrillHole("B030 Dir Down", 3.2), 232.5, 32.1);
+fp.AddElement(new DrillHole("B031 LIN", 7.5), 287, 61.6);
+fp.AddElement(new DrillHole("B032 CV IN", 9.5), 287, 21.1);
+fp.AddElement(new DrillHole("B033 LFO FREQ", 7.5), 318, 61.6);
+fp.AddElement(new DrillHole("B034 AMPLITUDE", 7.5), 318, 37.1);
+fp.AddElement(new DrillHole("B035 LFO EXP/LIN", 6), 308.5, 11.1);
+fp.AddElement(new DrillHole("B036 LFO Dreieck/Rechteck", 6), 327.5, 11.1);
+fp.AddElement(new DrillHole("B037 LFO", 3.2), 318, 11.1);
+fp.AddElement(new DrillHole("B038 Mix A", 7.5), 348, 61.6);
+fp.AddElement(new DrillHole("B039 Vol A", 7.5), 372, 61.6);
+fp.AddElement(new DrillHole("B040 Up/Down", 6), 389, 61.6);
+fp.AddElement(new DrillHole("B041 Bypass", 6), 402, 61.6);
+fp.AddElement(new DrillHole("B042 OUT A", 9.5), 416.5, 61.6);
+fp.AddElement(new DrillHole("B043 Mix B", 7.5), 348, 21.1);
+fp.AddElement(new DrillHole("B044 Vol B", 7.5), 372, 21.1);
+fp.AddElement(new DrillHole("B045 Up/Down", 6), 389, 21.1);
+fp.AddElement(new DrillHole("B046 Bypass", 6), 402, 21.1);
+fp.AddElement(new DrillHole("B047 OUT B", 9.5), 416.5, 21.1);
+fp.AddElement(new RectHole("R048 Netzschalter", 12.3, 27.2, 1), 436.5, 44.05);
+
+// Druckgrafik (UV-Farbdruck) über die ganze Platte: Bezugspunkt unten links = Plattenursprung
+// Parameter 4/5 sind Skalierung X/Y in Prozent – das PDF ist bereits 1:1 in mm (484.717 x 90.339 mm)
+var pg = new PrintGraphic("Druckgrafik", "/Users/patrickjoricke/Claude/code/haible-fs1a/frontpanel/fs1a_frontpanel_druck.pdf", refpoint_leftbottom, 100, 100);
+fp.AddElement(pg, -1.058, -1.106);
+
+
+if (PRINTED) { try { fp.SetPrinted(); } catch (e) { Print("SetPrinted nicht verfügbar\n"); } }
+AddFrontpanel(fp);
+if (SAVE_AS != "") {
+    try { SaveFrontpanel(fp, SAVE_AS, true); Print("Gespeichert: " + SAVE_AS + "\n"); }
+    catch (e) { Print("Speichern fehlgeschlagen: " + e + "\n"); }
+}
+Print("FS-1A Frontpanel: " + fp.Count() + " Elemente\n");

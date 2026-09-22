@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="484.7167mm" height="90.3111mm" viewBox="-1.0583 -1.1056 484.7167 90.3111">
+  <rect x="-1.0583" y="-1.1056" width="484.7167" height="90.3111" fill="#F2E7C6"/>
+  <line x1="38" y1="2.5" x2="427.5" y2="2.5" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="38" y1="85.6" x2="427.5" y2="85.6" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="38" y1="45" x2="174" y2="45" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="335" y1="12" x2="427.5" y2="12" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="335" y1="50.5" x2="427.5" y2="50.5" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="38" y1="2.5" x2="38" y2="85.6" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="133.5" y1="2.5" x2="133.5" y2="45" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="122.5" y1="45" x2="122.5" y2="85.6" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="174" y1="2.5" x2="174" y2="85.6" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="273" y1="2.5" x2="273" y2="85.6" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="301" y1="2.5" x2="301" y2="85.6" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="335" y1="2.5" x2="335" y2="85.6" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="427.5" y1="2.5" x2="427.5" y2="85.6" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <text x="52" y="43.724" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.4" text-anchor="middle" fill="#22307C">Preamp</text>
+  <line x1="74.85" y1="35.42" x2="74.1" y2="36.719" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="71.08" y1="31.65" x2="69.781" y2="32.4" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="69.7" y1="26.5" x2="68.2" y2="26.5" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="71.08" y1="21.35" x2="69.781" y2="20.6" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="74.85" y1="17.58" x2="74.1" y2="16.281" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="80" y1="16.2" x2="80" y2="14.7" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="85.15" y1="17.58" x2="85.9" y2="16.281" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="88.92" y1="21.35" x2="90.219" y2="20.6" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="90.3" y1="26.5" x2="91.8" y2="26.5" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="88.92" y1="31.65" x2="90.219" y2="32.4" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="85.15" y1="35.42" x2="85.9" y2="36.719" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <text x="73.2" y="39.178" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">0</text>
+  <text x="68.222" y="34.2" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">1</text>
+  <text x="66.4" y="27.4" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">2</text>
+  <text x="68.222" y="20.6" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">3</text>
+  <text x="73.2" y="15.622" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">4</text>
+  <text x="80" y="13.8" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">5</text>
+  <text x="86.8" y="15.622" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">6</text>
+  <text x="91.778" y="20.6" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">7</text>
+  <text x="93.6" y="27.4" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">8</text>
+  <text x="91.778" y="34.2" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">9</text>
+  <text x="86.8" y="39.178" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">10</text>
+  <text x="80" y="43.724" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.4" text-anchor="middle" fill="#22307C">GAIN</text>
+  <text x="101" y="43.724" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.4" text-anchor="middle" fill="#22307C">PAD</text>
+  <line x1="115.35" y1="35.42" x2="114.6" y2="36.719" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="111.58" y1="31.65" x2="110.281" y2="32.4" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="110.2" y1="26.5" x2="108.7" y2="26.5" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="111.58" y1="21.35" x2="110.281" y2="20.6" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="115.35" y1="17.58" x2="114.6" y2="16.281" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="120.5" y1="16.2" x2="120.5" y2="14.7" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="125.65" y1="17.58" x2="126.4" y2="16.281" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="129.42" y1="21.35" x2="130.719" y2="20.6" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="130.8" y1="26.5" x2="132.3" y2="26.5" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="129.42" y1="31.65" x2="130.719" y2="32.4" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="125.65" y1="35.42" x2="126.4" y2="36.719" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <text x="113.7" y="39.178" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">0</text>
+  <text x="120.5" y="13.8" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">5</text>
+  <text x="127.3" y="39.178" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">10</text>
+  <text x="120.5" y="43.724" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.4" text-anchor="middle" fill="#22307C">LEVEL</text>
+  <text x="52" y="84.224" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.4" text-anchor="middle" fill="#22307C">AUX</text>
+  <line x1="74.85" y1="75.92" x2="74.1" y2="77.219" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="71.08" y1="72.15" x2="69.781" y2="72.9" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="69.7" y1="67" x2="68.2" y2="67" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="71.08" y1="61.85" x2="69.781" y2="61.1" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="74.85" y1="58.08" x2="74.1" y2="56.781" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="80" y1="56.7" x2="80" y2="55.2" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="85.15" y1="58.08" x2="85.9" y2="56.781" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="88.92" y1="61.85" x2="90.219" y2="61.1" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="90.3" y1="67" x2="91.8" y2="67" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="88.92" y1="72.15" x2="90.219" y2="72.9" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="85.15" y1="75.92" x2="85.9" y2="77.219" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <text x="73.2" y="79.678" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">0</text>
+  <text x="68.222" y="74.7" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">1</text>
+  <text x="66.4" y="67.9" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">2</text>
+  <text x="68.222" y="61.1" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">3</text>
+  <text x="73.2" y="56.122" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">4</text>
+  <text x="80" y="54.3" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">5</text>
+  <text x="86.8" y="56.122" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">6</text>
+  <text x="91.778" y="61.1" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">7</text>
+  <text x="93.6" y="67.9" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">8</text>
+  <text x="91.778" y="74.7" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">9</text>
+  <text x="86.8" y="79.678" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">10</text>
+  <text x="80" y="84.224" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.4" text-anchor="middle" fill="#22307C">LEVEL</text>
+  <text x="101" y="56.516" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.1" text-anchor="middle" fill="#22307C">Deep</text>
+  <text x="101" y="60.116" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.1" text-anchor="middle" fill="#22307C">Phase</text>
+  <text x="101" y="76.116" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.1" text-anchor="middle" fill="#22307C">Norm</text>
+  <text x="113" y="60.116" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.1" text-anchor="middle" fill="#22307C">Up</text>
+  <text x="113" y="76.116" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.1" text-anchor="middle" fill="#22307C">Down</text>
+  <text x="107" y="84.224" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.4" text-anchor="middle" fill="#22307C">FEEDBACK</text>
+  <text x="139.5" y="19.224" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.4" text-anchor="middle" fill="#22307C">+</text>
+  <line x1="138.3" y1="35" x2="140.7" y2="35" stroke="#22307C" stroke-width="0.4" stroke-linecap="round"/>
+  <text x="139.5" y="43.724" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.4" text-anchor="middle" fill="#22307C">Invert</text>
+  <line x1="153.35" y1="35.42" x2="152.6" y2="36.719" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="149.58" y1="31.65" x2="148.281" y2="32.4" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="148.2" y1="26.5" x2="146.7" y2="26.5" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="149.58" y1="21.35" x2="148.281" y2="20.6" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="153.35" y1="17.58" x2="152.6" y2="16.281" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="158.5" y1="16.2" x2="158.5" y2="14.7" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="163.65" y1="17.58" x2="164.4" y2="16.281" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="167.42" y1="21.35" x2="168.719" y2="20.6" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="168.8" y1="26.5" x2="170.3" y2="26.5" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="167.42" y1="31.65" x2="168.719" y2="32.4" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="163.65" y1="35.42" x2="164.4" y2="36.719" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <text x="151.7" y="39.178" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">0</text>
+  <text x="158.5" y="13.8" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">5</text>
+  <text x="165.3" y="39.178" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">10</text>
+  <text x="158.5" y="43.724" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.4" text-anchor="middle" fill="#22307C">EXP</text>
+  <text x="134" y="84.224" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.4" text-anchor="middle" fill="#22307C">V/OCT</text>
+  <text x="158.5" y="84.224" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.4" text-anchor="middle" fill="#22307C">CV IN</text>
+  <line x1="174" y1="6.5" x2="161.5" y2="6.5" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <path d="M 158.5 9.5 A 3 3 0 0 1 161.5 6.5" fill="none" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="158.5" y1="9.5" x2="158.5" y2="10.6" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="158.5" y1="45.3" x2="158.5" y2="57.4" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="190.4" y1="41.896" x2="188.9" y2="44.494" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="184.104" y1="35.6" x2="181.506" y2="37.1" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="181.8" y1="27" x2="178.8" y2="27" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="184.104" y1="18.4" x2="181.506" y2="16.9" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="190.4" y1="12.104" x2="188.9" y2="9.506" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="199" y1="9.8" x2="199" y2="6.8" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="207.6" y1="12.104" x2="209.1" y2="9.506" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="213.896" y1="18.4" x2="216.494" y2="16.9" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="216.2" y1="27" x2="219.2" y2="27" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="213.896" y1="35.6" x2="216.494" y2="37.1" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="207.6" y1="41.896" x2="209.1" y2="44.494" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="188.067" y1="42.048" x2="187.127" y2="43.342" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="186.554" y1="40.822" x2="185.484" y2="42.012" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="185.178" y1="39.446" x2="183.988" y2="40.516" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="183.952" y1="37.933" x2="182.658" y2="38.873" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="182.008" y1="34.565" x2="180.546" y2="35.216" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="181.31" y1="32.748" x2="179.789" y2="33.242" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="180.806" y1="30.867" x2="179.241" y2="31.2" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="180.502" y1="28.944" x2="178.911" y2="29.111" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="180.502" y1="25.056" x2="178.911" y2="24.889" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="180.806" y1="23.133" x2="179.241" y2="22.8" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="181.31" y1="21.252" x2="179.789" y2="20.758" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="182.008" y1="19.435" x2="180.546" y2="18.784" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="183.952" y1="16.067" x2="182.658" y2="15.127" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="185.178" y1="14.554" x2="183.988" y2="13.484" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="186.554" y1="13.178" x2="185.484" y2="11.988" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="188.067" y1="11.952" x2="187.127" y2="10.658" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="191.435" y1="10.008" x2="190.784" y2="8.546" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="193.252" y1="9.31" x2="192.758" y2="7.789" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="195.133" y1="8.806" x2="194.8" y2="7.241" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="197.056" y1="8.502" x2="196.889" y2="6.911" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="200.944" y1="8.502" x2="201.111" y2="6.911" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="202.867" y1="8.806" x2="203.2" y2="7.241" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="204.748" y1="9.31" x2="205.242" y2="7.789" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="206.565" y1="10.008" x2="207.216" y2="8.546" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="209.933" y1="11.952" x2="210.873" y2="10.658" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="211.446" y1="13.178" x2="212.516" y2="11.988" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="212.822" y1="14.554" x2="214.012" y2="13.484" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="214.048" y1="16.067" x2="215.342" y2="15.127" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="215.992" y1="19.435" x2="217.454" y2="18.784" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="216.69" y1="21.252" x2="218.211" y2="20.758" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="217.194" y1="23.133" x2="218.759" y2="22.8" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="217.498" y1="25.056" x2="219.089" y2="24.889" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="217.498" y1="28.944" x2="219.089" y2="29.111" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="217.194" y1="30.867" x2="218.759" y2="31.2" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="216.69" y1="32.748" x2="218.211" y2="33.242" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="215.992" y1="34.565" x2="217.454" y2="35.216" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="214.048" y1="37.933" x2="215.342" y2="38.873" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="212.822" y1="39.446" x2="214.012" y2="40.516" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="211.446" y1="40.822" x2="212.516" y2="42.012" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="209.933" y1="42.048" x2="210.873" y2="43.342" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <path d="M 188.9 44.494 A 20.2 20.2 0 1 1 209.1 44.494" fill="none" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="188.9" y1="44.494" x2="188.9" y2="46.8" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="209.1" y1="44.494" x2="209.1" y2="46.8" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <text x="179.255" y="39.408" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.8" text-anchor="middle" fill="#22307C">1</text>
+  <text x="176.2" y="28.008" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.8" text-anchor="middle" fill="#22307C">2</text>
+  <text x="179.255" y="16.608" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.8" text-anchor="middle" fill="#22307C">3</text>
+  <text x="187.6" y="8.263" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.8" text-anchor="middle" fill="#22307C">4</text>
+  <text x="199" y="5.208" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.8" text-anchor="middle" fill="#22307C">5</text>
+  <text x="210.4" y="8.263" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.8" text-anchor="middle" fill="#22307C">6</text>
+  <text x="218.745" y="16.608" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.8" text-anchor="middle" fill="#22307C">7</text>
+  <text x="221.8" y="28.008" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.8" text-anchor="middle" fill="#22307C">8</text>
+  <text x="218.745" y="39.408" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.8" text-anchor="middle" fill="#22307C">9</text>
+  <text x="199" y="48.824" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.4" text-anchor="middle" fill="#22307C">RANGE</text>
+  <line x1="239.4" y1="41.896" x2="237.9" y2="44.494" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="233.104" y1="35.6" x2="230.506" y2="37.1" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="230.8" y1="27" x2="227.8" y2="27" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="233.104" y1="18.4" x2="230.506" y2="16.9" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="239.4" y1="12.104" x2="237.9" y2="9.506" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="248" y1="9.8" x2="248" y2="6.8" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="256.6" y1="12.104" x2="258.1" y2="9.506" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="262.896" y1="18.4" x2="265.494" y2="16.9" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="265.2" y1="27" x2="268.2" y2="27" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="262.896" y1="35.6" x2="265.494" y2="37.1" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="256.6" y1="41.896" x2="258.1" y2="44.494" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="237.067" y1="42.048" x2="236.127" y2="43.342" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="235.554" y1="40.822" x2="234.484" y2="42.012" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="234.178" y1="39.446" x2="232.988" y2="40.516" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="232.952" y1="37.933" x2="231.658" y2="38.873" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="231.008" y1="34.565" x2="229.546" y2="35.216" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="230.31" y1="32.748" x2="228.789" y2="33.242" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="229.806" y1="30.867" x2="228.241" y2="31.2" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="229.502" y1="28.944" x2="227.911" y2="29.111" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="229.502" y1="25.056" x2="227.911" y2="24.889" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="229.806" y1="23.133" x2="228.241" y2="22.8" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="230.31" y1="21.252" x2="228.789" y2="20.758" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="231.008" y1="19.435" x2="229.546" y2="18.784" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="232.952" y1="16.067" x2="231.658" y2="15.127" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="234.178" y1="14.554" x2="232.988" y2="13.484" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="235.554" y1="13.178" x2="234.484" y2="11.988" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="237.067" y1="11.952" x2="236.127" y2="10.658" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="240.435" y1="10.008" x2="239.784" y2="8.546" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="242.252" y1="9.31" x2="241.758" y2="7.789" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="244.133" y1="8.806" x2="243.8" y2="7.241" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="246.056" y1="8.502" x2="245.889" y2="6.911" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="249.944" y1="8.502" x2="250.111" y2="6.911" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="251.867" y1="8.806" x2="252.2" y2="7.241" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="253.748" y1="9.31" x2="254.242" y2="7.789" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="255.565" y1="10.008" x2="256.216" y2="8.546" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="258.933" y1="11.952" x2="259.873" y2="10.658" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="260.446" y1="13.178" x2="261.516" y2="11.988" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="261.822" y1="14.554" x2="263.012" y2="13.484" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="263.048" y1="16.067" x2="264.342" y2="15.127" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="264.992" y1="19.435" x2="266.454" y2="18.784" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="265.69" y1="21.252" x2="267.211" y2="20.758" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="266.194" y1="23.133" x2="267.759" y2="22.8" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="266.498" y1="25.056" x2="268.089" y2="24.889" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="266.498" y1="28.944" x2="268.089" y2="29.111" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="266.194" y1="30.867" x2="267.759" y2="31.2" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="265.69" y1="32.748" x2="267.211" y2="33.242" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="264.992" y1="34.565" x2="266.454" y2="35.216" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="263.048" y1="37.933" x2="264.342" y2="38.873" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="261.822" y1="39.446" x2="263.012" y2="40.516" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="260.446" y1="40.822" x2="261.516" y2="42.012" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <line x1="258.933" y1="42.048" x2="259.873" y2="43.342" stroke="#22307C" stroke-width="0.25" stroke-linecap="round"/>
+  <path d="M 237.9 44.494 A 20.2 20.2 0 1 1 258.1 44.494" fill="none" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="237.9" y1="44.494" x2="237.9" y2="46.8" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="258.1" y1="44.494" x2="258.1" y2="46.8" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <text x="228.255" y="39.408" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.8" text-anchor="middle" fill="#22307C">-4</text>
+  <text x="225.2" y="28.008" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.8" text-anchor="middle" fill="#22307C">-3</text>
+  <text x="228.255" y="16.608" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.8" text-anchor="middle" fill="#22307C">-2</text>
+  <text x="236.6" y="8.263" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.8" text-anchor="middle" fill="#22307C">-1</text>
+  <text x="248" y="5.208" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.8" text-anchor="middle" fill="#22307C">0</text>
+  <text x="259.4" y="8.263" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.8" text-anchor="middle" fill="#22307C">+1</text>
+  <text x="267.745" y="16.608" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.8" text-anchor="middle" fill="#22307C">+2</text>
+  <text x="270.8" y="28.008" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.8" text-anchor="middle" fill="#22307C">+3</text>
+  <text x="267.745" y="39.408" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.8" text-anchor="middle" fill="#22307C">+4</text>
+  <text x="248" y="48.824" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.4" text-anchor="middle" fill="#22307C">MANUAL</text>
+  <line x1="193.85" y1="75.92" x2="193.1" y2="77.219" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="190.08" y1="72.15" x2="188.781" y2="72.9" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="188.7" y1="67" x2="187.2" y2="67" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="190.08" y1="61.85" x2="188.781" y2="61.1" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="193.85" y1="58.08" x2="193.1" y2="56.781" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="199" y1="56.7" x2="199" y2="55.2" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="204.15" y1="58.08" x2="204.9" y2="56.781" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="207.92" y1="61.85" x2="209.219" y2="61.1" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="209.3" y1="67" x2="210.8" y2="67" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="207.92" y1="72.15" x2="209.219" y2="72.9" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="204.15" y1="75.92" x2="204.9" y2="77.219" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <text x="192.2" y="79.678" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">b</text>
+  <text x="199" y="54.3" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">0</text>
+  <text x="205.8" y="79.678" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">#</text>
+  <text x="199" y="84.224" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.4" text-anchor="middle" fill="#22307C">Fine Tune</text>
+  <line x1="242.85" y1="75.92" x2="242.1" y2="77.219" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="239.08" y1="72.15" x2="237.781" y2="72.9" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="237.7" y1="67" x2="236.2" y2="67" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="239.08" y1="61.85" x2="237.781" y2="61.1" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="242.85" y1="58.08" x2="242.1" y2="56.781" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="248" y1="56.7" x2="248" y2="55.2" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="253.15" y1="58.08" x2="253.9" y2="56.781" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="256.92" y1="61.85" x2="258.219" y2="61.1" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="258.3" y1="67" x2="259.8" y2="67" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="256.92" y1="72.15" x2="258.219" y2="72.9" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="253.15" y1="75.92" x2="253.9" y2="77.219" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <text x="241.2" y="79.678" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">b</text>
+  <text x="248" y="54.3" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">0</text>
+  <text x="254.8" y="79.678" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">#</text>
+  <text x="248" y="84.224" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.4" text-anchor="middle" fill="#22307C">Fine Tune</text>
+  <text x="216.5" y="61.716" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.1" text-anchor="middle" fill="#22307C">Freq</text>
+  <text x="230" y="61.716" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.1" text-anchor="middle" fill="#22307C">Dir</text>
+  <line x1="281.85" y1="35.42" x2="281.1" y2="36.719" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="278.08" y1="31.65" x2="276.781" y2="32.4" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="276.7" y1="26.5" x2="275.2" y2="26.5" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="278.08" y1="21.35" x2="276.781" y2="20.6" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="281.85" y1="17.58" x2="281.1" y2="16.281" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="287" y1="16.2" x2="287" y2="14.7" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="292.15" y1="17.58" x2="292.9" y2="16.281" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="295.92" y1="21.35" x2="297.219" y2="20.6" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="297.3" y1="26.5" x2="298.8" y2="26.5" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="295.92" y1="31.65" x2="297.219" y2="32.4" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="292.15" y1="35.42" x2="292.9" y2="36.719" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <text x="280.2" y="39.178" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">-5</text>
+  <text x="287" y="13.8" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">0</text>
+  <text x="293.8" y="39.178" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">+5</text>
+  <text x="287" y="43.724" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.4" text-anchor="middle" fill="#22307C">LIN</text>
+  <text x="287" y="84.224" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.4" text-anchor="middle" fill="#22307C">CV IN</text>
+  <line x1="273" y1="6.5" x2="284" y2="6.5" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <path d="M 284 6.5 A 3 3 0 0 1 287 9.5" fill="none" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="287" y1="9.5" x2="287" y2="10.6" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <line x1="287" y1="45.3" x2="287" y2="57.4" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
+  <text x="318" y="7.316" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.1" text-anchor="middle" fill="#22307C">LFO</text>
+  <text x="318" y="11.016" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.1" text-anchor="middle" fill="#22307C">FREQ</text>
+  <line x1="312.85" y1="35.42" x2="312.1" y2="36.719" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="309.08" y1="31.65" x2="307.781" y2="32.4" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="307.7" y1="26.5" x2="306.2" y2="26.5" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="309.08" y1="21.35" x2="307.781" y2="20.6" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="312.85" y1="17.58" x2="312.1" y2="16.281" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="318" y1="16.2" x2="318" y2="14.7" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="323.15" y1="17.58" x2="323.9" y2="16.281" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="326.92" y1="21.35" x2="328.219" y2="20.6" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="328.3" y1="26.5" x2="329.8" y2="26.5" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="326.92" y1="31.65" x2="328.219" y2="32.4" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="323.15" y1="35.42" x2="323.9" y2="36.719" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <text x="311.2" y="39.178" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">0</text>
+  <text x="306.222" y="34.2" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">1</text>
+  <text x="304.4" y="27.4" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">2</text>
+  <text x="306.222" y="20.6" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">3</text>
+  <text x="311.2" y="15.622" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">4</text>
+  <text x="318" y="13.8" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">5</text>
+  <text x="324.8" y="15.622" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">6</text>
+  <text x="329.778" y="20.6" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">7</text>
+  <text x="331.6" y="27.4" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">8</text>
+  <text x="329.778" y="34.2" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">9</text>
+  <text x="324.8" y="39.178" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">10</text>
+  <line x1="312.85" y1="59.92" x2="312.1" y2="61.219" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="309.08" y1="56.15" x2="307.781" y2="56.9" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="307.7" y1="51" x2="306.2" y2="51" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="309.08" y1="45.85" x2="307.781" y2="45.1" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="312.85" y1="42.08" x2="312.1" y2="40.781" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="318" y1="40.7" x2="318" y2="39.2" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="323.15" y1="42.08" x2="323.9" y2="40.781" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="326.92" y1="45.85" x2="328.219" y2="45.1" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="328.3" y1="51" x2="329.8" y2="51" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="326.92" y1="56.15" x2="328.219" y2="56.9" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="323.15" y1="59.92" x2="323.9" y2="61.219" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <text x="311.2" y="63.678" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">0</text>
+  <text x="318" y="38.3" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">5</text>
+  <text x="324.8" y="63.678" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">10</text>
+  <text x="318" y="68.224" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.4" text-anchor="middle" fill="#22307C">AMPLITUDE</text>
+  <text x="314.7" y="72.736" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.6" text-anchor="middle" fill="#22307C">EXP</text>
+  <text x="314.7" y="83.136" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.6" text-anchor="middle" fill="#22307C">LIN</text>
+  <polyline points="319.7,73 321.3,70.6 322.9,73" fill="none" stroke="#22307C" stroke-width="0.35" stroke-linejoin="round"/>
+  <polyline points="319.7,83.6 319.7,81 322.9,81 322.9,83.6" fill="none" stroke="#22307C" stroke-width="0.35" stroke-linejoin="round"/>
+  <text x="381.25" y="9.682" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="6.2" text-anchor="middle" fill="none" font-weight="600" stroke="#22307C" stroke-width="0.28" stroke-linejoin="round" textLength="86.5" lengthAdjust="spacingAndGlyphs">JH FS-1A FREQUENCY SHIFTER</text>
+  <text x="381.25" y="48.296" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.6" text-anchor="middle" fill="#22307C">diysynth.de</text>
+  <line x1="342.85" y1="35.42" x2="342.1" y2="36.719" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="339.08" y1="31.65" x2="337.781" y2="32.4" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="337.7" y1="26.5" x2="336.2" y2="26.5" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="339.08" y1="21.35" x2="337.781" y2="20.6" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="342.85" y1="17.58" x2="342.1" y2="16.281" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="348" y1="16.2" x2="348" y2="14.7" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="353.15" y1="17.58" x2="353.9" y2="16.281" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="356.92" y1="21.35" x2="358.219" y2="20.6" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="358.3" y1="26.5" x2="359.8" y2="26.5" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="356.92" y1="31.65" x2="358.219" y2="32.4" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="353.15" y1="35.42" x2="353.9" y2="36.719" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <text x="341.2" y="39.178" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">dry</text>
+  <text x="354.8" y="39.178" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">wet</text>
+  <text x="348" y="43.724" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.4" text-anchor="middle" fill="#22307C">Mix A</text>
+  <line x1="366.85" y1="35.42" x2="366.1" y2="36.719" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="363.08" y1="31.65" x2="361.781" y2="32.4" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="361.7" y1="26.5" x2="360.2" y2="26.5" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="363.08" y1="21.35" x2="361.781" y2="20.6" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="366.85" y1="17.58" x2="366.1" y2="16.281" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="372" y1="16.2" x2="372" y2="14.7" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="377.15" y1="17.58" x2="377.9" y2="16.281" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="380.92" y1="21.35" x2="382.219" y2="20.6" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="382.3" y1="26.5" x2="383.8" y2="26.5" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="380.92" y1="31.65" x2="382.219" y2="32.4" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="377.15" y1="35.42" x2="377.9" y2="36.719" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <text x="365.2" y="39.178" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">0</text>
+  <text x="372" y="13.8" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">5</text>
+  <text x="378.8" y="39.178" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">10</text>
+  <text x="372" y="43.724" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.4" text-anchor="middle" fill="#22307C">Vol A</text>
+  <text x="389" y="19.616" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.1" text-anchor="middle" fill="#22307C">Up</text>
+  <text x="389" y="35.616" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.1" text-anchor="middle" fill="#22307C">Down</text>
+  <text x="402" y="35.616" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.1" text-anchor="middle" fill="#22307C">Bypass</text>
+  <text x="416.5" y="43.724" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.4" text-anchor="middle" fill="#22307C">OUT A</text>
+  <line x1="342.85" y1="75.92" x2="342.1" y2="77.219" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="339.08" y1="72.15" x2="337.781" y2="72.9" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="337.7" y1="67" x2="336.2" y2="67" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="339.08" y1="61.85" x2="337.781" y2="61.1" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="342.85" y1="58.08" x2="342.1" y2="56.781" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="348" y1="56.7" x2="348" y2="55.2" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="353.15" y1="58.08" x2="353.9" y2="56.781" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="356.92" y1="61.85" x2="358.219" y2="61.1" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="358.3" y1="67" x2="359.8" y2="67" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="356.92" y1="72.15" x2="358.219" y2="72.9" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="353.15" y1="75.92" x2="353.9" y2="77.219" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <text x="341.2" y="79.678" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">dry</text>
+  <text x="354.8" y="79.678" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">wet</text>
+  <text x="348" y="84.224" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.4" text-anchor="middle" fill="#22307C">Mix B</text>
+  <line x1="366.85" y1="75.92" x2="366.1" y2="77.219" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="363.08" y1="72.15" x2="361.781" y2="72.9" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="361.7" y1="67" x2="360.2" y2="67" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="363.08" y1="61.85" x2="361.781" y2="61.1" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="366.85" y1="58.08" x2="366.1" y2="56.781" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="372" y1="56.7" x2="372" y2="55.2" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="377.15" y1="58.08" x2="377.9" y2="56.781" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="380.92" y1="61.85" x2="382.219" y2="61.1" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="382.3" y1="67" x2="383.8" y2="67" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="380.92" y1="72.15" x2="382.219" y2="72.9" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <line x1="377.15" y1="75.92" x2="377.9" y2="77.219" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
+  <text x="365.2" y="79.678" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">0</text>
+  <text x="372" y="54.3" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">5</text>
+  <text x="378.8" y="79.678" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#22307C">10</text>
+  <text x="372" y="84.224" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.4" text-anchor="middle" fill="#22307C">Vol B</text>
+  <text x="389" y="60.116" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.1" text-anchor="middle" fill="#22307C">Up</text>
+  <text x="389" y="76.116" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.1" text-anchor="middle" fill="#22307C">Down</text>
+  <text x="402" y="76.116" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.1" text-anchor="middle" fill="#22307C">Bypass</text>
+  <text x="416.5" y="84.224" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.4" text-anchor="middle" fill="#22307C">OUT B</text>
+</svg>

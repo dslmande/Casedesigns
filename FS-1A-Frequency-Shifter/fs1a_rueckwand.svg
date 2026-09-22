@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="437.0mm" height="88.1mm" viewBox="0 0 437.0 88.1">
+  <title>JH FS-1A FREQUENCY SHIFTER – Frontpanel 19" 2HE</title>
+  <g inkscape:groupmode="layer" inkscape:label="0 Hintergrund (Vorschau)" id="layer0">
+    <rect x="0" y="0" width="437.0" height="88.1" rx="2.0" fill="#F2E7C6"/>
+  </g>
+  <g inkscape:groupmode="layer" inkscape:label="1 Kontur" id="layer1">
+    <rect x="0" y="0" width="437.0" height="88.1" rx="2.0" fill="none" stroke="#22307C" stroke-width="0.2"/>
+  </g>
+  <g inkscape:groupmode="layer" inkscape:label="2 Ausschnitte" id="layer2">
+    <circle cx="5" cy="4.9" r="2.65" fill="#FFFFFF" stroke="#22307C" stroke-width="0.15"/>
+    <circle cx="5" cy="83.2" r="2.65" fill="#FFFFFF" stroke="#22307C" stroke-width="0.15"/>
+    <circle cx="432" cy="4.9" r="2.65" fill="#FFFFFF" stroke="#22307C" stroke-width="0.15"/>
+    <circle cx="432" cy="83.2" r="2.65" fill="#FFFFFF" stroke="#22307C" stroke-width="0.15"/>
+    <circle cx="40" cy="58.1" r="6" fill="#FFFFFF" stroke="#22307C" stroke-width="0.15"/>
+  </g>
+  <g inkscape:groupmode="layer" inkscape:label="3 Druck" id="layer3">
+
+  </g>
+  <g inkscape:groupmode="layer" inkscape:label="4 Bauteile (Vorschau)" id="layer4">
+    <circle cx="5" cy="4.9" r="4.3" fill="#1C1C1C" stroke="none" stroke-width="0"/>
+    <circle cx="5" cy="4.9" r="2.2" fill="none" stroke="#3C3C3C" stroke-width="0.45"/>
+    <circle cx="5" cy="83.2" r="4.3" fill="#1C1C1C" stroke="none" stroke-width="0"/>
+    <circle cx="5" cy="83.2" r="2.2" fill="none" stroke="#3C3C3C" stroke-width="0.45"/>
+    <circle cx="432" cy="4.9" r="4.3" fill="#1C1C1C" stroke="none" stroke-width="0"/>
+    <circle cx="432" cy="4.9" r="2.2" fill="none" stroke="#3C3C3C" stroke-width="0.45"/>
+    <circle cx="432" cy="83.2" r="4.3" fill="#1C1C1C" stroke="none" stroke-width="0"/>
+    <circle cx="432" cy="83.2" r="2.2" fill="none" stroke="#3C3C3C" stroke-width="0.45"/>
+    <circle cx="40" cy="58.1" r="6" fill="#2A2A2A"/>
+  </g>
+  <g inkscape:groupmode="layer" inkscape:label="5 Bohrmaße" id="layer5" style="display:none">
+    <text x="8.45" y="5.548" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="1.8" text-anchor="start" fill="#C0392B">Ø5.3</text>
+    <text x="8.45" y="83.848" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="1.8" text-anchor="start" fill="#C0392B">Ø5.3</text>
+    <text x="435.45" y="5.548" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="1.8" text-anchor="start" fill="#C0392B">Ø5.3</text>
+    <text x="435.45" y="83.848" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="1.8" text-anchor="start" fill="#C0392B">Ø5.3</text>
+    <text x="46.8" y="58.748" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="1.8" text-anchor="start" fill="#C0392B">Ø12</text>
+  </g>
+</svg>

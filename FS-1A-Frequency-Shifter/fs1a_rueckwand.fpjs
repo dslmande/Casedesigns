@@ -1,0 +1,39 @@
+// FS-1A Frontpanel – erzeugt von fs1a_panel.py
+// Ausführen in Schaeffer FrontDesign: Bearbeiten → Skripte → Hinzufügen (diese Datei) → Start
+// oder Inhalt in das PastePad kopieren und Start drücken.
+// Koordinaten in mm, Ursprung unten links (FrontDesign-Konvention).
+
+var SAVE_AS  = "/Users/patrickjoricke/Claude/code/haible-fs1a/frontpanel/fs1a_rueckwand.fpd";   // "" = nicht speichern, nur anzeigen
+var PRINTED  = false;   // true: Elemente drucken statt gravieren
+var INK      = engrave_night_blue;
+var FONT     = "helvetica-light-1stroke";
+var FONT_TTL = "helvetica-medium-outline";
+
+var fp = new Frontpanel("FS-1A Rückwand", thick_2mm, 437, 88.1, alu_elox, elox_natural);
+fp.SetCornerRadii(2, 2, 2, 2);
+fp.SetRemark("FS-1A Rückwand, Gehäuse 437 mm (Gie-Tec Seitenteilprofil 4). Bohrung Ø12 für Kabeldurchführung.");
+
+function text(name, s, x, y, size, align, font) {
+    var t = new TextEngraving(name, s);
+    try { t.SetFont(font + ":" + size + "mm"); } catch (e) {}
+    try { t.SetTextSize(size); } catch (e) {}
+    t.SetAlignment(align);
+    try { t.SetVAlignment(valign_center); } catch (e) {}
+    t.SetColor(INK);
+    fp.AddElement(t, x, y);
+    return t;
+}
+
+fp.AddElement(new DrillHole("B001 M5 in Schraubkanal Seitenteilprofil 4", 5.3), 5, 83.2);
+fp.AddElement(new DrillHole("B002 M5 in Schraubkanal Seitenteilprofil 4", 5.3), 5, 4.9);
+fp.AddElement(new DrillHole("B003 M5 in Schraubkanal Seitenteilprofil 4", 5.3), 432, 83.2);
+fp.AddElement(new DrillHole("B004 M5 in Schraubkanal Seitenteilprofil 4", 5.3), 432, 4.9);
+fp.AddElement(new DrillHole("B005 40 mm von links, 30 mm von unten", 12), 40, 30);
+
+if (PRINTED) { try { fp.SetPrinted(); } catch (e) { Print("SetPrinted nicht verfügbar\n"); } }
+AddFrontpanel(fp);
+if (SAVE_AS != "") {
+    try { SaveFrontpanel(fp, SAVE_AS, true); Print("Gespeichert: " + SAVE_AS + "\n"); }
+    catch (e) { Print("Speichern fehlgeschlagen: " + e + "\n"); }
+}
+Print("FS-1A Frontpanel: " + fp.Count() + " Elemente\n");

@@ -1,0 +1,49 @@
+Nr;Bauteil;x_mm_von_links;y_mm_von_oben;Durchmesser_mm;Bemerkung
+1;Rack-Langloch;8.75;5.95;;10.0 x 6.4 mm
+2;Rack-Langloch;8.75;82.15;;10.0 x 6.4 mm
+3;Rack-Langloch;473.85;5.95;;10.0 x 6.4 mm
+4;Rack-Langloch;473.85;82.15;;10.0 x 6.4 mm
+5;Schraube M5;27.8;4.9;5.3;M5 in Schraubkanal Seitenteilprofil 4
+6;Schraube M5;27.8;83.2;5.3;M5 in Schraubkanal Seitenteilprofil 4
+7;Schraube M5;454.8;4.9;5.3;M5 in Schraubkanal Seitenteilprofil 4
+8;Schraube M5;454.8;83.2;5.3;M5 in Schraubkanal Seitenteilprofil 4
+9;Combo XLR/Klinke;52;26.5;24;Preamp, Neutrik NCJ6FI-S
+10;Combo-Schraube;42;15;3.2;M3, Neutrik-Zeichnung 3102ST1728 (20 x 23 mm)
+11;Combo-Schraube;62;38;3.2;M3, Neutrik-Zeichnung 3102ST1728 (20 x 23 mm)
+12;Poti;80;26.5;7.5;GAIN
+13;Kippschalter;101;26.5;6;PAD
+14;Poti;120.5;26.5;7.5;LEVEL
+15;Klinke 6,35;52;67;9.5;AUX
+16;Poti;80;67;7.5;LEVEL
+17;Kippschalter;101;67;6;Deep Phase/Norm
+18;Kippschalter;113;67;6;Up/Down
+19;Kippschalter;139.5;26.5;6;Invert +/-
+20;Poti;158.5;26.5;7.5;EXP
+21;Klinke 6,35;134;67;9.5;V/OCT
+22;Klinke 6,35;158.5;67;9.5;CV IN
+23;Poti (groß);199;27;7.5;RANGE
+24;Poti (groß);248;27;7.5;MANUAL
+25;Poti;199;67;7.5;Fine Tune
+26;Poti;248;67;7.5;Fine Tune
+27;LED;214;56;3.2;Freq Up
+28;LED;219;56;3.2;Freq Down
+29;LED;227.5;56;3.2;Dir Up
+30;LED;232.5;56;3.2;Dir Down
+31;Poti;287;26.5;7.5;LIN
+32;Klinke 6,35;287;67;9.5;CV IN
+33;Poti;318;26.5;7.5;LFO FREQ
+34;Poti;318;51;7.5;AMPLITUDE
+35;Kippschalter;308.5;77;6;LFO EXP/LIN
+36;Kippschalter;327.5;77;6;LFO Dreieck/Rechteck
+37;LED;318;77;3.2;LFO
+38;Poti;348;26.5;7.5;Mix A
+39;Poti;372;26.5;7.5;Vol A
+40;Kippschalter;389;26.5;6;Up/Down
+41;Kippschalter;402;26.5;6;Bypass
+42;Klinke 6,35;416.5;26.5;9.5;OUT A
+43;Poti;348;67;7.5;Mix B
+44;Poti;372;67;7.5;Vol B
+45;Kippschalter;389;67;6;Up/Down
+46;Kippschalter;402;67;6;Bypass
+47;Klinke 6,35;416.5;67;9.5;OUT B
+48;Netzschalter;436.5;44.05;;12.3 x 27.2 mm, R 1.0 – Marquardt 1555.3102 Wippschalter, Ausschnitt 27,2 ±0,1 x 12,2 +0,2 hochkant

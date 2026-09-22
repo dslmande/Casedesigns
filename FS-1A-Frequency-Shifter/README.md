@@ -191,7 +191,7 @@ after regenerating the print variant.
 
 ## License
 
-© 2026 Patrick Joricke (dsl-man.de / diysynth.de) — [CC BY-SA 4.0](../LICENSE). Build it, change it, sell it; credit the
+© 2026 Dsl-man.de — [CC BY-SA 4.0](../LICENSE). Build it, change it, sell it; credit the
 source and pass your changes on under the same license.
 
 ## Credits

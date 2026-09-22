@@ -13,7 +13,7 @@ Every design folder contains the generator scripts, the production files (Schaef
 
 ## License
 
-© 2026 Patrick Joricke (dsl-man.de / diysynth.de)
+© 2026 Dsl-man.de
 
 Licensed under [Creative Commons Attribution-ShareAlike 4.0 International](LICENSE)
 (CC BY-SA 4.0) — including the generator scripts. You may build, modify and redistribute

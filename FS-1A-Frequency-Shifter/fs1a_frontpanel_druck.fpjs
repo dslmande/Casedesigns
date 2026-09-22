@@ -78,6 +78,8 @@ fp.AddElement(new RectHole("R048 Netzschalter", 12.3, 27.2, 1), 436.5, 44.05);
 var pg = new PrintGraphic("Druckgrafik", "/Users/patrickjoricke/Claude/code/haible-fs1a/frontpanel/fs1a_frontpanel_druck.pdf", refpoint_leftbottom, 100, 100);
 fp.AddElement(pg, -1.058, -1.106);
 
+fp.AddElement(new Bolt("S049 Winkel Keystone 633 zum Blech", "GU30", 6), 241.3, 79.75);   // sitzt auf der Rueckseite
+fp.AddElement(new Bolt("S050 Winkel Keystone 633 zum Blech", "GU30", 6), 241.3, 8.35);   // sitzt auf der Rueckseite
 
 if (PRINTED) { try { fp.SetPrinted(); } catch (e) { Print("SetPrinted nicht verfügbar\n"); } }
 AddFrontpanel(fp);

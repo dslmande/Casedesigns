@@ -85,6 +85,7 @@ Konturen. Ebene `DRUCK` enthält den Text als Pfade (Strichschrift). Auch für K
 | Netzschalter | 12,3 × 27,2, R 1 | Marquardt 1555.3102 Wippschalter (Reichelt WIPPE 1555.3102), Snap-in, hochkant; Datenblatt 27,2 ±0,1 × 12,2 +0,2, Wandstärke 0,8–5 mm, Blende 30 × 15. Keine On/Off-Beschriftung |
 | Schrauben M5 | 5,3 | 4 × Befestigung an den Seitenteilprofilen (x 27,8 / 454,8, y 4,9 / 83,2) |
 | Rack-Langlöcher | 10 × 6,4 | Lochmitten 465,1 mm, ±38,1 mm von der Panelmitte |
+| Gewindebolzen M3 | kein Loch | 2 × Einklebebolzen GU30, 6 mm, auf der **Rückseite** bei x 241,3 / y 8,35 und 79,75 |
 
 Vor der Bestellung die Durchmesser mit den tatsächlich verwendeten Bauteilen abgleichen.
 
@@ -104,6 +105,26 @@ Gehäuse-Außenbreite `BOX_WIDTH = 437` mm → Profile belegen hinter der Blende
 - keine Befestigungsschrauben in der Blendenmitte (dort gibt es keinen Gegenhalt)
 
 `pruefung_gehaeusezonen.png` zeigt die Profilzonen rot über dem Layout.
+
+## Versteifung: Winkel zwischen Blende und Blechen
+
+Damit sich die Blende nicht gegen die Bleche verwindet, sitzt oben und unten mittig je ein
+**Gewindebolzen M3** auf der Rückseite der Frontplatte (FrontDesign-Element `Bolt`,
+Typ GU30 = Einklebebolzen mit 3-mm-Gewinde, 6 mm lang). Darauf kommt ein Winkel
+**Keystone 633**, dessen zweiter Schenkel ans Deckel- bzw. Bodenblech geschraubt wird.
+
+Maße des Winkels (Messing vernickelt): Schenkel 9,5 × 9,5 mm, Breite 7,1 mm, Material
+0,81 mm, beide Löcher Ø 3,7 mm, **Lochmitte je 5,5 mm von der Außenfläche des anderen
+Schenkels**. Daraus folgt alles Weitere:
+
+| Merkmal | Wert |
+|---|---|
+| Bolzen Frontplatte | x 241,3 (Mitte), y **8,35** von oben bzw. **79,75** von unten gerechnet ab Oberkante |
+| Loch in Deckel und Boden | Ø **3,1**, mittig (208 mm von der linken Kante), **5,5 mm von der Vorderkante** |
+| Abstand Bolzenachse ↔ Blechfläche | 5,5 mm (= Maß D des Winkels) |
+| Nächstes Bauteil | Fine-Tune-Poti, 14,4 mm entfernt – frei |
+
+Zusätzlich nötig: 2 × Mutter M3 (auf die Bolzen), 2 × Schraube M3 + Mutter (Winkel ans Blech).
 
 ## Rückwand – `fs1a_rueckwand.fpd`
 
@@ -129,8 +150,11 @@ Gehäusetiefe `BOX_DEPTH = 250` mm (Profillänge), Außentiefe 254 mm mit Front 
 | 2 | Seitenteilprofil | Gie-Tec 122040, Zuschnitt **250 mm** (Sonderlänge bestellbar) |
 | 1 | Frontplatte | 482,6 × 88,1 × 2 – `fs1a_frontpanel.fpd` bzw. `_druck.fpd` |
 | 1 | Rückwand | 437 × 88,1 × 2 – `fs1a_rueckwand.fpd` |
-| 2 | Deckel / Boden | **416 × 249,5 × 1,5 mm Alu-Blech** – `fs1a_deckel_boden.dxf` |
+| 2 | Deckel / Boden | **416 × 249,5 × 1,5 mm Alu-Blech**, 1 Loch Ø 3,1 – `fs1a_deckel_boden.dxf` |
 | 8 | Schraube M5 | gewindeformend in die Profilkanäle, 4 vorn + 4 hinten |
+| 2 | Winkel Keystone 633 | Blende oben/unten mittig an Deckel und Boden |
+| 2 | Mutter M3 | auf die Gewindebolzen der Blende |
+| 2 | Schraube M3 + Mutter | Winkel an Deckel/Boden |
 
 Blechmaße aus der Profilkontur (`gietec_122040_profil.dat`, aus Gie-Tecs `cad_122040.dxf`):
 Blechnut 1,6 mm breit auf Höhe 1,4–3,0 bzw. 85,3–86,9 mm, Nutgrund 10 mm hinter der

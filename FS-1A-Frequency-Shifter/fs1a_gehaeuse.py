@@ -28,22 +28,27 @@ BOX_WIDTH = p.BOX_WIDTH       # 437 mm, Außenfläche zu Außenfläche
 BOX_DEPTH = 250.0             # Profillänge = Gehäusetiefe ohne Front/Rückwand
 PANEL_T = 2.0                 # Dicke Frontplatte und Rückwand
 
-# Profilmaße (aus der CAD-Datei)
-PROF_H = 88.30
+# Profilmaße – die gemeinsamen Werte stehen in fs1a_panel.py
+PROF_H = p.PROF_H
 PROF_W = 20.50
-GROOVE_BOTTOM = 10.0          # Nutgrund, von der Außenfläche des Profils
-GROOVE_MOUTH = 13.0           # Nutöffnung (Innenkante des Profilfußes)
-GROOVE_LO = (1.4, 3.0)        # Nut unten: Höhenband
-GROOVE_HI = (PROF_H - 3.0, PROF_H - 1.4)
-SCREW_INSET = 5.0
-SCREW_PITCH = 78.3
+GROOVE_BOTTOM = p.GROOVE_BOTTOM   # Nutgrund, von der Außenfläche des Profils
+GROOVE_MOUTH = 13.0               # Nutöffnung (Innenkante des Profilfußes)
+GROOVE_LO, GROOVE_HI = p.GROOVE_LO, p.GROOVE_HI
+SCREW_INSET = p.PROFILE_HOLE_INSET
+SCREW_PITCH = p.PROFILE_HOLE_PITCH
 
 # Deckel/Boden
-COVER_T = 1.5                 # Blechdicke (Nut nimmt bis 1,6 mm)
+COVER_T = p.COVER_T           # Blechdicke (Nut nimmt bis 1,6 mm)
 COVER_PLAY = 1.0              # Untermaß in der Breite, damit es sich schieben lässt
 COVER_W = BOX_WIDTH - 2 * GROOVE_BOTTOM - COVER_PLAY      # 416,0 mm
 COVER_L = BOX_DEPTH - 0.5     # 0,5 mm kürzer als die Profile
 NAME = "fs1a_deckel_boden"
+
+# Loch für den Montagewinkel (Keystone 633) zum Gewindebolzen der Frontplatte.
+# Der Winkel liegt mit einem Schenkel am Blech, seine Lochmitte sitzt 5,5 mm von der
+# Blechvorderkante; das Blech schließt vorn bündig mit der Blendenrückseite ab.
+COVER_HOLE_D = 3.1
+COVER_HOLE_FROM_FRONT = p.BRACKET_HOLE_OFF
 
 
 def build_cover():
@@ -51,6 +56,8 @@ def build_cover():
     p.CUTS.clear()
     p.PRINT.clear()
     p.PREV.clear()
+    p.hole("Winkelschraube M3", COVER_W / 2, COVER_HOLE_FROM_FRONT, COVER_HOLE_D,
+           "Keystone 633 auf den Gewindebolzen der Frontplatte")
 
 
 # ------------------------------------------------------- Querschnittzeichnung
@@ -143,16 +150,28 @@ def write_cover_drawing(path):
                 f'fill="#C0392B" font-family="{p.FONT}" transform="rotate(-90 {x - 4} '
                 f'{(y1 + y2) / 2})">{txt}</text>')
 
+    hx, hy = W_ / 2, COVER_HOLE_FROM_FRONT
+    g.append(f'<circle cx="{hx}" cy="{hy}" r="{COVER_HOLE_D / 2}" fill="#fff" stroke="#333" '
+             f'stroke-width="0.4"/>'
+             f'<line x1="{hx - 4}" y1="{hy}" x2="{hx + 4}" y2="{hy}" stroke="#C0392B" stroke-width="0.3"/>'
+             f'<line x1="{hx}" y1="{hy - 4}" x2="{hx}" y2="{hy + 4}" stroke="#C0392B" stroke-width="0.3"/>'
+             f'<text x="{hx + 7}" y="{hy + 3.5}" font-size="9" fill="#C0392B" '
+             f'font-family="{p.FONT}">&#216;{COVER_HOLE_D}</text>')
     g.append(dimh(-12, 0, W_, f"{W_:.0f} mm"))
     g.append(dimv(-12, 0, L_, f"{L_:.1f} mm"))
     g.append(f'<text x="{W_ / 2}" y="{L_ / 2 - 8}" font-size="13" text-anchor="middle" fill="#333" '
              f'font-family="{p.FONT}">FS-1A Deckel und Boden</text>')
     g.append(f'<text x="{W_ / 2}" y="{L_ / 2 + 8}" font-size="9.5" text-anchor="middle" fill="#333" '
-             f'font-family="{p.FONT}">Aluminium {COVER_T} mm, 2 Stück, keine Bohrungen – '
-             f'Kanten entgratet</text>')
+             f'font-family="{p.FONT}">Aluminium {COVER_T} mm, 2 Stück – Kanten entgratet</text>')
     g.append(f'<text x="{W_ / 2}" y="{L_ / 2 + 21}" font-size="9.5" text-anchor="middle" fill="#333" '
              f'font-family="{p.FONT}">schiebt in die Blechnuten des Gie-Tec Seitenteilprofils 4 '
              f'(Nut 1,6 mm, Eingriff 2,5 mm je Seite)</text>')
+    g.append(f'<text x="{W_ / 2}" y="{L_ / 2 + 32}" font-size="9" text-anchor="middle" '
+             f'fill="#C0392B" font-family="{p.FONT}">Bohrung &#216;{COVER_HOLE_D} mittig, '
+             f'{COVER_HOLE_FROM_FRONT} mm von der Vorderkante</text>')
+    g.append(f'<text x="{W_ / 2}" y="{L_ / 2 + 44}" font-size="9" text-anchor="middle" '
+             f'fill="#C0392B" font-family="{p.FONT}">für Winkel Keystone 633 zum '
+             f'Gewindebolzen der Frontplatte</text>')
     Path(path).write_text(
         f'<?xml version="1.0" encoding="UTF-8"?>\n<svg xmlns="http://www.w3.org/2000/svg" '
         f'width="{W_ + 2 * m}mm" height="{L_ + 2 * m}mm" '
@@ -168,6 +187,9 @@ def stueckliste():
         ("1", "Rückwand", f"{BOX_WIDTH:.0f} x {p.H_FRONT} x {PANEL_T:.0f} mm – fs1a_rueckwand.fpd"),
         ("2", "Deckel / Boden", f"{COVER_W:.0f} x {COVER_L:.1f} x {COVER_T} mm Alu-Blech – {NAME}.dxf (Blechzuschnitt)"),
         ("8", "Schraube M5", "Blechschraube/gewindeformend in die Profilkanäle, 4 vorn + 4 hinten"),
+        ("2", "Winkel", "Keystone 633, Frontplatte oben/unten mittig an Deckel und Boden"),
+        ("2", "Mutter M3", "auf die Gewindebolzen der Frontplatte"),
+        ("2", "Schraube M3", "Winkel an Deckel/Boden, mit Mutter"),
     ]
     w = max(len(r[1]) for r in rows)
     print("\nStückliste Gehäuse")
@@ -186,7 +208,8 @@ if __name__ == "__main__":
     p.write_svg(OUT / f"{NAME}.svg", preview=False)
     p.write_dxf(OUT / f"{NAME}.dxf")
     write_cover_drawing(OUT / f"{NAME}_zeichnung.svg")
-    print(f"{NAME}.svg / .dxf / _zeichnung.svg  ({COVER_W:.1f} x {COVER_L:.1f} x {COVER_T} mm, 2 Stück)")
+    p.write_holes(OUT / f"{NAME}_bohrungen.csv")
+    print(f"{NAME}.svg / .dxf / _zeichnung.svg / _bohrungen.csv  ({COVER_W:.1f} x {COVER_L:.1f} x {COVER_T} mm, 2 Stück)")
     print("  Hinweis: Schaeffer fertigt diese Größe nicht in 1,5 mm (geprüft im "
           "Frontplatten Designer) – Blechzuschnitt beim Blechner bestellen.")
     print("fs1a_gehaeuse_schnitt.svg")

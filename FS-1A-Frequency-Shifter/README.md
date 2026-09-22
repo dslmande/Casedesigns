@@ -23,8 +23,11 @@ PCB files.
 | 1 | Front panel | 482.6 × 88.1 × 2 mm, corner R2 | `fs1a_frontpanel.fpd` or `fs1a_frontpanel_druck.fpd` |
 | 1 | Rear panel | 437 × 88.1 × 2 mm, corner R2 | `fs1a_rueckwand.fpd` |
 | 2 | Side rail | Gie-Tec *Seitenteilprofil 4* (art. 122040), cut to **250 mm** | purchased part |
-| 2 | Top / bottom cover | 416 × 249.5 × **1.5 mm** aluminium sheet | `fs1a_deckel_boden.dxf` |
+| 2 | Top / bottom cover | 416 × 249.5 × **1.5 mm** aluminium sheet, one Ø3.1 hole | `fs1a_deckel_boden.dxf` |
 | 8 | Screw M5 | thread-forming, into the rail screw channels (4 front, 4 rear) | — |
+| 2 | Angle bracket | Keystone **633**, panel to top and bottom cover | — |
+| 2 | Nut M3 | onto the panel studs | — |
+| 2 | Screw M3 + nut | bracket to cover | — |
 
 Overall size **482.6 × 88.1 × 254 mm** (panel), body 437 mm wide, 250 mm deep.
 Aluminium volume 769.7 cm³ ≈ **2.1 kg**.
@@ -68,11 +71,30 @@ contains no holes or panel outline — as required by Schaeffer's print-data gui
 | Power rocker | 12.3 × 27.2, R1 | Marquardt 1555.3102, snap-in, mounted upright; datasheet cut-out 27.2 ±0.1 × 12.2 +0.2, panel 0.8–5 mm |
 | M5 fixing screws | 5.3 | x 27.8 / 454.8, y 4.9 / 83.2 |
 | Rack slots | 10 × 6.4 | 465.1 mm pitch, ±38.1 mm from panel centre |
+| M3 studs | no hole | 2 × glued-in stud GU30, 6 mm, on the **rear face** at x 241.3, y 8.35 and 79.75 |
 
 Full list with coordinates: `fs1a_frontpanel_bohrungen.csv`
 (columns: no., part, x from left, y from top, Ø, note).
 
 ---
+
+## Stiffening brackets
+
+To stop the panel twisting against the covers, an **M3 stud** sits on the rear face of the
+front panel, top and bottom centre (FrontDesign `Bolt`, type GU30 = glued-in stud with
+3 mm thread, 6 mm long). A **Keystone 633** angle bracket goes onto the stud, its other
+leg is screwed to the top or bottom cover.
+
+Bracket data (nickel-plated brass): legs 9.5 × 9.5 mm, width 7.1 mm, material 0.81 mm,
+both holes Ø3.7 mm, **hole centre 5.5 mm from the outer face of the other leg**. Everything
+else follows from that:
+
+| Feature | Value |
+|---|---|
+| Stud on the panel | x 241.3 (centre), y **8.35** and **79.75** from the top edge |
+| Hole in top and bottom cover | Ø **3.1**, centred (208 mm from the left edge), **5.5 mm from the front edge** |
+| Stud axis to sheet face | 5.5 mm (= bracket dimension D) |
+| Nearest component | Fine Tune pot, 14.4 mm away — clear |
 
 ## Rear panel
 
@@ -111,7 +133,7 @@ body may reach into those zones — the generator keeps them clear, and
 
 ## 3D assembly
 
-`fs1a_gehaeuse.step` — STEP AP214, six named solids, built with FreeCAD from the same
+`fs1a_gehaeuse.step` — STEP AP214, eight named solids, built with FreeCAD from the same
 geometry model:
 
 | Solid | Size (mm) | Volume |
@@ -119,7 +141,8 @@ geometry model:
 | Frontplatte (front panel) | 482.6 × 2 × 88.1 | 79.98 cm³ |
 | Rueckwand (rear panel) | 437 × 2 × 88.1 | 76.59 cm³ |
 | Seitenteil links / rechts (side rails) | 20.5 × 250 × 88.3 | 150.86 cm³ each |
-| Deckel / Boden (top / bottom cover) | 416 × 249.5 × 1.5 | 155.69 cm³ each |
+| Deckel / Boden (top / bottom cover) | 416 × 249.5 × 1.5 | 155.68 cm³ each |
+| Gewindebolzen oben / unten (studs) | Ø3 × 6 | 0.04 cm³ each |
 
 Origin: X = width from the left panel edge, Y = depth from the back of the front panel
 (+Y rearwards), Z = height from the bottom panel edge. The rails protrude 0.1 mm above

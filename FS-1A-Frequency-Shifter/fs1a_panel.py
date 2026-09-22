@@ -108,12 +108,31 @@ X_OUT_C = (X_LFO + X1) / 2
 PROFILE_HOLE_PITCH = 78.3
 PROFILE_HOLE_INSET = 5.0
 PROFILE_FACE = 16.0           # so weit ragt das Profil hinter der Blende nach innen
+PROF_H = 88.30                # Profilhöhe
+GROOVE_LO = (1.4, 3.0)        # Blechnut unten: Höhenband über der Profilunterkante
+GROOVE_HI = (PROF_H - 3.0, PROF_H - 1.4)      # Blechnut oben
+GROOVE_BOTTOM = 10.0          # Nutgrund, von der Außenfläche des Profils
+COVER_T = 1.5                 # Deckel-/Bodenblech
+# Montagewinkel Keystone 633 (Messing vernickelt): Schenkel 9,5 x 9,5 mm, Breite 7,1 mm,
+# Materialstärke 0,81 mm, beide Löcher Ø3,7 – Lochmitte je 5,5 mm von der Außenfläche des
+# jeweils anderen Schenkels. Ein Schenkel kommt auf den Gewindebolzen hinter der Blende,
+# der andere wird ans Deckel- bzw. Bodenblech geschraubt.
+BRACKET_HOLE_OFF = 5.5
+BRACKET_T = 0.81
+BOLT_TYPE, BOLT_LEN = "GU30", 6               # Einklebebolzen M3, 6 mm (kürzeste Länge)
 BOX_WIDTH = 437.0             # Außenbreite des Gehäuses (Außenfläche zu Außenfläche der Profile)
 X_PROFILE_IN_L = (W - BOX_WIDTH) / 2 + PROFILE_FACE      # ab hier ist hinter der Blende frei
 X_PROFILE_IN_R = W - X_PROFILE_IN_L
 X_EAR_L = (W - BOX_WIDTH) / 2 + PROFILE_HOLE_INSET
 X_EAR_R = W - X_EAR_L
 Y_EAR = (H / 2 - PROFILE_HOLE_PITCH / 2, H / 2 + PROFILE_HOLE_PITCH / 2)
+# Gewindebolzen mittig oben und unten: der Winkel liegt flach am Blech an, seine Lochmitte
+# sitzt 5,5 mm von der Blechfläche entfernt.
+Z_PROF = (H - PROF_H) / 2                                  # Profilunterkante zur Blendenunterkante
+_Z_COVER_LO = Z_PROF + GROOVE_LO[0] + ((GROOVE_LO[1] - GROOVE_LO[0]) - COVER_T) / 2 + COVER_T
+_Z_COVER_HI = Z_PROF + GROOVE_HI[0] + ((GROOVE_HI[1] - GROOVE_HI[0]) - COVER_T) / 2
+Y_BOLT_TOP = H - (_Z_COVER_HI - BRACKET_HOLE_OFF)          # von der Blendenoberkante
+Y_BOLT_BOT = H - (_Z_COVER_LO + BRACKET_HOLE_OFF)
 
 # ------------------------------------------------------- Geometriemodell
 # Koordinaten wie in der SVG: x nach rechts, y nach unten, Ursprung oben links.
@@ -164,6 +183,19 @@ def slot(x, y):
 
 def rect_cut(kind, x, y, w, h, r, note=""):
     CUTS.append(("rect", kind, x, y, w, h, r, note))
+
+
+BOLTS = []    # (x, y, typ, laenge, note) – Gewindebolzen auf der Rückseite, kein Loch
+
+
+def bolt(x, y, note="", typ=BOLT_TYPE, laenge=BOLT_LEN):
+    BOLTS.append((x, y, typ, laenge, note))
+    PREV.append(f'<circle cx="{f(x)}" cy="{f(y)}" r="3" fill="none" stroke="#8A8D92" '
+                f'stroke-width="0.3" stroke-dasharray="1.2 0.8"/>'
+                f'<line x1="{f(x - 2)}" y1="{f(y)}" x2="{f(x + 2)}" y2="{f(y)}" stroke="#8A8D92" '
+                f'stroke-width="0.25"/>'
+                f'<line x1="{f(x)}" y1="{f(y - 2)}" x2="{f(x)}" y2="{f(y + 2)}" stroke="#8A8D92" '
+                f'stroke-width="0.25"/>')
 
 
 # --------------------------------------------------------------- Skalen
@@ -469,6 +501,10 @@ def build():
         toggle(x_ud, yc, "Up", "Down", dy=8.0)
         toggle(x_byp, yc, None, "Bypass", dy=8.0)
         jack(x_out, yc, f"OUT {ch}")
+
+    # ---- Gewindebolzen M3 fuer die Montagewinkel zu Deckel und Boden
+    for by in (Y_BOLT_TOP, Y_BOLT_BOT):
+        bolt(W / 2, by, "Winkel Keystone 633 zum Blech")
 
     # ---- Netzschalter
     x_pwr, y_pwr = 436.5, H / 2               # Wippenkörper 12,3 breit: 430,4–442,7, 1,1 mm vor dem Profil
@@ -843,6 +879,10 @@ g.ChangePen(penLine);""")
         js.append(f'text({q(nm("T") + " " + s)}, {q(s)}, {f(x)}, {f(Y(y))}, '
                   f'{f(round(FPD_TEXT * size, 2))}, {align}, {font});')
 
+    for bx, by, typ, lng, note in BOLTS:
+        js.append(f'fp.AddElement(new Bolt({q(nm("S") + " " + note)}, {q(typ)}, {lng}), '
+                  f'{f(bx)}, {f(Y(by))});   // sitzt auf der Rueckseite')
+
     js.append("""
 if (PRINTED) { try { fp.SetPrinted(); } catch (e) { Print("SetPrinted nicht verfügbar\\n"); } }
 AddFrontpanel(fp);
@@ -870,6 +910,9 @@ def write_holes(path):
             else:
                 _, kind, x, y, cw, ch, r, note = c
                 w.writerow([i, kind, f(round(x, 3)), f(round(y, 3)), "", f"{cw} x {ch} mm, R {r} – {note}"])
+        for j, (x, y, typ, lng, note) in enumerate(BOLTS, len(CUTS) + 1):
+            w.writerow([j, "Gewindebolzen M3", f(round(x, 3)), f(round(y, 3)), "",
+                        f"kein Loch – Einklebebolzen {typ} {lng} mm auf der Rueckseite, {note}"])
 
 
 if __name__ == "__main__":

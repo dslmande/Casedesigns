@@ -477,6 +477,8 @@ text("T168 Up", "Up", 389, 29.1, 2.73, align_center, FONT);
 text("T169 Down", "Down", 389, 13.1, 2.73, align_center, FONT);
 text("T170 Bypass", "Bypass", 402, 13.1, 2.73, align_center, FONT);
 text("T171 OUT B", "OUT B", 416.5, 5.1, 2.99, align_center, FONT);
+fp.AddElement(new Bolt("S172 Winkel Keystone 633 zum Blech", "GU30", 6), 241.3, 79.75);   // sitzt auf der Rueckseite
+fp.AddElement(new Bolt("S173 Winkel Keystone 633 zum Blech", "GU30", 6), 241.3, 8.35);   // sitzt auf der Rueckseite
 
 if (PRINTED) { try { fp.SetPrinted(); } catch (e) { Print("SetPrinted nicht verfügbar\n"); } }
 AddFrontpanel(fp);

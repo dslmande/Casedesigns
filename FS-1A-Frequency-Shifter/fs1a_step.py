@@ -120,7 +120,17 @@ def cover_solid(top):
     z_lo = Z_PROF + (G.GROOVE_HI[0] if top else G.GROOVE_LO[0])
     z = z_lo + ((G.GROOVE_HI[1] - G.GROOVE_HI[0]) - G.COVER_T) / 2.0
     x = (FRONT_W - G.COVER_W) / 2.0
-    return Part.makeBox(G.COVER_W, G.COVER_L, G.COVER_T, Vector(x, 0, z))
+    body = Part.makeBox(G.COVER_W, G.COVER_L, G.COVER_T, Vector(x, 0, z))
+    hole = Part.makeCylinder(G.COVER_HOLE_D / 2.0, G.COVER_T + 2,
+                             Vector(FRONT_W / 2.0, G.COVER_HOLE_FROM_FRONT, z - 1),
+                             Vector(0, 0, 1))
+    return body.cut(hole)
+
+
+def bolt_solid(y_from_top):
+    """Gewindebolzen M3 auf der Rueckseite der Frontplatte."""
+    return Part.makeCylinder(3.0 / 2, P.BOLT_LEN,
+                             Vector(FRONT_W / 2.0, 0, FRONT_H - y_from_top), Vector(0, 1, 0))
 
 
 # --------------------------------------------------------------- Baugruppe
@@ -133,6 +143,8 @@ parts = [
     ("Seitenteil_rechts", profile_solid(+1)),
     ("Deckel", cover_solid(True)),
     ("Boden", cover_solid(False)),
+    ("Gewindebolzen_oben", bolt_solid(P.Y_BOLT_TOP)),
+    ("Gewindebolzen_unten", bolt_solid(P.Y_BOLT_BOT)),
 ]
 # Frontplatte nach vorn, Rückwand nach hinten schieben
 parts[0][1].translate(Vector(0, -FRONT_T, 0))

@@ -47,3 +47,5 @@ Nr;Bauteil;x_mm_von_links;y_mm_von_oben;Durchmesser_mm;Bemerkung
 46;Kippschalter;402;67;6;Bypass
 47;Klinke 6,35;416.5;67;9.5;OUT B
 48;Netzschalter;436.5;44.05;;12.3 x 27.2 mm, R 1.0 – Marquardt 1555.3102 Wippschalter, Ausschnitt 27,2 ±0,1 x 12,2 +0,2 hochkant
+49;Gewindebolzen M3;241.3;8.35;;kein Loch – Einklebebolzen GU30 6 mm auf der Rueckseite, Winkel Keystone 633 zum Blech
+50;Gewindebolzen M3;241.3;79.75;;kein Loch – Einklebebolzen GU30 6 mm auf der Rueckseite, Winkel Keystone 633 zum Blech

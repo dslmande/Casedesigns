@@ -20,7 +20,7 @@ PCB files.
 
 | Qty | Part | Size / spec | File |
 |---|---|---|---|
-| 1 | Front panel | 482.6 × 88.1 × 2 mm, corner R2 | `fs1a_frontpanel.fpd` or `fs1a_frontpanel_druck.fpd` |
+| 1 | Front panel | 482.6 × 88.1 × **3 mm**, corner R2 | `fs1a_frontpanel.fpd` or `fs1a_frontpanel_druck.fpd` |
 | 1 | Rear panel | 437 × 88.1 × 2 mm, corner R2 | `fs1a_rueckwand.fpd` |
 | 2 | Side rail | Gie-Tec *Seitenteilprofil 4* (art. 122040), cut to **250 mm** | purchased part |
 | 2 | Top / bottom cover | 416 × 249.5 × **1.5 mm** aluminium sheet, two Ø3.2 holes | `fs1a_deckel_boden.dxf` |
@@ -29,14 +29,14 @@ PCB files.
 | 2 | Nut M3 | onto the front panel studs | — |
 | 6 | Screw M3 + nut | 2 brackets to the rear panel, 4 to the covers | — |
 
-Overall size **482.6 × 88.1 × 254 mm** (panel), body 437 mm wide, 250 mm deep.
-Aluminium volume 769.7 cm³ ≈ **2.1 kg**.
+Overall size **482.6 × 88.1 × 255 mm** (panel), body 437 mm wide, 250 mm deep.
+Aluminium volume 809 cm³ ≈ **2.2 kg**.
 
 ---
 
 ## Front panel
 
-482.6 × 88.1 mm, 2 mm aluminium, **48 cutouts**, 123 legend items. Controls left to right:
+482.6 × 88.1 mm, **3 mm** aluminium, **48 cutouts**, 123 legend items. Controls left to right:
 
 * **Preamp** — Neutrik combo XLR/jack input, GAIN, PAD, LEVEL, signal + clip LED
 * **AUX** — jack input, LEVEL, FEEDBACK (Deep Phase / Norm, Up / Down)
@@ -69,7 +69,7 @@ contains no holes or panel outline — as required by Schaeffer's print-data gui
 | Toggle switches (10 ×) | 6.0 | M6 bushing |
 | LEDs (7 ×) | 3.2 | 3 mm, no bezel |
 | Power rocker | 12.3 × 27.2, R1 | Marquardt 1555.3102, snap-in, mounted upright; datasheet cut-out 27.2 ±0.1 × 12.2 +0.2, panel 0.8–5 mm |
-| M5 fixing screws | 5.3 | x 27.8 / 454.8, y 4.9 / 83.2 |
+| M5 fixing screws | 5.3 | x 27.8 / 454.8, y 4.9 / 83.2 — **cheese head**, see below |
 | Rack slots | 10 × 6.4 | 465.1 mm pitch, ±38.1 mm from panel centre |
 | M3 studs | no hole | 2 × glued-in stud GU30, 6 mm, on the **rear face** at x 241.3, y 8.35 and 79.75 |
 
@@ -77,6 +77,23 @@ Full list with coordinates: `fs1a_frontpanel_bohrungen.csv`
 (columns: no., part, x from left, y from top, Ø, note).
 
 ---
+
+## Why the fixing screws are not countersunk
+
+The rail screw channels sit 5 mm from the rail edge and the panel is 0.2 mm shorter than
+the rail, so the hole centres are only **4.9 mm from the panel edge**. No M5 countersunk
+head fits there:
+
+| Option | Ø | Material left to the panel edge |
+|---|---|---|
+| Schaeffer countersink DIN 74A-M5 (3 mm panel) | 10.94 | **−0.57 mm** — cuts into the edge |
+| M5 countersunk DIN 7991 (hex socket) | 10.0 | **−0.10 mm** |
+| M5 countersunk DIN 965 (cross recess) | 9.2 | +0.30 mm — only 0.3 mm left |
+| **M5 cheese head DIN 912 (chosen)** | 8.5 | **+0.65 mm** |
+
+Verified by drawing it in Front Panel Designer (`pruefung_senkung.png`). The countersink
+is wired up in the generator — set `CSK_TYPE = "sink_74A_M5"` in `fs1a_panel.py` to switch
+it on; the hole then grows to Ø5.6.
 
 ## Stiffening brackets
 
@@ -149,7 +166,7 @@ geometry model:
 
 | Solid | Size (mm) | Volume |
 |---|---|---|
-| Frontplatte (front panel) | 482.6 × 2 × 88.1 | 79.98 cm³ |
+| Frontplatte (front panel) | 482.6 × 3 × 88.1 | 119.97 cm³ |
 | Rueckwand (rear panel) | 437 × 2 × 88.1 | 76.59 cm³ |
 | Seitenteil links / rechts (side rails) | 20.5 × 250 × 88.3 | 150.86 cm³ each |
 | Deckel / Boden (top / bottom cover) | 416 × 249.5 × 1.5 | 155.68 cm³ each |

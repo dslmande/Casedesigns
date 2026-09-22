@@ -23,6 +23,7 @@ from pathlib import Path
 
 # ------------------------------------------------------------------ Panel
 W, H = 482.6, 88.1            # 19" Rackblende, 2 HE
+PANEL_T = 3.0                 # Blendendicke – 3 mm, damit die M5-Senkung (2,64 mm) hineinpasst
 R_CORNER = 2.0
 BLEED = 1.0                   # Druckgrafik läuft ≥1 mm über die Plattenkante hinaus (Schaeffer: bündig oder darüber)
 PT = 25.4 / 72                # Chrome rundet PDF-Seiten auf ganze Punkte: Seitengröße so wählen, dass nichts gerundet wird
@@ -52,7 +53,8 @@ DRILL = {
     "toggle": 6.0,     # Miniatur-Kippschalter, M6-Gewindebuchse
     "led3": 3.2,
     "led5": 5.2,
-    "screw": 5.3,      # M5 Durchgang, Befestigung Blende an den Seitenteilprofilen
+    "screw": 5.3,      # M5 Durchgang (Rückwand, ohne Senkung)
+    "screw_csk": 5.6,  # M5 mit Senkung DIN 74A für Senkkopfschrauben (Schaeffer-Maß)
 }
 # Netzschalter: Marquardt 1555.3102 (Wippschalter 2-polig, rot beleuchtet, Snap-in, Reichelt WIPPE 1555.3102)
 # Datenblatt: Ausschnitt 27,2 ±0,1 x 12,2 +0,2 mm, Wandstärke 0,8–5 mm, Blende 30 x 15 mm – hochkant eingebaut
@@ -75,7 +77,7 @@ LW_FRAME, LW_TICK, LW_ARC, LW_FINE = 0.35, 0.3, 0.35, 0.25
 # FrontDesign (Schaeffer) – Material, Farben, Schriften, Werkzeuge
 FPD = {
     "name": "FS-1A Frontpanel",
-    "thickness": "thick_2mm",
+    "thickness": "thick_3mm",
     "material": "alu_powder_coated",      # oder alu_elox
     "matcolor": "pcoat_grey_white",       # RAL 9002, dem Creme am nächsten; elox_natural bei alu_elox
     "elox_color": "elox_natural",         # Druckvariante: Digitaldruck geht nur auf eloxiertem Alu
@@ -120,6 +122,14 @@ COVER_T = 1.5                 # Deckel-/Bodenblech
 BRACKET_HOLE_OFF = 5.5
 BRACKET_T = 0.81
 BOLT_TYPE, BOLT_LEN = "GU30", 6               # Einklebebolzen M3, 6 mm (kürzeste Länge)
+# Senkung für die Befestigungsschrauben: geht an dieser Stelle NICHT.
+# Die Schraubkanäle des Profils liegen 5 mm von der Profilkante, die Blende ist 0,2 mm
+# niedriger -> Lochmitte nur 4,9 mm von der Blendenkante. Schaeffers Senkung DIN 74A-M5
+# ist bei 3 mm Platte Ø10,94 (im Designer ausgelesen und gezeichnet: sie schneidet die
+# Kante an). Selbst der kleinste genormte M5-Senkkopf (DIN 965, Ø9,2) ließe nur 0,3 mm
+# Material stehen. Deshalb bleibt es bei Zylinderkopf M5 (DIN 912, Ø8,5 -> 0,65 mm Rand).
+# CSK_TYPE auf "sink_74A_M5" setzen, wenn doch gesenkt werden soll.
+CSK_TYPE, CSK_CONE, CSK_DEPTH = None, 10.94, 2.67
 BOX_WIDTH = 437.0             # Außenbreite des Gehäuses (Außenfläche zu Außenfläche der Profile)
 X_PROFILE_IN_L = (W - BOX_WIDTH) / 2 + PROFILE_FACE      # ab hier ist hinter der Blende frei
 X_PROFILE_IN_R = W - X_PROFILE_IN_L
@@ -173,8 +183,13 @@ def p_text(x, y, s, size=F_LABEL, anchor="middle", style="label"):
     PRINT.append(("text", x, y, s, size, anchor, style))
 
 
-def hole(kind, x, y, d, note=""):
+SINK = {}     # (x, y) -> FrontDesign-Senkungskonstante
+
+
+def hole(kind, x, y, d, note="", sink=None):
     CUTS.append(("circle", kind, x, y, d, note))
+    if sink:
+        SINK[(round(x, 3), round(y, 3))] = sink
 
 
 def slot(x, y):
@@ -375,7 +390,12 @@ def led(x, y, color, note, d=None):
 
 
 def screw(x, y, note):
-    hole("Schraube M5", x, y, DRILL["screw"], note)
+    """Befestigung der Blende an den Schraubkanälen der Seitenteilprofile."""
+    d = DRILL["screw_csk"] if CSK_TYPE else DRILL["screw"]
+    hole("Schraube M5", x, y, d, note, sink=CSK_TYPE)
+    if CSK_TYPE:
+        PREV.append(f'<circle cx="{f(x)}" cy="{f(y)}" r="{f(CSK_CONE / 2)}" fill="#C9CCD0" '
+                    f'stroke="#8A8D92" stroke-width="0.2"/>')
     screw_preview(x, y)
 
 
@@ -397,7 +417,7 @@ def build():
             slot(sx, sy)
     for ex in (X_EAR_L, X_EAR_R):
         for ey in Y_EAR:
-            screw(ex, ey, "M5 in Schraubkanal Seitenteilprofil 4")
+            screw(ex, ey, "M5 Zylinderkopf in den Schraubkanal des Seitenteilprofils")
 
     # Rahmen
     y0, y1 = INSET, H - INSET
@@ -828,7 +848,13 @@ function text(name, s, x, y, size, align, font) {{
         if c[0] == "circle":
             _, kind, x, y, d, note = c
             name = nm("B") + " " + (note or kind)
-            js.append(f'fp.AddElement(new DrillHole({q(name)}, {f(d)}), {f(x)}, {f(Y(y))});')
+            sink = SINK.get((round(x, 3), round(y, 3)))
+            if sink:
+                v = f"b{n[0]}"
+                js.append(f'var {v} = new DrillHole({q(name)}, {f(d)}); '
+                          f'{v}.SetCountersink({sink}); fp.AddElement({v}, {f(x)}, {f(Y(y))});')
+            else:
+                js.append(f'fp.AddElement(new DrillHole({q(name)}, {f(d)}), {f(x)}, {f(Y(y))});')
         elif c[0] == "slot":
             _, x, y, w, h = c
             js.append(f'fp.AddElement(new RectHole({q(nm("L") + " Rack")}, {f(w)}, {f(h)}, {f(h / 2)}), '
@@ -903,6 +929,9 @@ def write_holes(path):
         for i, c in enumerate(CUTS, 1):
             if c[0] == "circle":
                 _, kind, x, y, d, note = c
+                sink = SINK.get((round(x, 3), round(y, 3)))
+                if sink:
+                    note = f"{note} – Senkung {sink}: Kegel {CSK_CONE}, 90 Grad, {CSK_DEPTH} mm tief"
                 w.writerow([i, kind, f(round(x, 3)), f(round(y, 3)), f(d), note])
             elif c[0] == "slot":
                 _, x, y, sw, sh = c

@@ -9,7 +9,7 @@ var INK      = engrave_night_blue;
 var FONT     = "helvetica-light-1stroke";
 var FONT_TTL = "helvetica-medium-outline";
 
-var fp = new Frontpanel("FS-1A Frontpanel Druck", thick_2mm, 482.6, 88.1, alu_elox, elox_natural);
+var fp = new Frontpanel("FS-1A Frontpanel Druck", thick_3mm, 482.6, 88.1, alu_elox, elox_natural);
 fp.SetCornerRadii(2, 2, 2, 2);
 fp.SetRemark("Jürgen Haible Frequency Shifter FS-1A, 19 Zoll 2 HE. Bohrungen vor Fertigung mit Bauteilen abgleichen.");
 
@@ -28,10 +28,10 @@ fp.AddElement(new RectHole("L001 Rack", 10, 6.4, 3.2), 8.75, 82.15);
 fp.AddElement(new RectHole("L002 Rack", 10, 6.4, 3.2), 8.75, 5.95);
 fp.AddElement(new RectHole("L003 Rack", 10, 6.4, 3.2), 473.85, 82.15);
 fp.AddElement(new RectHole("L004 Rack", 10, 6.4, 3.2), 473.85, 5.95);
-fp.AddElement(new DrillHole("B005 M5 in Schraubkanal Seitenteilprofil 4", 5.3), 27.8, 83.2);
-fp.AddElement(new DrillHole("B006 M5 in Schraubkanal Seitenteilprofil 4", 5.3), 27.8, 4.9);
-fp.AddElement(new DrillHole("B007 M5 in Schraubkanal Seitenteilprofil 4", 5.3), 454.8, 83.2);
-fp.AddElement(new DrillHole("B008 M5 in Schraubkanal Seitenteilprofil 4", 5.3), 454.8, 4.9);
+fp.AddElement(new DrillHole("B005 M5 Zylinderkopf in den Schraubkanal des Seitenteilprofils", 5.3), 27.8, 83.2);
+fp.AddElement(new DrillHole("B006 M5 Zylinderkopf in den Schraubkanal des Seitenteilprofils", 5.3), 27.8, 4.9);
+fp.AddElement(new DrillHole("B007 M5 Zylinderkopf in den Schraubkanal des Seitenteilprofils", 5.3), 454.8, 83.2);
+fp.AddElement(new DrillHole("B008 M5 Zylinderkopf in den Schraubkanal des Seitenteilprofils", 5.3), 454.8, 4.9);
 fp.AddElement(new DrillHole("B009 Preamp, Neutrik NCJ6FI-S", 24), 52, 61.6);
 fp.AddElement(new DrillHole("B010 M3, Neutrik-Zeichnung 3102ST1728 (20 x 23 mm)", 3.2), 42, 73.1);
 fp.AddElement(new DrillHole("B011 M3, Neutrik-Zeichnung 3102ST1728 (20 x 23 mm)", 3.2), 62, 50.1);

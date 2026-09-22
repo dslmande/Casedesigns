@@ -26,7 +26,8 @@ OUT = Path(__file__).parent
 # ------------------------------------------------------------------ Gehäuse
 BOX_WIDTH = p.BOX_WIDTH       # 437 mm, Außenfläche zu Außenfläche
 BOX_DEPTH = 250.0             # Profillänge = Gehäusetiefe ohne Front/Rückwand
-PANEL_T = 2.0                 # Dicke Frontplatte und Rückwand
+FRONT_T = p.PANEL_T           # Blende 3 mm (Senkungen)
+REAR_T = 2.0                  # Rückwand 2 mm
 
 # Profilmaße – die gemeinsamen Werte stehen in fs1a_panel.py
 PROF_H = p.PROF_H
@@ -129,7 +130,7 @@ def write_section(path):
     g.append(dim(0, HH + 20, p.W_FRONT, HH + 20, f"Frontplatte {p.W_FRONT}"))
     g.append(f'<text x="{p.W_FRONT / 2:.1f}" y="-4" font-size="4.5" text-anchor="middle" '
              f'fill="{p.INK}" font-family="{p.FONT}">FS-1A Gehäusequerschnitt – '
-             f'Tiefe {BOX_DEPTH:.0f} mm (Profil), {BOX_DEPTH + 2 * PANEL_T:.0f} mm über alles</text>')
+             f'Tiefe {BOX_DEPTH:.0f} mm (Profil), {BOX_DEPTH + FRONT_T + REAR_T:.0f} mm über alles</text>')
 
     Path(path).write_text(
         f'<?xml version="1.0" encoding="UTF-8"?>\n'
@@ -193,10 +194,11 @@ def write_cover_drawing(path):
 def stueckliste():
     rows = [
         ("2", "Seitenteilprofil", f"Gie-Tec 122040, Zuschnitt {BOX_DEPTH:.0f} mm"),
-        ("1", "Frontplatte", f"{p.W_FRONT} x {p.H_FRONT} x {PANEL_T:.0f} mm – fs1a_frontpanel(.druck).fpd"),
-        ("1", "Rückwand", f"{BOX_WIDTH:.0f} x {p.H_FRONT} x {PANEL_T:.0f} mm – fs1a_rueckwand.fpd"),
+        ("1", "Frontplatte", f"{p.W_FRONT} x {p.H_FRONT} x {FRONT_T:.0f} mm – fs1a_frontpanel(.druck).fpd"),
+        ("1", "Rückwand", f"{BOX_WIDTH:.0f} x {p.H_FRONT} x {REAR_T:.0f} mm – fs1a_rueckwand.fpd"),
         ("2", "Deckel / Boden", f"{COVER_W:.0f} x {COVER_L:.1f} x {COVER_T} mm Alu-Blech – {NAME}.dxf (Blechzuschnitt)"),
-        ("8", "Schraube M5", "Blechschraube/gewindeformend in die Profilkanäle, 4 vorn + 4 hinten"),
+        ("4", "Senkkopfschraube M5", "vorn, gewindeformend in die Profilkanäle – Kopf versenkt"),
+        ("4", "Schraube M5", "hinten, gewindeformend in die Profilkanäle"),
         ("4", "Winkel", "Keystone 633, oben/unten mittig an Front- und Rückseite"),
         ("2", "Mutter M3", "auf die Gewindebolzen der Frontplatte"),
         ("6", "Schraube M3 + Mutter", "2 Winkel an die Rückwand, 4 Winkel an Deckel/Boden"),
@@ -205,7 +207,7 @@ def stueckliste():
     print("\nStückliste Gehäuse")
     for n, t, d in rows:
         print(f"  {n:>2} x  {t:<{w}}  {d}")
-    print(f"\n  Außenmaße: {p.W_FRONT} x {p.H_FRONT} x {BOX_DEPTH + 2 * PANEL_T:.0f} mm "
+    print(f"\n  Außenmaße: {p.W_FRONT} x {p.H_FRONT} x {BOX_DEPTH + FRONT_T + REAR_T:.0f} mm "
           f"(Blende), Korpus {BOX_WIDTH:.0f} mm breit")
 
 

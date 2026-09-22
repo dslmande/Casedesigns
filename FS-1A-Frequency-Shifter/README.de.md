@@ -48,7 +48,7 @@ Skalierung 100 %). Neu erzeugen: Bearbeiten → Skripte → PastePad →
 
 ## Gravur-Variante – `fs1a_frontpanel.fpd`
 
-Platte 482,6 × 88,1 × 2 mm, Aluminium pulverbeschichtet Grauweiß RAL 9002 (Creme gibt es
+Platte 482,6 × 88,1 × **3 mm**, Aluminium pulverbeschichtet Grauweiß RAL 9002 (Creme gibt es
 nicht), Eckenradius 2 mm, 52 Bohrungen/Langlöcher, 125 Textgravuren (Helvetica Light
 1-stroke, Titel Helvetica Medium outline), HPGL-Gravur mit Rahmen, Skalen und Bögen.
 Gravurfarbe Nachtblau RAL 5022, Option „Gravuren drucken“ gesetzt. Für echte Gravur mit
@@ -83,7 +83,7 @@ Konturen. Ebene `DRUCK` enthält den Text als Pfade (Strichschrift). Auch für K
 | Mini-Kippschalter | 6,0 | M6-Gewindebuchse, 9 Stück |
 | LED 3 mm | 3,2 | Freq/Dir ×4, LFO ×1 |
 | Netzschalter | 12,3 × 27,2, R 1 | Marquardt 1555.3102 Wippschalter (Reichelt WIPPE 1555.3102), Snap-in, hochkant; Datenblatt 27,2 ±0,1 × 12,2 +0,2, Wandstärke 0,8–5 mm, Blende 30 × 15. Keine On/Off-Beschriftung |
-| Schrauben M5 | 5,3 | 4 × Befestigung an den Seitenteilprofilen (x 27,8 / 454,8, y 4,9 / 83,2) |
+| Schrauben M5 | 5,3 | 4 × Befestigung an den Seitenteilprofilen (x 27,8 / 454,8, y 4,9 / 83,2), **Zylinderkopf** – Senkkopf passt nicht, s. u. |
 | Rack-Langlöcher | 10 × 6,4 | Lochmitten 465,1 mm, ±38,1 mm von der Panelmitte |
 | Gewindebolzen M3 | kein Loch | 2 × Einklebebolzen GU30, 6 mm, auf der **Rückseite** bei x 241,3 / y 8,35 und 79,75 |
 
@@ -105,6 +105,22 @@ Gehäuse-Außenbreite `BOX_WIDTH = 437` mm → Profile belegen hinter der Blende
 - keine Befestigungsschrauben in der Blendenmitte (dort gibt es keinen Gegenhalt)
 
 `pruefung_gehaeusezonen.png` zeigt die Profilzonen rot über dem Layout.
+
+## Warum kein Senkkopf an den Befestigungsschrauben
+
+Die Schraubkanäle liegen 5 mm von der Profilkante, die Blende ist 0,2 mm niedriger als das
+Profil → **Lochmitte nur 4,9 mm von der Blendenkante**. Das reicht für keinen M5-Senkkopf:
+
+| Variante | Ø | Rand bis zur Blendenkante |
+|---|---|---|
+| Schaeffer-Senkung DIN 74A-M5 (bei 3 mm Platte) | 10,94 | **−0,57 mm** – schneidet die Kante an |
+| M5 Senkkopf DIN 7991 (Innensechskant) | 10,0 | **−0,10 mm** |
+| M5 Senkkopf DIN 965 (Kreuzschlitz) | 9,2 | +0,30 mm – nur 0,3 mm Restmaterial |
+| **M5 Zylinderkopf DIN 912 (gewählt)** | 8,5 | **+0,65 mm** |
+
+Im Frontplatten Designer nachgezeichnet und bestätigt (`pruefung_senkung.png`). Die
+Senkung ist im Generator vorbereitet: `CSK_TYPE = "sink_74A_M5"` in `fs1a_panel.py`
+schaltet sie ein, die Bohrung wächst dann auf Ø 5,6.
 
 ## Versteifung: Winkel zwischen Blende und Blechen
 
@@ -152,15 +168,15 @@ Erzeugen: `python3 fs1a_rueckwand.py`, dann in FrontDesign
 ## Gehäuse – Seitenteile, Deckel, Boden
 
 `python3 fs1a_gehaeuse.py` erzeugt die Gehäuseteile und gibt die Stückliste aus.
-Gehäusetiefe `BOX_DEPTH = 250` mm (Profillänge), Außentiefe 254 mm mit Front und Rückwand.
+Gehäusetiefe `BOX_DEPTH = 250` mm (Profillänge), Außentiefe **255 mm** (Blende 3 mm + Rückwand 2 mm).
 
 | Anz. | Teil | Maß / Datei |
 |---|---|---|
 | 2 | Seitenteilprofil | Gie-Tec 122040, Zuschnitt **250 mm** (Sonderlänge bestellbar) |
-| 1 | Frontplatte | 482,6 × 88,1 × 2 – `fs1a_frontpanel.fpd` bzw. `_druck.fpd` |
+| 1 | Frontplatte | 482,6 × 88,1 × **3** – `fs1a_frontpanel.fpd` bzw. `_druck.fpd` |
 | 1 | Rückwand | 437 × 88,1 × 2 – `fs1a_rueckwand.fpd` |
 | 2 | Deckel / Boden | **416 × 249,5 × 1,5 mm Alu-Blech**, 2 Löcher Ø 3,2 – `fs1a_deckel_boden.dxf` |
-| 8 | Schraube M5 | gewindeformend in die Profilkanäle, 4 vorn + 4 hinten |
+| 8 | Schraube M5 | Zylinderkopf, gewindeformend in die Profilkanäle, 4 vorn + 4 hinten |
 | 4 | Winkel Keystone 633 | oben/unten mittig, vorn an der Blende und hinten an der Rückwand |
 | 2 | Mutter M3 | auf die Gewindebolzen der Blende |
 | 6 | Schraube M3 + Mutter | 2 × Winkel an die Rückwand, 4 × Winkel an Deckel/Boden |

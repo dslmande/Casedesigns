@@ -33,7 +33,8 @@ OUT = HERE / "fs1a_gehaeuse.step"
 # --------------------------------------------------------------- Geometrie
 P.build()
 FRONT_CUTS, FRONT_W, FRONT_H = list(P.CUTS), P.W, P.H
-FRONT_T = 2.0
+FRONT_SINK = dict(P.SINK)
+FRONT_T = P.PANEL_T
 
 R.build()                       # setzt P.W/P.H auf die Rückwand und leert CUTS
 REAR_CUTS, REAR_W, REAR_H = list(P.CUTS), P.W, P.H
@@ -86,14 +87,20 @@ def cut_rect(x, z, w, h, r, t):
     return b
 
 
-def panel_solid(w, h, t, r, cuts, x_off=0.0):
+def panel_solid(w, h, t, r, cuts, x_off=0.0, sinks=None):
     """Platte mit allen Ausschnitten; Ausschnittkoordinaten x von links, y von oben."""
     body = plate(w, h, t, r)
+    sinks = sinks or {}
     tools = []
     for c in cuts:
         if c[0] == "circle":
             _, _kind, cx, cy, d, _n = c
             tools.append(cut_cyl(cx, h - cy, d, t))
+            if (round(cx, 3), round(cy, 3)) in sinks:
+                # 90°-Senkung: Kegel von der Vorderseite (y = 0) nach innen
+                cone_h = (P.CSK_CONE - d) / 2.0
+                tools.append(Part.makeCone(P.CSK_CONE / 2.0, d / 2.0, cone_h,
+                                           Vector(cx, 0, h - cy), Vector(0, 1, 0)))
         elif c[0] == "slot":
             _, cx, cy, cw, ch = c
             tools.append(cut_slot(cx, h - cy, cw, ch, t))
@@ -137,7 +144,8 @@ def bolt_solid(y_from_top):
 doc = App.newDocument("FS1A")
 
 parts = [
-    ("Frontplatte", panel_solid(FRONT_W, FRONT_H, FRONT_T, P.R_CORNER, FRONT_CUTS)),
+    ("Frontplatte", panel_solid(FRONT_W, FRONT_H, FRONT_T, P.R_CORNER, FRONT_CUTS,
+                               sinks=FRONT_SINK)),
     ("Rueckwand", panel_solid(REAR_W, REAR_H, REAR_T, 2.0, REAR_CUTS, x_off=X_OUT_L)),
     ("Seitenteil_links", profile_solid(-1)),
     ("Seitenteil_rechts", profile_solid(+1)),

@@ -12,5 +12,5 @@
   <line x1="22.80" y1="94.10" x2="459.80" y2="94.10" stroke="#C0392B" stroke-width="0.25"/><text x="241.30" y="92.90" font-size="3.2" text-anchor="middle" fill="#C0392B" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif">Gehäuse 437</text>
   <line x1="32.80" y1="101.10" x2="449.80" y2="101.10" stroke="#C0392B" stroke-width="0.25"/><text x="241.30" y="99.90" font-size="3.2" text-anchor="middle" fill="#C0392B" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif">Nutgrund 417 – Blech 416</text>
   <line x1="0.00" y1="108.10" x2="482.60" y2="108.10" stroke="#C0392B" stroke-width="0.25"/><text x="241.30" y="106.90" font-size="3.2" text-anchor="middle" fill="#C0392B" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif">Frontplatte 482.6</text>
-  <text x="241.3" y="-4" font-size="4.5" text-anchor="middle" fill="#22307C" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif">FS-1A Gehäusequerschnitt – Tiefe 250 mm (Profil), 254 mm über alles</text>
+  <text x="241.3" y="-4" font-size="4.5" text-anchor="middle" fill="#22307C" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif">FS-1A Gehäusequerschnitt – Tiefe 250 mm (Profil), 255 mm über alles</text>
 </svg>

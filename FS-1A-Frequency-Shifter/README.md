@@ -189,6 +189,11 @@ after regenerating the print variant.
   outside depth is 254 mm. Change `BOX_DEPTH` in `fs1a_gehaeuse.py` if you want the
   other convention.
 
+## License
+
+© 2026 Patrick Joricke (dsl-man.de / diysynth.de) — [CC BY-SA 4.0](../LICENSE). Build it, change it, sell it; credit the
+source and pass your changes on under the same license.
+
 ## Credits
 
 * FS-1A circuit design: **Jürgen Haible** († 2011)

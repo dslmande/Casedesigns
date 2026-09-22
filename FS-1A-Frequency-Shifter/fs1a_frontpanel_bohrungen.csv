@@ -3,10 +3,10 @@ Nr;Bauteil;x_mm_von_links;y_mm_von_oben;Durchmesser_mm;Bemerkung
 2;Rack-Langloch;8.75;82.15;;10.0 x 6.4 mm
 3;Rack-Langloch;473.85;5.95;;10.0 x 6.4 mm
 4;Rack-Langloch;473.85;82.15;;10.0 x 6.4 mm
-5;Schraube M5;27.8;4.9;5.3;M5 Zylinderkopf in den Schraubkanal des Seitenteilprofils
-6;Schraube M5;27.8;83.2;5.3;M5 Zylinderkopf in den Schraubkanal des Seitenteilprofils
-7;Schraube M5;454.8;4.9;5.3;M5 Zylinderkopf in den Schraubkanal des Seitenteilprofils
-8;Schraube M5;454.8;83.2;5.3;M5 Zylinderkopf in den Schraubkanal des Seitenteilprofils
+5;Schraube M5;27.8;4.9;5.3;M5 Senkkopf DIN 965 in den Schraubkanal des Seitenteilprofils – Senkung Kegel 9.2 / 90 Grad, 2.15 mm tief (Senkkopf DIN 965 M5)
+6;Schraube M5;27.8;83.2;5.3;M5 Senkkopf DIN 965 in den Schraubkanal des Seitenteilprofils – Senkung Kegel 9.2 / 90 Grad, 2.15 mm tief (Senkkopf DIN 965 M5)
+7;Schraube M5;454.8;4.9;5.3;M5 Senkkopf DIN 965 in den Schraubkanal des Seitenteilprofils – Senkung Kegel 9.2 / 90 Grad, 2.15 mm tief (Senkkopf DIN 965 M5)
+8;Schraube M5;454.8;83.2;5.3;M5 Senkkopf DIN 965 in den Schraubkanal des Seitenteilprofils – Senkung Kegel 9.2 / 90 Grad, 2.15 mm tief (Senkkopf DIN 965 M5)
 9;Combo XLR/Klinke;52;26.5;24;Preamp, Neutrik NCJ6FI-S
 10;Combo-Schraube;42;15;3.2;M3, Neutrik-Zeichnung 3102ST1728 (20 x 23 mm)
 11;Combo-Schraube;62;38;3.2;M3, Neutrik-Zeichnung 3102ST1728 (20 x 23 mm)

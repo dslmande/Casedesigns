@@ -122,14 +122,16 @@ COVER_T = 1.5                 # Deckel-/Bodenblech
 BRACKET_HOLE_OFF = 5.5
 BRACKET_T = 0.81
 BOLT_TYPE, BOLT_LEN = "GU30", 6               # Einklebebolzen M3, 6 mm (kürzeste Länge)
-# Senkung für die Befestigungsschrauben: geht an dieser Stelle NICHT.
-# Die Schraubkanäle des Profils liegen 5 mm von der Profilkante, die Blende ist 0,2 mm
-# niedriger -> Lochmitte nur 4,9 mm von der Blendenkante. Schaeffers Senkung DIN 74A-M5
-# ist bei 3 mm Platte Ø10,94 (im Designer ausgelesen und gezeichnet: sie schneidet die
-# Kante an). Selbst der kleinste genormte M5-Senkkopf (DIN 965, Ø9,2) ließe nur 0,3 mm
-# Material stehen. Deshalb bleibt es bei Zylinderkopf M5 (DIN 912, Ø8,5 -> 0,65 mm Rand).
-# CSK_TYPE auf "sink_74A_M5" setzen, wenn doch gesenkt werden soll.
-CSK_TYPE, CSK_CONE, CSK_DEPTH = None, 10.94, 2.67
+# Senkung für die Befestigungsschrauben der Blende.
+# Randbedingung: die Schraubkanäle liegen 5 mm von der Profilkante, die Blende ist 0,2 mm
+# niedriger -> Lochmitte nur 4,9 mm von der Blendenkante. Schaeffers fertige Senkung
+# DIN 74A-M5 ist bei 3 mm Platte Ø10,94 und würde die Kante anschneiden; ein Senkkopf
+# DIN 7991 (dk 10,0) ebenfalls. Passend ist nur DIN 965 / ISO 7046, dk 9,2 -> 0,3 mm
+# Restmaterial zur Kante. Deshalb eine kundendefinierte Senkung auf genau dieses Maß.
+# Schraube: DIN 965 M5 x 20, A2, Kreuzschlitz PH2 (dk 9,2 / k 2,5 / 90°).
+CSK_CONE, CSK_DRILL, CSK_CYL, CSK_ANGLE = 9.2, 5.3, 0.2, 90
+CSK_DEPTH = (CSK_CONE - CSK_DRILL) / 2 + CSK_CYL     # 2,15 mm in der 3-mm-Platte
+CSK_TYPE = f"custom:{CSK_CONE},{CSK_DRILL},{CSK_CYL},{CSK_ANGLE}"
 BOX_WIDTH = 437.0             # Außenbreite des Gehäuses (Außenfläche zu Außenfläche der Profile)
 X_PROFILE_IN_L = (W - BOX_WIDTH) / 2 + PROFILE_FACE      # ab hier ist hinter der Blende frei
 X_PROFILE_IN_R = W - X_PROFILE_IN_L
@@ -391,7 +393,7 @@ def led(x, y, color, note, d=None):
 
 def screw(x, y, note):
     """Befestigung der Blende an den Schraubkanälen der Seitenteilprofile."""
-    d = DRILL["screw_csk"] if CSK_TYPE else DRILL["screw"]
+    d = CSK_DRILL if CSK_TYPE else DRILL["screw"]
     hole("Schraube M5", x, y, d, note, sink=CSK_TYPE)
     if CSK_TYPE:
         PREV.append(f'<circle cx="{f(x)}" cy="{f(y)}" r="{f(CSK_CONE / 2)}" fill="#C9CCD0" '
@@ -417,7 +419,7 @@ def build():
             slot(sx, sy)
     for ex in (X_EAR_L, X_EAR_R):
         for ey in Y_EAR:
-            screw(ex, ey, "M5 Zylinderkopf in den Schraubkanal des Seitenteilprofils")
+            screw(ex, ey, "M5 Senkkopf DIN 965 in den Schraubkanal des Seitenteilprofils")
 
     # Rahmen
     y0, y1 = INSET, H - INSET
@@ -851,8 +853,10 @@ function text(name, s, x, y, size, align, font) {{
             sink = SINK.get((round(x, 3), round(y, 3)))
             if sink:
                 v = f"b{n[0]}"
+                call = (f"SetCountersinkWithParameters({sink[7:]})" if sink.startswith("custom:")
+                        else f"SetCountersink({sink})")
                 js.append(f'var {v} = new DrillHole({q(name)}, {f(d)}); '
-                          f'{v}.SetCountersink({sink}); fp.AddElement({v}, {f(x)}, {f(Y(y))});')
+                          f'{v}.{call}; fp.AddElement({v}, {f(x)}, {f(Y(y))});')
             else:
                 js.append(f'fp.AddElement(new DrillHole({q(name)}, {f(d)}), {f(x)}, {f(Y(y))});')
         elif c[0] == "slot":
@@ -931,7 +935,8 @@ def write_holes(path):
                 _, kind, x, y, d, note = c
                 sink = SINK.get((round(x, 3), round(y, 3)))
                 if sink:
-                    note = f"{note} – Senkung {sink}: Kegel {CSK_CONE}, 90 Grad, {CSK_DEPTH} mm tief"
+                    note = (f"{note} – Senkung Kegel {CSK_CONE} / {CSK_ANGLE} Grad, "
+                            f"{CSK_DEPTH:.2f} mm tief (Senkkopf DIN 965 M5)")
                 w.writerow([i, kind, f(round(x, 3)), f(round(y, 3)), f(d), note])
             elif c[0] == "slot":
                 _, x, y, sw, sh = c

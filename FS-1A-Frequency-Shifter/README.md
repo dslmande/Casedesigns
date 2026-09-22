@@ -24,7 +24,8 @@ PCB files.
 | 1 | Rear panel | 437 × 88.1 × 2 mm, corner R2 | `fs1a_rueckwand.fpd` |
 | 2 | Side rail | Gie-Tec *Seitenteilprofil 4* (art. 122040), cut to **250 mm** | purchased part |
 | 2 | Top / bottom cover | 416 × 249.5 × **1.5 mm** aluminium sheet, two Ø3.2 holes | `fs1a_deckel_boden.dxf` |
-| 8 | Screw M5 | thread-forming, into the rail screw channels (4 front, 4 rear) | — |
+| 4 | Countersunk screw DIN 965 M5 × 20 A2 | front, into the rail channels, head flush | — |
+| 4 | Screw M5 | rear panel into the rail channels | — |
 | 4 | Angle bracket | Keystone **633**, front and rear, to top and bottom cover | — |
 | 2 | Nut M3 | onto the front panel studs | — |
 | 6 | Screw M3 + nut | 2 brackets to the rear panel, 4 to the covers | — |
@@ -69,7 +70,7 @@ contains no holes or panel outline — as required by Schaeffer's print-data gui
 | Toggle switches (10 ×) | 6.0 | M6 bushing |
 | LEDs (7 ×) | 3.2 | 3 mm, no bezel |
 | Power rocker | 12.3 × 27.2, R1 | Marquardt 1555.3102, snap-in, mounted upright; datasheet cut-out 27.2 ±0.1 × 12.2 +0.2, panel 0.8–5 mm |
-| M5 fixing screws | 5.3 | x 27.8 / 454.8, y 4.9 / 83.2 — **cheese head**, see below |
+| M5 fixing screws | 5.3 | x 27.8 / 454.8, y 4.9 / 83.2, with **Ø9.2 / 90° countersink** for DIN 965 |
 | Rack slots | 10 × 6.4 | 465.1 mm pitch, ±38.1 mm from panel centre |
 | M3 studs | no hole | 2 × glued-in stud GU30, 6 mm, on the **rear face** at x 241.3, y 8.35 and 79.75 |
 
@@ -78,22 +79,31 @@ Full list with coordinates: `fs1a_frontpanel_bohrungen.csv`
 
 ---
 
-## Why the fixing screws are not countersunk
+## Countersunk fixing screws — which screw fits
 
 The rail screw channels sit 5 mm from the rail edge and the panel is 0.2 mm shorter than
-the rail, so the hole centres are only **4.9 mm from the panel edge**. No M5 countersunk
-head fits there:
+the rail, so the hole centres are only **4.9 mm from the panel edge**. That rules out most
+countersunk heads:
 
-| Option | Ø | Material left to the panel edge |
+| Option | Ø head / countersink | Material left to the panel edge |
 |---|---|---|
 | Schaeffer countersink DIN 74A-M5 (3 mm panel) | 10.94 | **−0.57 mm** — cuts into the edge |
-| M5 countersunk DIN 7991 (hex socket) | 10.0 | **−0.10 mm** |
-| M5 countersunk DIN 965 (cross recess) | 9.2 | +0.30 mm — only 0.3 mm left |
-| **M5 cheese head DIN 912 (chosen)** | 8.5 | **+0.65 mm** |
+| M5 countersunk DIN 7991 / ISO 10642 (hex socket) | 10.0 | **−0.10 mm** |
+| **M5 countersunk DIN 965 / ISO 7046 (cross recess) — chosen** | **9.2** | **+0.30 mm** |
+| M5 cheese head DIN 912 | 8.5 | +0.65 mm |
 
-Verified by drawing it in Front Panel Designer (`pruefung_senkung.png`). The countersink
-is wired up in the generator — set `CSK_TYPE = "sink_74A_M5"` in `fs1a_panel.py` to switch
-it on; the hole then grows to Ø5.6.
+So instead of the designer's standard countersink the panel uses a **custom one**:
+
+```
+SetCountersinkWithParameters(9.2, 5.3, 0.2, 90)
+```
+
+Cone Ø9.2 at 90°, drill Ø5.3, 0.2 mm straight portion → **2.15 mm deep** in the 3 mm panel,
+leaving 0.85 mm of material below and 0.30 mm to the panel edge.
+
+Screw: **DIN 965 M5 × 20, A2, PH2** (dk 9.2 / k 2.5 / 90°) — with the 3 mm panel that gives
+about 17 mm of thread in the rail channel. Generator constants: `CSK_CONE / CSK_DRILL /
+CSK_CYL / CSK_ANGLE` in `fs1a_panel.py`; `CSK_TYPE = None` reverts to cheese heads.
 
 ## Stiffening brackets
 

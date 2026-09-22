@@ -5,7 +5,8 @@ Erzeugt fs1a_rueckwand.svg / .dxf / .fpjs / _bohrungen.csv mit denselben Routine
 wie fs1a_panel.py (dort stehen auch alle Konstanten).
 
 Inhalt: Außenkontur 437 x 88,1 mm, vier M5-Durchgänge in die Schraubkanäle der
-Seitenteilprofile und ein Durchbruch Ø 12 mm für die Kabeldurchführung.
+Seitenteilprofile, zwei M3-Löcher für die Montagewinkel zu Deckel und Boden
+und ein Durchbruch Ø 12 mm für die Kabeldurchführung.
 
 Aufruf:  python3 fs1a_rueckwand.py
 """
@@ -18,6 +19,7 @@ W, H = p.BOX_WIDTH, 88.1      # Rückwand deckt die Profil-Stirnflächen ab
 HOLE_D = 12.0                 # Kabeldurchführung
 HOLE_X = 40.0                 # von der linken Kante
 HOLE_Y_FROM_BOTTOM = 30.0
+BRACKET_SCREW_D = 3.2         # M3-Durchgang für die Winkel zu Deckel und Boden
 
 NAME = "fs1a_rueckwand"
 OUT = Path(__file__).parent
@@ -37,6 +39,14 @@ def build():
         for y in ys:
             p.hole("Schraube M5", x, y, p.DRILL["screw"], "M5 in Schraubkanal Seitenteilprofil 4")
             p.screw_preview(x, y)
+
+    # Löcher für die Montagewinkel (Keystone 633) zu Deckel und Boden,
+    # auf derselben Höhe wie die Gewindebolzen der Frontplatte
+    for by in (p.Y_BOLT_TOP, p.Y_BOLT_BOT):
+        p.hole("Winkelschraube M3", W / 2, by, BRACKET_SCREW_D,
+               "Keystone 633 zu Deckel/Boden, Schraube von außen")
+        p.PREV.append(f'<circle cx="{p.f(W / 2)}" cy="{p.f(by)}" '
+                      f'r="{p.f(BRACKET_SCREW_D / 2)}" fill="#2A2A2A"/>')
 
     # Kabeldurchführung
     y_hole = H - HOLE_Y_FROM_BOTTOM

@@ -117,14 +117,22 @@ Maße des Winkels (Messing vernickelt): Schenkel 9,5 × 9,5 mm, Breite 7,1 mm, M
 0,81 mm, beide Löcher Ø 3,7 mm, **Lochmitte je 5,5 mm von der Außenfläche des anderen
 Schenkels**. Daraus folgt alles Weitere:
 
+Hinten dasselbe, nur mit Schraube statt Bolzen: die Rückwand bekommt an der gleichen
+Stelle zwei Durchgangslöcher, der Winkel wird von außen angeschraubt.
+
 | Merkmal | Wert |
 |---|---|
-| Bolzen Frontplatte | x 241,3 (Mitte), y **8,35** von oben bzw. **79,75** von unten gerechnet ab Oberkante |
-| Loch in Deckel und Boden | Ø **3,1**, mittig (208 mm von der linken Kante), **5,5 mm von der Vorderkante** |
-| Abstand Bolzenachse ↔ Blechfläche | 5,5 mm (= Maß D des Winkels) |
+| Bolzen Frontplatte | x 241,3 (Mitte), y **8,35** und **79,75** von der Oberkante |
+| Löcher Rückwand | Ø **3,2**, x 218,5 (Mitte), y **8,35** und **79,75** von der Oberkante |
+| Löcher in Deckel und Boden | Ø **3,1**, mittig (208 mm von links), **5,5 mm von der Vorderkante** und **5,0 mm von der Hinterkante** |
+| Abstand Bolzen-/Schraubenachse ↔ Blechfläche | 5,5 mm (= Maß D des Winkels) |
 | Nächstes Bauteil | Fine-Tune-Poti, 14,4 mm entfernt – frei |
 
-Zusätzlich nötig: 2 × Mutter M3 (auf die Bolzen), 2 × Schraube M3 + Mutter (Winkel ans Blech).
+Warum hinten 5,0 statt 5,5 mm: Das Blech endet 0,5 mm vor der Profilstirnfläche, an der die
+Rückwand anliegt.
+
+Zusätzlich nötig: 2 × Mutter M3 (auf die Bolzen der Blende), 6 × Schraube M3 + Mutter
+(2 × Winkel an die Rückwand, 4 × Winkel an Deckel und Boden).
 
 ## Rückwand – `fs1a_rueckwand.fpd`
 
@@ -135,6 +143,7 @@ Alu eloxiert natur, Eckenradius 2 mm, unbedruckt.
 |---|---|---|
 | 4 × M5 in die Schraubkanäle | x 5 / 432, y 4,9 / 83,2 | 5,3 |
 | Kabeldurchführung | x 40 (von links), y 58,1 (= 30 mm von unten) | 12,0 |
+| 2 × Winkelschraube M3 | x 218,5 (Mitte), y 8,35 / 79,75 | 3,2 |
 
 Erzeugen: `python3 fs1a_rueckwand.py`, dann in FrontDesign
 `EvalFile("/…/fs1a_rueckwand.fpjs");`. Maße stehen oben in `fs1a_rueckwand.py`
@@ -150,11 +159,11 @@ Gehäusetiefe `BOX_DEPTH = 250` mm (Profillänge), Außentiefe 254 mm mit Front 
 | 2 | Seitenteilprofil | Gie-Tec 122040, Zuschnitt **250 mm** (Sonderlänge bestellbar) |
 | 1 | Frontplatte | 482,6 × 88,1 × 2 – `fs1a_frontpanel.fpd` bzw. `_druck.fpd` |
 | 1 | Rückwand | 437 × 88,1 × 2 – `fs1a_rueckwand.fpd` |
-| 2 | Deckel / Boden | **416 × 249,5 × 1,5 mm Alu-Blech**, 1 Loch Ø 3,1 – `fs1a_deckel_boden.dxf` |
+| 2 | Deckel / Boden | **416 × 249,5 × 1,5 mm Alu-Blech**, 2 Löcher Ø 3,1 – `fs1a_deckel_boden.dxf` |
 | 8 | Schraube M5 | gewindeformend in die Profilkanäle, 4 vorn + 4 hinten |
-| 2 | Winkel Keystone 633 | Blende oben/unten mittig an Deckel und Boden |
+| 4 | Winkel Keystone 633 | oben/unten mittig, vorn an der Blende und hinten an der Rückwand |
 | 2 | Mutter M3 | auf die Gewindebolzen der Blende |
-| 2 | Schraube M3 + Mutter | Winkel an Deckel/Boden |
+| 6 | Schraube M3 + Mutter | 2 × Winkel an die Rückwand, 4 × Winkel an Deckel/Boden |
 
 Blechmaße aus der Profilkontur (`gietec_122040_profil.dat`, aus Gie-Tecs `cad_122040.dxf`):
 Blechnut 1,6 mm breit auf Höhe 1,4–3,0 bzw. 85,3–86,9 mm, Nutgrund 10 mm hinter der

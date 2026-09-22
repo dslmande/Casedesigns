@@ -12,6 +12,8 @@
     <circle cx="5" cy="83.2" r="2.65" fill="#FFFFFF" stroke="#22307C" stroke-width="0.15"/>
     <circle cx="432" cy="4.9" r="2.65" fill="#FFFFFF" stroke="#22307C" stroke-width="0.15"/>
     <circle cx="432" cy="83.2" r="2.65" fill="#FFFFFF" stroke="#22307C" stroke-width="0.15"/>
+    <circle cx="218.5" cy="8.35" r="1.6" fill="#FFFFFF" stroke="#22307C" stroke-width="0.15"/>
+    <circle cx="218.5" cy="79.75" r="1.6" fill="#FFFFFF" stroke="#22307C" stroke-width="0.15"/>
     <circle cx="40" cy="58.1" r="6" fill="#FFFFFF" stroke="#22307C" stroke-width="0.15"/>
   </g>
   <g inkscape:groupmode="layer" inkscape:label="3 Druck" id="layer3">
@@ -26,6 +28,8 @@
     <circle cx="432" cy="4.9" r="2.2" fill="none" stroke="#3C3C3C" stroke-width="0.45"/>
     <circle cx="432" cy="83.2" r="4.3" fill="#1C1C1C" stroke="none" stroke-width="0"/>
     <circle cx="432" cy="83.2" r="2.2" fill="none" stroke="#3C3C3C" stroke-width="0.45"/>
+    <circle cx="218.5" cy="8.35" r="1.6" fill="#2A2A2A"/>
+    <circle cx="218.5" cy="79.75" r="1.6" fill="#2A2A2A"/>
     <circle cx="40" cy="58.1" r="6" fill="#2A2A2A"/>
   </g>
   <g inkscape:groupmode="layer" inkscape:label="5 Bohrmaße" id="layer5" style="display:none">
@@ -33,6 +37,8 @@
     <text x="8.45" y="83.848" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="1.8" text-anchor="start" fill="#C0392B">Ø5.3</text>
     <text x="435.45" y="5.548" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="1.8" text-anchor="start" fill="#C0392B">Ø5.3</text>
     <text x="435.45" y="83.848" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="1.8" text-anchor="start" fill="#C0392B">Ø5.3</text>
+    <text x="220.9" y="8.998" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="1.8" text-anchor="start" fill="#C0392B">Ø3.2</text>
+    <text x="220.9" y="80.398" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="1.8" text-anchor="start" fill="#C0392B">Ø3.2</text>
     <text x="46.8" y="58.748" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="1.8" text-anchor="start" fill="#C0392B">Ø12</text>
   </g>
 </svg>

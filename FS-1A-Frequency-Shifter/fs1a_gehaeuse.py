@@ -49,6 +49,14 @@ NAME = "fs1a_deckel_boden"
 # Blechvorderkante; das Blech schließt vorn bündig mit der Blendenrückseite ab.
 COVER_HOLE_D = 3.1
 COVER_HOLE_FROM_FRONT = p.BRACKET_HOLE_OFF
+# hinten sitzt der Winkel an der Rückwand; das Blech endet 0,5 mm vor der Profilstirnfläche
+COVER_HOLE_FROM_REAR = p.BRACKET_HOLE_OFF - (BOX_DEPTH - COVER_L)
+
+
+def cover_holes():
+    """Lochmitten im Blech: (x von links, y von der Vorderkante)."""
+    return [(COVER_W / 2, COVER_HOLE_FROM_FRONT),
+            (COVER_W / 2, COVER_L - COVER_HOLE_FROM_REAR)]
 
 
 def build_cover():
@@ -56,8 +64,10 @@ def build_cover():
     p.CUTS.clear()
     p.PRINT.clear()
     p.PREV.clear()
-    p.hole("Winkelschraube M3", COVER_W / 2, COVER_HOLE_FROM_FRONT, COVER_HOLE_D,
-           "Keystone 633 auf den Gewindebolzen der Frontplatte")
+    for i, (hx, hy) in enumerate(cover_holes()):
+        p.hole("Winkelschraube M3", hx, hy, COVER_HOLE_D,
+               "Keystone 633 zum Gewindebolzen der Frontplatte" if i == 0
+               else "Keystone 633 zur Rückwand")
 
 
 # ------------------------------------------------------- Querschnittzeichnung
@@ -150,13 +160,13 @@ def write_cover_drawing(path):
                 f'fill="#C0392B" font-family="{p.FONT}" transform="rotate(-90 {x - 4} '
                 f'{(y1 + y2) / 2})">{txt}</text>')
 
-    hx, hy = W_ / 2, COVER_HOLE_FROM_FRONT
-    g.append(f'<circle cx="{hx}" cy="{hy}" r="{COVER_HOLE_D / 2}" fill="#fff" stroke="#333" '
-             f'stroke-width="0.4"/>'
-             f'<line x1="{hx - 4}" y1="{hy}" x2="{hx + 4}" y2="{hy}" stroke="#C0392B" stroke-width="0.3"/>'
-             f'<line x1="{hx}" y1="{hy - 4}" x2="{hx}" y2="{hy + 4}" stroke="#C0392B" stroke-width="0.3"/>'
-             f'<text x="{hx + 7}" y="{hy + 3.5}" font-size="9" fill="#C0392B" '
-             f'font-family="{p.FONT}">&#216;{COVER_HOLE_D}</text>')
+    for hx, hy in cover_holes():
+            g.append(f'<circle cx="{hx}" cy="{hy}" r="{COVER_HOLE_D / 2}" fill="#fff" stroke="#333" '
+                 f'stroke-width="0.4"/>'
+                 f'<line x1="{hx - 4}" y1="{hy}" x2="{hx + 4}" y2="{hy}" stroke="#C0392B" stroke-width="0.3"/>'
+                 f'<line x1="{hx}" y1="{hy - 4}" x2="{hx}" y2="{hy + 4}" stroke="#C0392B" stroke-width="0.3"/>'
+                 f'<text x="{hx + 7}" y="{hy + 3.5}" font-size="9" fill="#C0392B" '
+                 f'font-family="{p.FONT}">&#216;{COVER_HOLE_D}</text>')
     g.append(dimh(-12, 0, W_, f"{W_:.0f} mm"))
     g.append(dimv(-12, 0, L_, f"{L_:.1f} mm"))
     g.append(f'<text x="{W_ / 2}" y="{L_ / 2 - 8}" font-size="13" text-anchor="middle" fill="#333" '
@@ -167,11 +177,11 @@ def write_cover_drawing(path):
              f'font-family="{p.FONT}">schiebt in die Blechnuten des Gie-Tec Seitenteilprofils 4 '
              f'(Nut 1,6 mm, Eingriff 2,5 mm je Seite)</text>')
     g.append(f'<text x="{W_ / 2}" y="{L_ / 2 + 32}" font-size="9" text-anchor="middle" '
-             f'fill="#C0392B" font-family="{p.FONT}">Bohrung &#216;{COVER_HOLE_D} mittig, '
-             f'{COVER_HOLE_FROM_FRONT} mm von der Vorderkante</text>')
+             f'fill="#C0392B" font-family="{p.FONT}">2 Bohrungen &#216;{COVER_HOLE_D} mittig: '
+             f'{COVER_HOLE_FROM_FRONT} mm von der Vorder-, {COVER_HOLE_FROM_REAR} mm von der Hinterkante</text>')
     g.append(f'<text x="{W_ / 2}" y="{L_ / 2 + 44}" font-size="9" text-anchor="middle" '
-             f'fill="#C0392B" font-family="{p.FONT}">für Winkel Keystone 633 zum '
-             f'Gewindebolzen der Frontplatte</text>')
+             f'fill="#C0392B" font-family="{p.FONT}">für die Winkel Keystone 633 an '
+             f'Frontplatte und Rückwand</text>')
     Path(path).write_text(
         f'<?xml version="1.0" encoding="UTF-8"?>\n<svg xmlns="http://www.w3.org/2000/svg" '
         f'width="{W_ + 2 * m}mm" height="{L_ + 2 * m}mm" '
@@ -187,10 +197,10 @@ def stueckliste():
         ("1", "Rückwand", f"{BOX_WIDTH:.0f} x {p.H_FRONT} x {PANEL_T:.0f} mm – fs1a_rueckwand.fpd"),
         ("2", "Deckel / Boden", f"{COVER_W:.0f} x {COVER_L:.1f} x {COVER_T} mm Alu-Blech – {NAME}.dxf (Blechzuschnitt)"),
         ("8", "Schraube M5", "Blechschraube/gewindeformend in die Profilkanäle, 4 vorn + 4 hinten"),
-        ("2", "Winkel", "Keystone 633, Frontplatte oben/unten mittig an Deckel und Boden"),
+        ("4", "Winkel", "Keystone 633, oben/unten mittig an Front- und Rückseite"),
         ("2", "Mutter M3", "auf die Gewindebolzen der Frontplatte"),
-        ("2", "Schraube M3", "Winkel an Deckel/Boden, mit Mutter"),
-    ]
+        ("6", "Schraube M3 + Mutter", "2 Winkel an die Rückwand, 4 Winkel an Deckel/Boden"),
+            ]
     w = max(len(r[1]) for r in rows)
     print("\nStückliste Gehäuse")
     for n, t, d in rows:

@@ -23,11 +23,11 @@ PCB files.
 | 1 | Front panel | 482.6 × 88.1 × 2 mm, corner R2 | `fs1a_frontpanel.fpd` or `fs1a_frontpanel_druck.fpd` |
 | 1 | Rear panel | 437 × 88.1 × 2 mm, corner R2 | `fs1a_rueckwand.fpd` |
 | 2 | Side rail | Gie-Tec *Seitenteilprofil 4* (art. 122040), cut to **250 mm** | purchased part |
-| 2 | Top / bottom cover | 416 × 249.5 × **1.5 mm** aluminium sheet, one Ø3.1 hole | `fs1a_deckel_boden.dxf` |
+| 2 | Top / bottom cover | 416 × 249.5 × **1.5 mm** aluminium sheet, two Ø3.1 holes | `fs1a_deckel_boden.dxf` |
 | 8 | Screw M5 | thread-forming, into the rail screw channels (4 front, 4 rear) | — |
-| 2 | Angle bracket | Keystone **633**, panel to top and bottom cover | — |
-| 2 | Nut M3 | onto the panel studs | — |
-| 2 | Screw M3 + nut | bracket to cover | — |
+| 4 | Angle bracket | Keystone **633**, front and rear, to top and bottom cover | — |
+| 2 | Nut M3 | onto the front panel studs | — |
+| 6 | Screw M3 + nut | 2 brackets to the rear panel, 4 to the covers | — |
 
 Overall size **482.6 × 88.1 × 254 mm** (panel), body 437 mm wide, 250 mm deep.
 Aluminium volume 769.7 cm³ ≈ **2.1 kg**.
@@ -89,18 +89,29 @@ Bracket data (nickel-plated brass): legs 9.5 × 9.5 mm, width 7.1 mm, material 0
 both holes Ø3.7 mm, **hole centre 5.5 mm from the outer face of the other leg**. Everything
 else follows from that:
 
+The rear does the same with a screw instead of a stud: the rear panel has two clearance
+holes at the same height, and the bracket is bolted on from outside.
+
 | Feature | Value |
 |---|---|
-| Stud on the panel | x 241.3 (centre), y **8.35** and **79.75** from the top edge |
-| Hole in top and bottom cover | Ø **3.1**, centred (208 mm from the left edge), **5.5 mm from the front edge** |
-| Stud axis to sheet face | 5.5 mm (= bracket dimension D) |
+| Stud on the front panel | x 241.3 (centre), y **8.35** and **79.75** from the top edge |
+| Holes in the rear panel | Ø **3.2**, x 218.5 (centre), y **8.35** and **79.75** from the top edge |
+| Holes in top and bottom cover | Ø **3.1**, centred (208 mm from the left edge), **5.5 mm from the front edge** and **5.0 mm from the rear edge** |
+| Stud / screw axis to sheet face | 5.5 mm (= bracket dimension D) |
 | Nearest component | Fine Tune pot, 14.4 mm away — clear |
+
+The rear hole is 5.0 instead of 5.5 mm because the cover ends 0.5 mm short of the rail
+face the rear panel sits against.
+
+Hardware: 2 × nut M3 (onto the panel studs), 6 × screw M3 + nut (2 brackets to the rear
+panel, 4 brackets to the covers).
 
 ## Rear panel
 
 437 × 88.1 × 2 mm, natural anodised, unprinted. One Ø12 mm cable gland hole at
-x = 40 mm from the left, 30 mm from the bottom, plus the four M5 holes into the rail
-channels (x 5 / 432, y 4.9 / 83.2).
+x = 40 mm from the left, 30 mm from the bottom, the four M5 holes into the rail channels
+(x 5 / 432, y 4.9 / 83.2) and two Ø3.2 holes for the stiffening brackets
+(x 218.5, y 8.35 / 79.75).
 
 ---
 

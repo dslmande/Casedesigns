@@ -3,4 +3,6 @@ Nr;Bauteil;x_mm_von_links;y_mm_von_oben;Durchmesser_mm;Bemerkung
 2;Schraube M5;5;83.2;5.3;M5 in Schraubkanal Seitenteilprofil 4
 3;Schraube M5;432;4.9;5.3;M5 in Schraubkanal Seitenteilprofil 4
 4;Schraube M5;432;83.2;5.3;M5 in Schraubkanal Seitenteilprofil 4
-5;Kabeldurchführung;40;58.1;12;40 mm von links, 30 mm von unten
+5;Winkelschraube M3;218.5;8.35;3.2;Keystone 633 zu Deckel/Boden, Schraube von außen
+6;Winkelschraube M3;218.5;79.75;3.2;Keystone 633 zu Deckel/Boden, Schraube von außen
+7;Kabeldurchführung;40;58.1;12;40 mm von links, 30 mm von unten

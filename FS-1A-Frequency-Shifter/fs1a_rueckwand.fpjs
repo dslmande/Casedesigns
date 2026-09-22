@@ -28,7 +28,9 @@ fp.AddElement(new DrillHole("B001 M5 in Schraubkanal Seitenteilprofil 4", 5.3), 
 fp.AddElement(new DrillHole("B002 M5 in Schraubkanal Seitenteilprofil 4", 5.3), 5, 4.9);
 fp.AddElement(new DrillHole("B003 M5 in Schraubkanal Seitenteilprofil 4", 5.3), 432, 83.2);
 fp.AddElement(new DrillHole("B004 M5 in Schraubkanal Seitenteilprofil 4", 5.3), 432, 4.9);
-fp.AddElement(new DrillHole("B005 40 mm von links, 30 mm von unten", 12), 40, 30);
+fp.AddElement(new DrillHole("B005 Keystone 633 zu Deckel/Boden, Schraube von außen", 3.2), 218.5, 79.75);
+fp.AddElement(new DrillHole("B006 Keystone 633 zu Deckel/Boden, Schraube von außen", 3.2), 218.5, 8.35);
+fp.AddElement(new DrillHole("B007 40 mm von links, 30 mm von unten", 12), 40, 30);
 
 if (PRINTED) { try { fp.SetPrinted(); } catch (e) { Print("SetPrinted nicht verfügbar\n"); } }
 AddFrontpanel(fp);

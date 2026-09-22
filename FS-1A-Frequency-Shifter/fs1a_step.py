@@ -121,10 +121,10 @@ def cover_solid(top):
     z = z_lo + ((G.GROOVE_HI[1] - G.GROOVE_HI[0]) - G.COVER_T) / 2.0
     x = (FRONT_W - G.COVER_W) / 2.0
     body = Part.makeBox(G.COVER_W, G.COVER_L, G.COVER_T, Vector(x, 0, z))
-    hole = Part.makeCylinder(G.COVER_HOLE_D / 2.0, G.COVER_T + 2,
-                             Vector(FRONT_W / 2.0, G.COVER_HOLE_FROM_FRONT, z - 1),
-                             Vector(0, 0, 1))
-    return body.cut(hole)
+    for hx, hy in G.cover_holes():
+        body = body.cut(Part.makeCylinder(G.COVER_HOLE_D / 2.0, G.COVER_T + 2,
+                                          Vector(x + hx, hy, z - 1), Vector(0, 0, 1)))
+    return body
 
 
 def bolt_solid(y_from_top):

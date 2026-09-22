@@ -31,7 +31,7 @@ PH = math.ceil((H + 2 * BLEED) / PT) * PT    # Druckseite Höhe (mm)
 BX, BY = (PW - W) / 2, (PH - H) / 2          # tatsächlicher Beschnitt je Seite
 INSET = 2.5                   # Abstand der Rahmenlinien vom Panelrand
 TITLE = "JH FS-1A FREQUENCY SHIFTER"
-BRAND = "diysynth.de"
+BRAND = "Made by DSL-man.de"
 
 # Farben (SVG)
 CREAM = "#F2E7C6"             # Panel (etwa RAL 1015 Hellelfenbein)

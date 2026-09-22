@@ -454,7 +454,7 @@ text("T145 AMPLITUDE", "AMPLITUDE", 318, 21.1, 2.99, align_center, FONT);
 text("T146 EXP", "EXP", 314.7, 16.3, 2.29, align_center, FONT);
 text("T147 LIN", "LIN", 314.7, 5.9, 2.29, align_center, FONT);
 text("T148 JH FS-1A FREQUENCY SHIFTER", "JH FS-1A FREQUENCY SHIFTER", 381.25, 80.65, 5.46, align_center, FONT_TTL);
-text("T149 diysynth.de", "diysynth.de", 381.25, 41.1, 3.17, align_center, FONT);
+text("T149 Made by DSL-man.de", "Made by DSL-man.de", 381.25, 41.1, 3.17, align_center, FONT);
 text("T150 dry", "dry", 341.2, 49.822, 2.2, align_center, FONT);
 text("T151 wet", "wet", 354.8, 49.822, 2.2, align_center, FONT);
 text("T152 Mix A", "Mix A", 348, 45.6, 2.99, align_center, FONT);

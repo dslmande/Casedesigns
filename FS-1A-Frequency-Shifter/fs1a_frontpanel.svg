@@ -389,7 +389,7 @@
     <polyline points="319.7,73 321.3,70.6 322.9,73" fill="none" stroke="#22307C" stroke-width="0.35" stroke-linejoin="round"/>
     <polyline points="319.7,83.6 319.7,81 322.9,81 322.9,83.6" fill="none" stroke="#22307C" stroke-width="0.35" stroke-linejoin="round"/>
     <text x="381.25" y="9.682" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="6.2" text-anchor="middle" fill="none" font-weight="600" stroke="#22307C" stroke-width="0.28" stroke-linejoin="round" textLength="86.5" lengthAdjust="spacingAndGlyphs">JH FS-1A FREQUENCY SHIFTER</text>
-    <text x="381.25" y="48.296" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.6" text-anchor="middle" fill="#22307C">diysynth.de</text>
+    <text x="381.25" y="48.296" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="3.6" text-anchor="middle" fill="#22307C">Made by DSL-man.de</text>
     <line x1="342.85" y1="35.42" x2="342.1" y2="36.719" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
     <line x1="339.08" y1="31.65" x2="337.781" y2="32.4" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>
     <line x1="337.7" y1="26.5" x2="336.2" y2="26.5" stroke="#22307C" stroke-width="0.3" stroke-linecap="round"/>

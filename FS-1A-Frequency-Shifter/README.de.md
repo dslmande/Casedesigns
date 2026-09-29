@@ -3,24 +3,37 @@
 Gestaltung nach dem Vorbild des Van-Daal-Aufbaus (cremefarbene Blende,
 dunkelblauer Druck, Funktionsblöcke mit Rahmenlinien, große RANGE/MANUAL-Knöpfe).
 
+## Versionsstand
+
+Alle erzeugten Dateien tragen den Stand im Namen, Schema
+`FS1A_<Teil>_Rev<x.y>[_<Zusatz>].<ext>` – aktuell **Rev0.1**. Die Generatoren
+(`fs1a_panel.py`, `fs1a_rueckwand.py`, `fs1a_gehaeuse.py`, `fs1a_step.py`) und die
+Eingangsdaten (`gietec_122040_profil.dat`, `rowmans.jhf`) bleiben ohne Version, sie
+sind das Werkzeug. Der Stand steht an einer Stelle: `REV` am Anfang von
+`fs1a_panel.py`; die anderen Skripte übernehmen ihn von dort.
+
+Jede Maß- oder Bauteiländerung an einem Teil ist ein neuer Stand: `REV` hochzählen,
+alles neu erzeugen, die alten Dateien behalten oder verwerfen – so kommen bestellte
+Platten und Daten nicht durcheinander.
+
 ## Dateien
 
 | Datei | Inhalt |
 |---|---|
 | `fs1a_panel.py` | Generator (nur Python-Standardbibliothek): `/usr/bin/python3 fs1a_panel.py` schreibt alle Ausgabedateien neu |
-| `fs1a_frontpanel_druck.fpd` | **FrontDesign, Farbdruck-Variante:** eloxiert natur + vollflächige Druckgrafik (Creme + Blau), Bohrungen als Bohrelemente |
-| `fs1a_frontpanel_druck.pdf` | Die Druckgrafik: Vektor-PDF 1:1, 484,7 × 90,3 mm (1 mm Beschnitt rundum), ohne Bohrungen/Kontur |
-| `fs1a_frontpanel_druck.fpjs` | FrontDesign-Skript, das die Druck-Variante erzeugt |
-| `fs1a_frontpanel.fpd` | FrontDesign, Gravur-Variante: Text/Linien als native Elemente (gravieren oder „Gravuren drucken“) |
-| `fs1a_frontpanel.fpjs` | FrontDesign-Skript für die Gravur-Variante |
-| `fs1a_frontpanel.dxf` | DXF R12, Ebenen `KONTUR` / `AUSSCHNITTE` / `DRUCK`, Text als Pfade |
-| `fs1a_frontpanel.svg` | 1:1 in mm mit Inkscape-Ebenen und Bauteil-Vorschau |
-| `fs1a_frontpanel_druck.svg` | Quelle der Druckgrafik (nur Panelfarbe + Druck) |
-| `fs1a_frontpanel_bohrungen.csv` | Bohrtabelle: Nr, Bauteil, x (von links), y (von oben), Ø, Bemerkung |
-| `fs1a_frontpanel_vorschau.png` | Render mit Knöpfen, Buchsen, Schaltern |
+| `FS1A_Frontpanel_Rev0.1_druck.fpd` | **FrontDesign, Farbdruck-Variante:** eloxiert natur + vollflächige Druckgrafik (Creme + Blau), Bohrungen als Bohrelemente |
+| `FS1A_Frontpanel_Rev0.1_druck.pdf` | Die Druckgrafik: Vektor-PDF 1:1, 484,7 × 90,3 mm (1 mm Beschnitt rundum), ohne Bohrungen/Kontur |
+| `FS1A_Frontpanel_Rev0.1_druck.fpjs` | FrontDesign-Skript, das die Druck-Variante erzeugt |
+| `FS1A_Frontpanel_Rev0.1.fpd` | FrontDesign, Gravur-Variante: Text/Linien als native Elemente (gravieren oder „Gravuren drucken“) |
+| `FS1A_Frontpanel_Rev0.1.fpjs` | FrontDesign-Skript für die Gravur-Variante |
+| `FS1A_Frontpanel_Rev0.1.dxf` | DXF R12, Ebenen `KONTUR` / `AUSSCHNITTE` / `DRUCK`, Text als Pfade |
+| `FS1A_Frontpanel_Rev0.1.svg` | 1:1 in mm mit Inkscape-Ebenen und Bauteil-Vorschau |
+| `FS1A_Frontpanel_Rev0.1_druck.svg` | Quelle der Druckgrafik (nur Panelfarbe + Druck) |
+| `FS1A_Frontpanel_Rev0.1_bohrungen.csv` | Bohrtabelle: Nr, Bauteil, x (von links), y (von oben), Ø, Bemerkung |
+| `FS1A_Frontpanel_Rev0.1_vorschau.png` | Render mit Knöpfen, Buchsen, Schaltern |
 | `fs1a_rueckwand.py` | Generator der Rückwand (nutzt `fs1a_panel.py` als Bibliothek) |
-| `fs1a_rueckwand.fpd` | FrontDesign, Rückwand 437 × 88,1 × 2 mm, Alu eloxiert natur |
-| `fs1a_rueckwand.svg` / `.dxf` / `.fpjs` / `_bohrungen.csv` / `_vorschau.png` | Rückwand in denselben Formaten |
+| `FS1A_Rueckwand_Rev0.1.fpd` | FrontDesign, Rückwand 437 × 88,1 × 2 mm, Alu eloxiert natur |
+| `FS1A_Rueckwand_Rev0.1.svg` / `.dxf` / `.fpjs` / `_bohrungen.csv` / `_vorschau.png` | Rückwand in denselben Formaten |
 | `rowmans.jhf` | Hershey-Strichschrift „Roman Simplex“ für den DXF-Text (gemeinfrei) |
 
 Alle Maße und Positionen stehen als Konstanten am Anfang von `fs1a_panel.py`
@@ -28,7 +41,7 @@ Alle Maße und Positionen stehen als Konstanten am Anfang von `fs1a_panel.py`
 Schriftgrößen, `TITLE`, `BRAND`, FrontDesign-Einstellungen `FPD`, Beschnitt `BLEED`).
 Die PDF-Erzeugung nutzt Google Chrome headless (`CHROME`-Pfad im Script).
 
-## Farbdruck (UV-Digitaldruck) – `fs1a_frontpanel_druck.fpd`
+## Farbdruck (UV-Digitaldruck) – `FS1A_Frontpanel_Rev0.1_druck.fpd`
 
 So sieht die Platte aus wie das Vorbild. Regeln aus Schaeffers „Hinweise zur Erstellung
 Ihrer Druckdaten“ (Druckdateien.pdf), die der Generator einhält:
@@ -44,9 +57,9 @@ Ihrer Druckdaten“ (Druckdateien.pdf), die der Generator einhält:
 
 Das Skript erzeugt Bohrungen + `PrintGraphic` (Bezugspunkt unten links bei (−1,06, −1,11) mm,
 Skalierung 100 %). Neu erzeugen: Bearbeiten → Skripte → PastePad →
-`EvalFile("/…/fs1a_frontpanel_druck.fpjs");` → Start.
+`EvalFile("/…/FS1A_Frontpanel_Rev0.1_druck.fpjs");` → Start.
 
-## Gravur-Variante – `fs1a_frontpanel.fpd`
+## Gravur-Variante – `FS1A_Frontpanel_Rev0.1.fpd`
 
 Platte 482,6 × 88,1 × **3 mm**, Aluminium pulverbeschichtet Grauweiß RAL 9002 (Creme gibt es
 nicht), Eckenradius 2 mm, 52 Bohrungen/Langlöcher, 125 Textgravuren (Helvetica Light
@@ -56,7 +69,7 @@ Farbauslegung `FPD["printed"] = False` setzen.
 
 ## DXF (Alternative)
 
-Datei → Importieren… → `fs1a_frontpanel.dxf`. Der Import-Assistent erkennt die größte
+Datei → Importieren… → `FS1A_Frontpanel_Rev0.1.dxf`. Der Import-Assistent erkennt die größte
 geschlossene Kontur als Plattenumriss, Kreise als Bohrungen und die Langlöcher als freie
 Konturen. Ebene `DRUCK` enthält den Text als Pfade (Strichschrift). Auch für KiCad/Inkscape.
 
@@ -104,7 +117,7 @@ Gehäuse-Außenbreite `BOX_WIDTH = 437` mm → Profile belegen hinter der Blende
 - Ausgangsblock endet bei x 426, Wippschalter bei x 435 (Blende 427,5–442,5 → 1,3 mm Luft)
 - keine Befestigungsschrauben in der Blendenmitte (dort gibt es keinen Gegenhalt)
 
-`pruefung_gehaeusezonen.png` zeigt die Profilzonen rot über dem Layout.
+`FS1A_Rev0.1_pruefung_gehaeusezonen.png` zeigt die Profilzonen rot über dem Layout.
 
 ## Befestigungsschrauben: Zylinderkopf, kein Senkkopf
 
@@ -153,7 +166,7 @@ Rückwand anliegt.
 Zusätzlich nötig: 2 × Mutter M3 (auf die Bolzen der Blende), 6 × Schraube M3 + Mutter
 (2 × Winkel an die Rückwand, 4 × Winkel an Deckel und Boden).
 
-## Rückwand – `fs1a_rueckwand.fpd`
+## Rückwand – `FS1A_Rueckwand_Rev0.1.fpd`
 
 437 × 88,1 × 2 mm (Gehäuse-Außenbreite, deckt die Stirnflächen der Seitenteilprofile ab),
 Alu eloxiert natur, Eckenradius 2 mm, unbedruckt.
@@ -165,7 +178,7 @@ Alu eloxiert natur, Eckenradius 2 mm, unbedruckt.
 | 2 × Winkelschraube M3 | x 218,5 (Mitte), y 8,35 / 79,75 | 3,2 |
 
 Erzeugen: `python3 fs1a_rueckwand.py`, dann in FrontDesign
-`EvalFile("/…/fs1a_rueckwand.fpjs");`. Maße stehen oben in `fs1a_rueckwand.py`
+`EvalFile("/…/FS1A_Rueckwand_Rev0.1.fpjs");`. Maße stehen oben in `fs1a_rueckwand.py`
 (`HOLE_D`, `HOLE_X`, `HOLE_Y_FROM_BOTTOM`).
 
 ## Gehäuse – Seitenteile, Deckel, Boden
@@ -176,9 +189,9 @@ Gehäusetiefe `BOX_DEPTH = 250` mm (Profillänge), Außentiefe **255 mm** (Blend
 | Anz. | Teil | Maß / Datei |
 |---|---|---|
 | 2 | Seitenteilprofil | Gie-Tec 122040, Zuschnitt **250 mm** (Sonderlänge bestellbar) |
-| 1 | Frontplatte | 482,6 × 88,1 × **3** – `fs1a_frontpanel.fpd` bzw. `_druck.fpd` |
-| 1 | Rückwand | 437 × 88,1 × 2 – `fs1a_rueckwand.fpd` |
-| 2 | Deckel / Boden | **416 × 249,5 × 1,5 mm Alu-Blech**, 2 Löcher Ø 3,2 – `fs1a_deckel_boden.dxf` |
+| 1 | Frontplatte | 482,6 × 88,1 × **3** – `FS1A_Frontpanel_Rev0.1.fpd` bzw. `_druck.fpd` |
+| 1 | Rückwand | 437 × 88,1 × 2 – `FS1A_Rueckwand_Rev0.1.fpd` |
+| 2 | Deckel / Boden | **416 × 249,5 × 1,5 mm Alu-Blech**, 2 Löcher Ø 3,2 – `FS1A_Deckel_Boden_Rev0.1.dxf` |
 | 8 | Schraube M5 Zylinderkopf | gewindeformend in die Profilkanäle, 4 vorn + 4 hinten |
 | 4 | Winkel Keystone 633 | oben/unten mittig, vorn an der Blende und hinten an der Rückwand |
 | 2 | Mutter M3 | auf die Gewindebolzen der Blende |
@@ -194,11 +207,11 @@ Außenfläche → freie Weite zwischen den Nutgründen 417 mm, Blech 416 mm (je 
 Frontplatte ist zu dünn"). 2 mm wäre lieferbar, passt aber nicht in die 1,6-mm-Nut.
 Also Blechzuschnitt (DXF) beim Blechner bestellen.
 
-`fs1a_gehaeuse_schnitt.svg/.png` zeigt den Querschnitt mit beiden Profilen, Blechen,
-Schraubkanälen und Frontplatte; `fs1a_deckel_boden_zeichnung.svg/.png` ist die bemaßte
+`FS1A_Gehaeuse_Rev0.1_schnitt.svg/.png` zeigt den Querschnitt mit beiden Profilen, Blechen,
+Schraubkanälen und Frontplatte; `FS1A_Deckel_Boden_Rev0.1_zeichnung.svg/.png` ist die bemaßte
 Blechzeichnung.
 
-## 3D-Baugruppe – `fs1a_gehaeuse.step`
+## 3D-Baugruppe – `FS1A_Gehaeuse_Rev0.1.step`
 
 `fs1a_step.py` baut alle sechs Teile in FreeCAD (headless) aus denselben Quellen wie die
 Fertigungsdateien und schreibt eine STEP-Datei (AP214) mit benannten Produkten:
@@ -222,7 +235,7 @@ stehen 0,1 mm über und unter der Blende (Profil 88,3 vs. Blende 88,1).
 
 Die Profilkontur wird entlang y = 0 geschlossen – die drei M3-Nuten an der vorderen
 Anlagefläche fehlen deshalb im Modell; alles andere entspricht der Gie-Tec-Kontur.
-`fs1a_gehaeuse_iso.png` und `fs1a_gehaeuse_vorderansicht.png` sind Kontrollansichten
+`FS1A_Gehaeuse_Rev0.1_iso.png` und `FS1A_Gehaeuse_Rev0.1_vorderansicht.png` sind Kontrollansichten
 der importierten STEP.
 
 ## Koordinaten

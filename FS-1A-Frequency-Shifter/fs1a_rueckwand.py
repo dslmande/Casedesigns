@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Rückwand zum FS-1A-Frontpanel – Gie-Tec Seitenteilprofil 4, Gehäuse 437 mm breit.
 
-Erzeugt fs1a_rueckwand.svg / .dxf / .fpjs / _bohrungen.csv mit denselben Routinen
+Erzeugt FS1A_Rueckwand_Rev*.svg / .dxf / .fpjs / _bohrungen.csv mit denselben Routinen
 wie fs1a_panel.py (dort stehen auch alle Konstanten).
 
 Inhalt: Außenkontur 437 x 88,1 mm, vier M5-Durchgänge in die Schraubkanäle der
@@ -21,7 +21,7 @@ HOLE_X = 40.0                 # von der linken Kante
 HOLE_Y_FROM_BOTTOM = 30.0
 BRACKET_SCREW_D = 3.2         # M3-Durchgang für die Winkel zu Deckel und Boden
 
-NAME = "fs1a_rueckwand"
+NAME = f"FS1A_Rueckwand_{p.REV}"   # Versionsstand wie bei ARP3620 im Dateinamen
 OUT = Path(__file__).parent
 
 

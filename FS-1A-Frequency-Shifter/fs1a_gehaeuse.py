@@ -11,8 +11,8 @@ Maße aus der Gie-Tec-CAD-Datei cad_122040.dxf (Kontur in gietec_122040_profil.d
   hinter der Außenfläche, Nuttiefe 3 mm
 
 Erzeugt:
-  fs1a_deckel_boden.svg/.dxf/.fpjs/_bohrungen.csv   Blech 1,5 mm, 2 Stück nötig
-  fs1a_gehaeuse_schnitt.svg                          Querschnitt des Gehäuses
+  FS1A_Deckel_Boden_Rev*.svg/.dxf/.fpjs/_bohrungen.csv   Blech 1,5 mm, 2 Stück nötig
+  FS1A_Gehaeuse_Rev*_schnitt.svg                          Querschnitt des Gehäuses
   Stückliste auf der Konsole
 
 Aufruf:  python3 fs1a_gehaeuse.py
@@ -43,7 +43,8 @@ COVER_T = p.COVER_T           # Blechdicke (Nut nimmt bis 1,6 mm)
 COVER_PLAY = 1.0              # Untermaß in der Breite, damit es sich schieben lässt
 COVER_W = BOX_WIDTH - 2 * GROOVE_BOTTOM - COVER_PLAY      # 416,0 mm
 COVER_L = BOX_DEPTH - 0.5     # 0,5 mm kürzer als die Profile
-NAME = "fs1a_deckel_boden"
+NAME = f"FS1A_Deckel_Boden_{p.REV}"   # Versionsstand wie bei ARP3620 im Dateinamen
+SECTION = f"FS1A_Gehaeuse_{p.REV}_schnitt"
 
 # Loch für den Montagewinkel (Keystone 633) zum Gewindebolzen der Frontplatte.
 # Der Winkel liegt mit einem Schenkel am Blech, seine Lochmitte sitzt 5,5 mm von der
@@ -194,8 +195,8 @@ def write_cover_drawing(path):
 def stueckliste():
     rows = [
         ("2", "Seitenteilprofil", f"Gie-Tec 122040, Zuschnitt {BOX_DEPTH:.0f} mm"),
-        ("1", "Frontplatte", f"{p.W_FRONT} x {p.H_FRONT} x {FRONT_T:.0f} mm – fs1a_frontpanel(.druck).fpd"),
-        ("1", "Rückwand", f"{BOX_WIDTH:.0f} x {p.H_FRONT} x {REAR_T:.0f} mm – fs1a_rueckwand.fpd"),
+        ("1", "Frontplatte", f"{p.W_FRONT} x {p.H_FRONT} x {FRONT_T:.0f} mm – {p.BASE}(_druck).fpd"),
+        ("1", "Rückwand", f"{BOX_WIDTH:.0f} x {p.H_FRONT} x {REAR_T:.0f} mm – FS1A_Rueckwand_{p.REV}.fpd"),
         ("2", "Deckel / Boden", f"{COVER_W:.0f} x {COVER_L:.1f} x {COVER_T} mm Alu-Blech – {NAME}.dxf (Blechzuschnitt)"),
         ("4", "Senkkopfschraube M5", "vorn, gewindeformend in die Profilkanäle – Kopf versenkt"),
         ("4", "Schraube M5", "hinten, gewindeformend in die Profilkanäle"),
@@ -213,7 +214,7 @@ def stueckliste():
 
 if __name__ == "__main__":
     p.W_FRONT, p.H_FRONT = p.W, p.H          # Frontplattenmaße merken
-    write_section(OUT / "fs1a_gehaeuse_schnitt.svg")
+    write_section(OUT / f"{SECTION}.svg")
 
     build_cover()
     p.R_CORNER = 1.5
@@ -224,5 +225,5 @@ if __name__ == "__main__":
     print(f"{NAME}.svg / .dxf / _zeichnung.svg / _bohrungen.csv  ({COVER_W:.1f} x {COVER_L:.1f} x {COVER_T} mm, 2 Stück)")
     print("  Hinweis: Schaeffer fertigt diese Größe nicht in 1,5 mm (geprüft im "
           "Frontplatten Designer) – Blechzuschnitt beim Blechner bestellen.")
-    print("fs1a_gehaeuse_schnitt.svg")
+    print(f"{SECTION}.svg")
     stueckliste()

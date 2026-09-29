@@ -3,15 +3,15 @@
 
 Erzeugt aus einem gemeinsamen Geometriemodell:
 
-  fs1a_frontpanel.svg   1:1 in mm, Inkscape-Ebenen (Kontur, Ausschnitte, Druck,
+  FS1A_Frontpanel_Rev*.svg   1:1 in mm, Inkscape-Ebenen (Kontur, Ausschnitte, Druck,
                         Bauteile-Vorschau, Bohrmaße)
-  fs1a_frontpanel.dxf   DXF R12, Ebenen KONTUR / AUSSCHNITTE / DRUCK
+  FS1A_Frontpanel_Rev*.dxf   DXF R12, Ebenen KONTUR / AUSSCHNITTE / DRUCK
                         (Text als Pfade, Hershey-Strichschrift) – für den
                         DXF-Import-Assistenten von FrontDesign, KiCad, Inkscape …
-  fs1a_frontpanel.fpjs  Skript für Schaeffer FrontDesign (Bearbeiten → Skripte):
+  FS1A_Frontpanel_Rev*.fpjs  Skript für Schaeffer FrontDesign (Bearbeiten → Skripte):
                         legt Platte, Bohrungen, Textgravuren und Linien nativ an
                         und speichert die .fpd
-  fs1a_frontpanel_bohrungen.csv  Bohrtabelle
+  FS1A_Frontpanel_Rev*_bohrungen.csv  Bohrtabelle
 
 Nur Standardbibliothek – läuft mit /usr/bin/python3.
 Aufruf:  python3 fs1a_panel.py [--no-preview] [--out NAME]
@@ -20,6 +20,12 @@ import csv
 import math
 import sys
 from pathlib import Path
+
+# ------------------------------------------------------------------ Versionsstand
+# Steht in jedem erzeugten Dateinamen (wie ARP3620_Rev0.2). Jede Maß- oder
+# Bauteiländerung an einem Teil = neuer Stand: REV hochzählen, alles neu erzeugen.
+REV = "Rev0.1"
+BASE = f"FS1A_Frontpanel_{REV}"
 
 # ------------------------------------------------------------------ Panel
 W, H = 482.6, 88.1            # 19" Rackblende, 2 HE
@@ -87,7 +93,7 @@ FPD = {
     "tool": "engraver_0_4mm",
     "tool_fine": "engraver_0_2mm",
     "printed": True,                      # Druck statt Gravur (wie beim Vorbild)
-    "save_as": str(Path(__file__).resolve().parent / "fs1a_frontpanel.fpd"),   # FrontDesign braucht einen absoluten Pfad
+    "save_as": str(Path(__file__).resolve().parent / f"{BASE}.fpd"),   # FrontDesign braucht einen absoluten Pfad
 }
 
 # ------------------------------------------------------------------ Layout
@@ -953,7 +959,7 @@ def write_holes(path):
 if __name__ == "__main__":
     args = sys.argv[1:]
     preview = "--no-preview" not in args
-    name = args[args.index("--out") + 1] if "--out" in args else "fs1a_frontpanel"
+    name = args[args.index("--out") + 1] if "--out" in args else BASE
     out = Path(__file__).parent
     build()
     write_svg(out / f"{name}.svg", preview)

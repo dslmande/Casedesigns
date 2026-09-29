@@ -28,7 +28,7 @@ import fs1a_panel as P
 import fs1a_rueckwand as R
 import fs1a_gehaeuse as G
 
-OUT = HERE / "fs1a_gehaeuse.step"
+OUT = HERE / f"FS1A_Gehaeuse_{P.REV}.step"   # Versionsstand aus fs1a_panel.py
 
 # --------------------------------------------------------------- Geometrie
 P.build()

@@ -4,12 +4,30 @@ Mechanical designs (front panels, rear panels, enclosures) for DIY synthesizer a
 effects projects — parametric, generated from Python scripts, with ready-to-order
 manufacturing files.
 
+![FS-1A enclosure](FS-1A-Frequency-Shifter/FS1A_Gehaeuse_Rev0.1_3d_iso.png)
+
+![FS-1A front panel](FS-1A-Frequency-Shifter/FS1A_Frontpanel_Rev0.1_3d.png)
+
+![FS-1A rear](FS-1A-Frequency-Shifter/FS1A_Gehaeuse_Rev0.1_3d_rueckseite.png)
+
+*FS-1A Frequency Shifter: 19" / 2 U enclosure, front panel with the full-surface
+colour print, and the rear. Rendered from the STEP assembly these files produce —
+the panel carries the actual print artwork, not a mock-up.*
+
 | Design | Description |
 |---|---|
 | [FS-1A Frequency Shifter](FS-1A-Frequency-Shifter/) | 19" / 2 U front panel, rear panel and enclosure for Jürgen Haible's FS-1A frequency shifter |
+| [SEM CPS-1](SEM-CPS1/) | Desktop enclosure in the style of the Oberheim CPS-1 for a SEM clone (254 × 177 mm panel): bent-sheet tub, front rail and rear panel |
 
 Every design folder contains the generator scripts, the production files (Schaeffer
 `.fpd`, DXF, print-ready PDF), a 3D assembly as STEP, and its own README.
+
+## Control panel PCBs
+
+For the FS-1A there is a set of control panel PCBs that carries the pots, switches,
+jacks and LEDs behind the front panel, so the build needs no point-to-point wiring.
+Those boards are not part of this repository — they are **available on request from
+[diysynth.de](https://diysynth.de)**.
 
 ## License
 

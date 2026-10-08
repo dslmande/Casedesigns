@@ -14,6 +14,9 @@ manufacturing files.
 colour print, and the rear. Rendered from the STEP assembly these files produce —
 the panel carries the actual print artwork, not a mock-up.*
 
+**[Turn it around in your browser](https://dslmande.github.io/fs1a-case-3d/)** — an
+interactive 3D view of the enclosure and the control PCBs.
+
 | Design | Description |
 |---|---|
 | [FS-1A Frequency Shifter](FS-1A-Frequency-Shifter/) | 19" / 2 U front panel, rear panel and enclosure for Jürgen Haible's FS-1A frequency shifter |

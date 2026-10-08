@@ -11,6 +11,8 @@ print-ready PDF, the drill schedule and the STEP assembly.
 
 ![Front panel](FS1A_Frontpanel_Rev0.1_3d.png)
 
+**[Interactive 3D viewer](https://dslmande.github.io/fs1a-case-3d/)** — rotate, zoom, switch parts on and off, make the enclosure see-through, move a section through it. Source: [dslmande/fs1a-case-3d](https://github.com/dslmande/fs1a-case-3d).
+
 The panel layout follows the well-known Van Daal Electronics build of the FS-1A (cream
 panel, dark blue legend, framed function blocks, two large RANGE / MANUAL dials). Circuit
 design: Jürgen Haible. This repository contains mechanical data only — no schematics, no

@@ -235,8 +235,9 @@ stehen 0,1 mm über und unter der Blende (Profil 88,3 vs. Blende 88,1).
 
 Die Profilkontur wird entlang y = 0 geschlossen – die drei M3-Nuten an der vorderen
 Anlagefläche fehlen deshalb im Modell; alles andere entspricht der Gie-Tec-Kontur.
-`FS1A_Gehaeuse_Rev0.1_iso.png` und `FS1A_Gehaeuse_Rev0.1_vorderansicht.png` sind Kontrollansichten
-der importierten STEP.
+Ansichten der Baugruppe erzeugt `fs1a_blender.py`
+(`FS1A_Gehaeuse_Rev0.1_3d_iso.png`, `_3d_rueckseite.png`, `FS1A_Frontpanel_Rev0.1_3d.png`);
+die alten FreeCAD-Kontrollansichten sind seit 08.10.2026 raus.
 
 ## Koordinaten
 

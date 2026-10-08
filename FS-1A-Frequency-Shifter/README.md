@@ -204,8 +204,6 @@ assembly with FreeCAD, puts the print artwork on the panel as a texture and
 writes the three views. Run it with
 `blender -b -P fs1a_blender.py`.
 
-![Wireframe](FS1A_Gehaeuse_Rev0.1_iso.png)
-
 ---
 
 ## Files

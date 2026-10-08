@@ -25,6 +25,13 @@ Every design folder contains the generator scripts, the production files (Schaef
 
 For the FS-1A there is a set of control panel PCBs that carries the pots, switches,
 jacks and LEDs behind the front panel, so the build needs no point-to-point wiring.
+Three boards, one per block of the panel layout, wired to each other with a single
+6-way link and to Haible's boards with the connectors he already uses.
+
+![Control panel PCBs behind the front panel](FS-1A-Frequency-Shifter/FS1A_ControlPCB_Rev0.2_3d_innen.png)
+
+![Control panel PCBs from the side](FS-1A-Frequency-Shifter/FS1A_ControlPCB_Rev0.2_3d_schraeg.png)
+
 Those boards are not part of this repository — they are **available on request from
 [diysynth.de](https://diysynth.de)**.
 

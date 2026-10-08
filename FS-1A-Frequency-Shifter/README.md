@@ -24,6 +24,15 @@ A set of control panel PCBs for this panel — pots, switches, jacks and LEDs on
 board, no point-to-point wiring — is **available on request from
 [diysynth.de](https://diysynth.de)**. Those boards are not part of this repository.
 
+Three boards, split along the frame lines of the panel layout (107.5 × 81, 126 × 71.2
+and 105 × 81 mm), mounted on M3 spacers behind the panel. They carry the 15 pots, 10
+toggle switches, 6 jacks, the combo socket and the LEDs, link to each other with one
+6-way cable and plug into Haible's boards with his own connector pinout.
+
+![Control panel PCBs behind the front panel](FS1A_ControlPCB_Rev0.2_3d_innen.png)
+
+![Control panel PCBs from the side](FS1A_ControlPCB_Rev0.2_3d_schraeg.png)
+
 ## Bill of materials
 
 | Qty | Part | Size / spec | File |

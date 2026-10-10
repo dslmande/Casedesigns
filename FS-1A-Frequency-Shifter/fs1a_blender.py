@@ -21,7 +21,8 @@ HERE = os.path.dirname(os.path.abspath(sys.argv[sys.argv.index("-P") + 1])) if "
 OUT = HERE
 MESH = os.path.join(HERE, "fs1a_mesh.json")
 TEX = os.path.join(HERE, "fs1a_panel_tex.png")
-REV = "Rev0.1"
+sys.path.insert(0, HERE)
+from fs1a_panel import REV            # Versionsstand kommt aus dem Generator
 STEP = os.path.join(HERE, f"FS1A_Gehaeuse_{REV}.step")
 DRUCK = os.path.join(HERE, f"FS1A_Frontpanel_{REV}_druck.svg")
 FREECAD = "/Applications/FreeCAD.app/Contents/Resources/bin/freecadcmd"
@@ -221,6 +222,6 @@ def shot(name, az, el, only=None, margin=1.10, res=None):
     print("fertig:", name)
 
 
-shot("FS1A_Gehaeuse_Rev0.1_3d_iso.png", az=-34, el=24)
-shot("FS1A_Gehaeuse_Rev0.1_3d_rueckseite.png", az=146, el=22)
-shot("FS1A_Frontpanel_Rev0.1_3d.png", az=-18, el=14, only={"Frontplatte"}, res=(1800, 470))
+shot(f"FS1A_Gehaeuse_{REV}_3d_iso.png", az=-34, el=24)
+shot(f"FS1A_Gehaeuse_{REV}_3d_rueckseite.png", az=146, el=22)
+shot(f"FS1A_Frontpanel_{REV}_3d.png", az=-18, el=14, only={"Frontplatte"}, res=(1800, 470))

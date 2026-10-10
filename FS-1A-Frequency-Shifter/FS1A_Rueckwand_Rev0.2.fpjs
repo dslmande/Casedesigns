@@ -3,7 +3,7 @@
 // oder Inhalt in das PastePad kopieren und Start drücken.
 // Koordinaten in mm, Ursprung unten links (FrontDesign-Konvention).
 
-var SAVE_AS  = "/Users/patrickjoricke/Claude/code/haible-fs1a/frontpanel/FS1A_Rueckwand_Rev0.1.fpd";   // "" = nicht speichern, nur anzeigen
+var SAVE_AS  = "/Users/patrickjoricke/Claude/code/haible-fs1a/frontpanel/FS1A_Rueckwand_Rev0.2.fpd";   // "" = nicht speichern, nur anzeigen
 var PRINTED  = false;   // true: Elemente drucken statt gravieren
 var INK      = engrave_night_blue;
 var FONT     = "helvetica-light-1stroke";

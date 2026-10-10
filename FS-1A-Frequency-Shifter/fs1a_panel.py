@@ -24,7 +24,7 @@ from pathlib import Path
 # ------------------------------------------------------------------ Versionsstand
 # Steht in jedem erzeugten Dateinamen (wie ARP3620_Rev0.2). Jede Maß- oder
 # Bauteiländerung an einem Teil = neuer Stand: REV hochzählen, alles neu erzeugen.
-REV = "Rev0.1"
+REV = "Rev0.2"
 BASE = f"FS1A_Frontpanel_{REV}"
 
 # ------------------------------------------------------------------ Panel
@@ -64,7 +64,8 @@ DRILL = {
 }
 # Netzschalter: Marquardt 1555.3102 (Wippschalter 2-polig, rot beleuchtet, Snap-in, Reichelt WIPPE 1555.3102)
 # Datenblatt: Ausschnitt 27,2 ±0,1 x 12,2 +0,2 mm, Wandstärke 0,8–5 mm, Blende 30 x 15 mm – hochkant eingebaut
-POWER_CUT_W, POWER_CUT_H, POWER_CUT_R = 12.3, 27.2, 1.0
+POWER_CUT_W, POWER_CUT_H, POWER_CUT_R = 12.5, 27.4, 1.0   # Rev0.2: je 0,2 mm groesser,
+# der Marquardt ging im Ausschnitt nach Datenblatt (12,3 x 27,2) nur schwer hinein
 COMBO_SCREW_DX, COMBO_SCREW_DY = 10.0, 11.5   # Combo-Befestigung NCJ6FI-S: 20 x 23 mm (oben links / unten rechts)
                                               # PCB-Version NCJ6FA-H wäre Ø22 und 19,8 x 19,8 mm
 SLOT_W, SLOT_H = 10.0, 6.4    # Rack-Langloch

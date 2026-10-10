@@ -55,7 +55,7 @@
     <circle cx="389" cy="67" r="3" fill="#FFFFFF" stroke="#22307C" stroke-width="0.15"/>
     <circle cx="402" cy="67" r="3" fill="#FFFFFF" stroke="#22307C" stroke-width="0.15"/>
     <circle cx="416.5" cy="67" r="4.75" fill="#FFFFFF" stroke="#22307C" stroke-width="0.15"/>
-    <rect x="430.35" y="30.45" width="12.3" height="27.2" rx="1" fill="#FFFFFF" stroke="#22307C" stroke-width="0.15"/>
+    <rect x="430.25" y="30.35" width="12.5" height="27.4" rx="1" fill="#FFFFFF" stroke="#22307C" stroke-width="0.15"/>
   </g>
   <g inkscape:groupmode="layer" inkscape:label="3 Druck" id="layer3">
     <line x1="38" y1="2.5" x2="427.5" y2="2.5" stroke="#22307C" stroke-width="0.35" stroke-linecap="round"/>
@@ -679,6 +679,6 @@
     <text x="392.8" y="67.648" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="1.8" text-anchor="start" fill="#C0392B">Ø6</text>
     <text x="405.8" y="67.648" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="1.8" text-anchor="start" fill="#C0392B">Ø6</text>
     <text x="422.05" y="67.648" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="1.8" text-anchor="start" fill="#C0392B">Ø9.5</text>
-    <text x="443.45" y="44.698" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="1.8" text-anchor="start" fill="#C0392B">12.3x27.2</text>
+    <text x="443.55" y="44.698" font-family="'Segoe UI', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="1.8" text-anchor="start" fill="#C0392B">12.5x27.4</text>
   </g>
 </svg>

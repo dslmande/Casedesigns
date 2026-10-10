@@ -3,7 +3,7 @@
 // oder Inhalt in das PastePad kopieren und Start drücken.
 // Koordinaten in mm, Ursprung unten links (FrontDesign-Konvention).
 
-var SAVE_AS  = "/Users/patrickjoricke/Claude/code/haible-fs1a/frontpanel/FS1A_Frontpanel_Rev0.1.fpd";   // "" = nicht speichern, nur anzeigen
+var SAVE_AS  = "/Users/patrickjoricke/Claude/code/haible-fs1a/frontpanel/FS1A_Frontpanel_Rev0.2.fpd";   // "" = nicht speichern, nur anzeigen
 var PRINTED  = true;   // true: Elemente drucken statt gravieren
 var INK      = engrave_night_blue;
 var FONT     = "helvetica-light-1stroke";
@@ -71,7 +71,7 @@ fp.AddElement(new DrillHole("B044 Vol B", 7.5), 372, 21.1);
 fp.AddElement(new DrillHole("B045 Up/Down", 6), 389, 21.1);
 fp.AddElement(new DrillHole("B046 Bypass", 6), 402, 21.1);
 fp.AddElement(new DrillHole("B047 OUT B", 9.5), 416.5, 21.1);
-fp.AddElement(new RectHole("R048 Netzschalter", 12.3, 27.2, 1), 436.5, 44.05);
+fp.AddElement(new RectHole("R048 Netzschalter", 12.5, 27.4, 1), 436.5, 44.05);
 
 var g = new HpglEngraving("Druck Linien", "", refpoint_file, 100, 0, 0);
 var penLine = g.DefinePen(INK, engraver_0_4mm);

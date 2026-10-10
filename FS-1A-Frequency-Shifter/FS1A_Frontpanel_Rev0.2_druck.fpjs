@@ -3,7 +3,7 @@
 // oder Inhalt in das PastePad kopieren und Start drücken.
 // Koordinaten in mm, Ursprung unten links (FrontDesign-Konvention).
 
-var SAVE_AS  = "/Users/patrickjoricke/Claude/code/haible-fs1a/frontpanel/FS1A_Frontpanel_Rev0.1_druck.fpd";   // "" = nicht speichern, nur anzeigen
+var SAVE_AS  = "/Users/patrickjoricke/Claude/code/haible-fs1a/frontpanel/FS1A_Frontpanel_Rev0.2_druck.fpd";   // "" = nicht speichern, nur anzeigen
 var PRINTED  = false;   // true: Elemente drucken statt gravieren
 var INK      = engrave_night_blue;
 var FONT     = "helvetica-light-1stroke";
@@ -71,11 +71,11 @@ fp.AddElement(new DrillHole("B044 Vol B", 7.5), 372, 21.1);
 fp.AddElement(new DrillHole("B045 Up/Down", 6), 389, 21.1);
 fp.AddElement(new DrillHole("B046 Bypass", 6), 402, 21.1);
 fp.AddElement(new DrillHole("B047 OUT B", 9.5), 416.5, 21.1);
-fp.AddElement(new RectHole("R048 Netzschalter", 12.3, 27.2, 1), 436.5, 44.05);
+fp.AddElement(new RectHole("R048 Netzschalter", 12.5, 27.4, 1), 436.5, 44.05);
 
 // Druckgrafik (UV-Farbdruck) über die ganze Platte: Bezugspunkt unten links = Plattenursprung
 // Parameter 4/5 sind Skalierung X/Y in Prozent – das PDF ist bereits 1:1 in mm (484.717 x 90.339 mm)
-var pg = new PrintGraphic("Druckgrafik", "/Users/patrickjoricke/Claude/code/haible-fs1a/frontpanel/FS1A_Frontpanel_Rev0.1_druck.pdf", refpoint_leftbottom, 100, 100);
+var pg = new PrintGraphic("Druckgrafik", "/Users/patrickjoricke/Claude/code/haible-fs1a/frontpanel/FS1A_Frontpanel_Rev0.2_druck.pdf", refpoint_leftbottom, 100, 100);
 fp.AddElement(pg, -1.058, -1.106);
 
 fp.AddElement(new Bolt("S049 Winkel Keystone 633 zum Blech", "GU30", 6), 241.3, 79.75);   // sitzt auf der Rueckseite

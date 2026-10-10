@@ -4,11 +4,11 @@ Mechanical designs (front panels, rear panels, enclosures) for DIY synthesizer a
 effects projects — parametric, generated from Python scripts, with ready-to-order
 manufacturing files.
 
-![FS-1A enclosure](FS-1A-Frequency-Shifter/FS1A_Gehaeuse_Rev0.1_3d_iso.png)
+![FS-1A enclosure](FS-1A-Frequency-Shifter/FS1A_Gehaeuse_Rev0.3_3d_iso.png)
 
-![FS-1A front panel](FS-1A-Frequency-Shifter/FS1A_Frontpanel_Rev0.1_3d.png)
+![FS-1A front panel](FS-1A-Frequency-Shifter/FS1A_Frontpanel_Rev0.3_3d.png)
 
-![FS-1A rear](FS-1A-Frequency-Shifter/FS1A_Gehaeuse_Rev0.1_3d_rueckseite.png)
+![FS-1A rear](FS-1A-Frequency-Shifter/FS1A_Gehaeuse_Rev0.3_3d_rueckseite.png)
 
 *FS-1A Frequency Shifter: 19" / 2 U enclosure, front panel with the full-surface
 colour print, and the rear. Rendered from the STEP assembly these files produce —

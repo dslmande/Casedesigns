@@ -24,7 +24,7 @@ from pathlib import Path
 # ------------------------------------------------------------------ Versionsstand
 # Steht in jedem erzeugten Dateinamen (wie ARP3620_Rev0.2). Jede Maß- oder
 # Bauteiländerung an einem Teil = neuer Stand: REV hochzählen, alles neu erzeugen.
-REV = "Rev0.2"
+REV = "Rev0.3"
 BASE = f"FS1A_Frontpanel_{REV}"
 
 # ------------------------------------------------------------------ Panel
@@ -810,7 +810,8 @@ def write_fpjs(path, mode="engrave", pdf_path=None, pdf_size=None, save_as=None)
     mode="print":   nur Bohrungen + eine Druckgrafik (PDF) über die ganze Platte, UV-Farbdruck."""
     js = []
     n = [0]
-    save_as = save_as or FPD["save_as"]
+    if save_as is None:            # "" heisst ausdruecklich: nicht speichern
+        save_as = FPD["save_as"]
     printing = (mode == "print")
     pw, ph = pdf_size or (PW, PH)
     if abs(pw - PW) > 0.05 or abs(ph - PH) > 0.05:
@@ -970,8 +971,14 @@ if __name__ == "__main__":
     write_print_svg(out / f"{name}_druck.svg")
     pdf = out / f"{name}_druck.pdf"
     pdf_size = write_print_pdf(out / f"{name}_druck.svg", pdf)
+    # Die Druckvariante speichert das Skript absichtlich NICHT: "Weiß drucken" und
+    # "Weiß unterdrucken" gibt es nur im Dialog, nicht in der Skript-Schnittstelle.
+    # Eine vom Skript geschriebene .fpd hätte sie immer auf "Nein" - also erst die
+    # beiden Optionen setzen, dann von Hand unter dem Namen unten sichern.
     write_fpjs(out / f"{name}_druck.fpjs", mode="print", pdf_path=pdf.resolve(), pdf_size=pdf_size,
-               save_as=str(Path(FPD["save_as"]).with_name(f"{name}_druck.fpd")))
+               save_as="")
+    print(f"   Druckvariante: nach dem Lauf Weiß drucken + Weiß unterdrucken setzen,")
+    print(f"   dann sichern als {name}_druck.fpd")
     print(f"{name}.svg / .dxf / .fpjs / _bohrungen.csv  ({len(CUTS)} Ausschnitte, "
           f"{sum(1 for e in PRINT if e[0] == 'text')} Texte, {len(PRINT)} Druckelemente)")
     print(f"{name}_druck.svg / _druck.pdf ({'%.2f x %.2f mm' % pdf_size if pdf_size else 'kein Chrome – PDF fehlt'}) / _druck.fpjs")

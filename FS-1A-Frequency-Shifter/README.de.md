@@ -16,13 +16,9 @@ Jede Maß- oder Bauteiländerung an einem Teil ist ein neuer Stand: `REV` hochz�
 alles neu erzeugen, die alten Dateien behalten oder verwerfen – so kommen bestellte
 Platten und Daten nicht durcheinander.
 
-> **Rev0.2: die `.fpd` fehlen noch.** Der Netzschalter-Ausschnitt ist je 0,2 mm größer
-> geworden, die Rev0.1-Dateien sind damit ungültig und entfernt. Neu erzeugen: in
-> FrontDesign *Bearbeiten → Skripte → PastePad →*
-> `EvalFile("/…/FS1A_Frontpanel_Rev0.2.fpjs");` → Start, ebenso für `_druck.fpjs` und
-> `FS1A_Rueckwand_Rev0.2.fpjs`. Nicht vergessen: bei der Druckvariante „Weiß drucken"
-> **und** „Weiß unterdrucken" im Dialog setzen, das Skript setzt es zurück.
-> DXF, Bohrtabelle und Druck-PDF sind vollständig und aktuell.
+> **Hinweis zur Druckvariante:** nach jedem Skriptlauf im Dialog „Eigenschaften
+> Frontplatte“ die Punkte *Weiß drucken* und *Weiß unterdrucken* setzen – das Skript
+> setzt sie zurück, und ohne sie liegt das Creme direkt auf dem Eloxal.
 
 ## Dateien
 

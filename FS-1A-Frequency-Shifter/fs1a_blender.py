@@ -12,7 +12,7 @@ das Kamera-Clipping hoch (Standard 1000 schneidet die Baugruppe weg), und Chrome
 zeichnet eine SVG in Originalgroesse in das Fenster - die Fenstergroesse muss die
 natuerliche Groesse sein, die Aufloesung kommt ueber den Skalierungsfaktor.
 """
-import json, math, os, subprocess, sys
+import json, math, os, subprocess, sys, tempfile
 import bpy
 from mathutils import Vector
 
@@ -38,7 +38,7 @@ def _veraltet(ziel, quelle):
 
 def quellen():
     if _veraltet(MESH, STEP):
-        skript = os.path.join(HERE, "_tess.py")
+        skript = os.path.join(tempfile.mkdtemp(), "_tess.py")   # nicht ins Projekt: sonst bleibt ein __pycache__ liegen
         open(skript, "w").write(
             "import json, FreeCAD, Import\n"
             f"doc = FreeCAD.newDocument('a'); Import.insert({STEP!r}, 'a')\n"
